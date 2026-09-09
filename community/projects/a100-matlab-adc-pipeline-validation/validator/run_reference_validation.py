@@ -49,11 +49,12 @@ def load_adc(files: list[Path], cfg: dict) -> np.ndarray:
     channels = []
     for path in files:
         values = np.loadtxt(path, delimiter=",").reshape(-1)
-        values = values[np.isfinite(values)]
         if values.size == expected + 1:
             values = values[1:]
         if values.size != expected:
             raise ValueError(f"{path.name}: {values.size} values, expected {expected}")
+        if not np.isfinite(values).all():
+            raise ValueError(f"{path.name}: non-finite payload value")
         words = values.astype(np.uint32)
         high = (words >> 16).astype(np.uint16).view(np.int16)
         low = (words & 65535).astype(np.uint16).view(np.int16)
