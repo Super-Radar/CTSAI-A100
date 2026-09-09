@@ -11,7 +11,6 @@ for rx = 1:cfg.numRx
     end
     values = readmatrix(files{rx});
     values = values(:);
-    values = values(isfinite(values));
 
     % Public files contain one leading metadata value followed by payload.
     if numel(values) == expectedWords + 1
@@ -20,6 +19,10 @@ for rx = 1:cfg.numRx
         error('CTSAI:DataLength', ...
             'RX%d contains %d values; expected %d payload values (+ optional header).', ...
             rx-1, numel(values), expectedWords);
+    end
+    if any(~isfinite(values))
+        error('CTSAI:DataValue', ...
+            'RX%d contains a non-finite payload value.', rx-1);
     end
 
     words = uint32(values);
