@@ -238,8 +238,10 @@ USB-CAN FD 端子可能还包含其他引脚，不要把中间端子直接当作
 请执行：
 
 ```bash
-python -m pip install pandas matplotlib numpy
+python -m pip install numpy pandas matplotlib scipy scikit-learn
 ```
+
+脚本使用 SciPy 和 scikit-learn 实现目标跟踪与 DBSCAN 聚类。请完整安装上述依赖，否则相关功能无法正常使用。
 
 若仍然报错，请确认当前终端使用的 Python 环境与安装依赖的 Python 环境一致。
 
