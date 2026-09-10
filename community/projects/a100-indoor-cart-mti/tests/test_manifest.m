@@ -23,8 +23,23 @@ assert(fixture_report.total_bytes == 3);
 write_bytes(data_path, uint8('abd'));
 assert_error_id(@() verify_data_manifest(fixture_root), 'a100:ManifestHashMismatch');
 
+write_bytes(data_path, uint8('abc'));
+write_duplicate_manifest(manifest_path, 3, ...
+    'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+assert_error_id(@() verify_data_manifest(fixture_root), 'a100:DuplicateManifestPath');
+
 clear cleanup;
 remove_fixture(fixture_root);
+end
+
+function write_duplicate_manifest(file_path, size_bytes, digest)
+fid = fopen(file_path, 'w');
+assert(fid >= 0);
+cleanup = onCleanup(@() fclose(fid));
+fprintf(fid, 'relative_path,size_bytes,sha256\n');
+fprintf(fid, 'data/sample.txt,%d,%s\n', size_bytes, digest);
+fprintf(fid, 'data/sample.txt,%d,%s\n', size_bytes, digest);
+clear cleanup;
 end
 
 function write_manifest(file_path, size_bytes, digest)

@@ -25,6 +25,7 @@ hash_column = required_column(headers, 'sha256');
 
 entry_count = 0;
 total_bytes = 0;
+seen_paths = {};
 line_number = 1;
 line = fgetl(fid);
 while ischar(line)
@@ -44,6 +45,11 @@ while ischar(line)
     expected_size = str2double(strtrim(fields{size_column}));
     expected_hash = lower(strtrim(fields{hash_column}));
     validate_relative_path(relative_path, line_number);
+    if any(strcmp(seen_paths, relative_path))
+        error('a100:DuplicateManifestPath', ...
+            'Manifest line %d repeats path "%s".', line_number, relative_path);
+    end
+    seen_paths{end + 1} = relative_path; %#ok<AGROW>
     if ~isfinite(expected_size) || expected_size < 0 || expected_size ~= floor(expected_size)
         error('a100:InvalidManifestSize', ...
             'Manifest line %d has invalid size "%s".', line_number, fields{size_column});

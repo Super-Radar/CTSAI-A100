@@ -42,7 +42,7 @@ end
 capacity = 4096;
 frame_nb = nan(capacity, 1);
 frame_sequence = nan(capacity, 1);
-time_of_day_s = nan(capacity, 1);
+timestamp_ms = nan(capacity, 1);
 obj_id = nan(capacity, 1);
 range_m = nan(capacity, 1);
 speed_mps = nan(capacity, 1);
@@ -59,26 +59,30 @@ count = 0;
 ignored_lines = 0;
 current_frame = NaN;
 current_frame_sequence = -1;
-current_time_s = NaN;
+current_timestamp_ms = NaN;
+total_frame_count = 0;
 line = fgetl(fid);
 while ischar(line)
     start_token = regexp(line, '^START,FrameNb:([0-9]+)', 'tokens', 'once');
     if ~isempty(start_token)
         current_frame = str2double(start_token{1});
         current_frame_sequence = current_frame_sequence + 1;
-        current_time_s = NaN;
+        current_timestamp_ms = NaN;
+        total_frame_count = total_frame_count + 1;
         line = fgetl(fid);
         continue;
     end
 
     timestamp_token = regexp(line, ...
-        '^[0-9]{4}/[0-9]{2}/[0-9]{2} ([0-9]{2}):([0-9]{2}):([0-9]{2}):([0-9]{3})', ...
+        '^([0-9]{4})/([0-9]{2})/([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}):([0-9]{3})', ...
         'tokens', 'once');
     if ~isempty(timestamp_token)
-        current_time_s = str2double(timestamp_token{1}) * 3600 + ...
-                         str2double(timestamp_token{2}) * 60 + ...
-                         str2double(timestamp_token{3}) + ...
-                         str2double(timestamp_token{4}) / 1000;
+        timestamp_values = cellfun(@str2double, timestamp_token);
+        day_index = round(datenum(timestamp_values(1), timestamp_values(2), ...
+            timestamp_values(3)) - datenum(1970, 1, 1));
+        current_timestamp_ms = (((day_index * 24 + timestamp_values(4)) * 60 + ...
+            timestamp_values(5)) * 60 + timestamp_values(6)) * 1000 + ...
+            timestamp_values(7);
         line = fgetl(fid);
         continue;
     end
@@ -109,7 +113,7 @@ while ischar(line)
         capacity = capacity * 2;
         frame_nb(old_capacity + 1:capacity, 1) = NaN;
         frame_sequence(old_capacity + 1:capacity, 1) = NaN;
-        time_of_day_s(old_capacity + 1:capacity, 1) = NaN;
+        timestamp_ms(old_capacity + 1:capacity, 1) = NaN;
         obj_id(old_capacity + 1:capacity, 1) = NaN;
         range_m(old_capacity + 1:capacity, 1) = NaN;
         speed_mps(old_capacity + 1:capacity, 1) = NaN;
@@ -125,7 +129,7 @@ while ischar(line)
 
     frame_nb(count) = current_frame;
     frame_sequence(count) = current_frame_sequence;
-    time_of_day_s(count) = current_time_s;
+    timestamp_ms(count) = current_timestamp_ms;
     obj_id(count) = key_values(1);
     range_m(count) = key_values(2);
     speed_mps(count) = key_values(3);
@@ -142,24 +146,29 @@ while ischar(line)
 end
 clear cleanup;
 
-fields_to_trim = {'frame_nb', 'frame_sequence', 'time_of_day_s', 'obj_id', ...
+fields_to_trim = {'frame_nb', 'frame_sequence', 'timestamp_ms', 'obj_id', ...
                   'range_m', 'speed_mps', 'angle_deg', 'snr_db', 'x_m', 'y_m', ...
                   'estimated_speed_mps', 'rcs_dbsm', 'reliability', ...
                   'obstacle_probability'};
-values = {frame_nb, frame_sequence, time_of_day_s, obj_id, range_m, speed_mps, ...
+values = {frame_nb, frame_sequence, timestamp_ms, obj_id, range_m, speed_mps, ...
           angle_deg, snr_db, x_m, y_m, estimated_speed_mps, rcs_dbsm, ...
           reliability, obstacle_probability};
 targets = struct();
 for idx = 1:numel(fields_to_trim)
     targets.(fields_to_trim{idx}) = values{idx}(1:count);
 end
-targets.elapsed_s = elapsed_seconds(targets.time_of_day_s, targets.frame_sequence);
+% 毫秒整数先做差，避免大绝对时间戳相减造成亚秒精度损失。
+targets.timestamp_s = targets.timestamp_ms / 1000;
+targets.time_of_day_s = mod(targets.timestamp_ms, 86400000) / 1000;
+targets.elapsed_s = elapsed_seconds(targets.timestamp_ms);
 targets.polar_x_m = -targets.range_m .* sin(targets.angle_deg * pi / 180);
 targets.polar_y_m = targets.range_m .* cos(targets.angle_deg * pi / 180);
 targets.meta = struct('file', file_path, ...
                       'record_count', count, ...
                       'ignored_line_count', ignored_lines, ...
-                      'frame_count', numel(unique(targets.frame_sequence)), ...
+                      'frame_count', total_frame_count, ...
+                      'target_frame_count', ...
+                          numel(unique(targets.frame_sequence)), ...
                       'headers', {headers});
 end
 
@@ -183,17 +192,12 @@ else
 end
 end
 
-function elapsed = elapsed_seconds(time_of_day_s, frame_sequence)
-elapsed = nan(size(time_of_day_s));
-valid = isfinite(time_of_day_s);
+function elapsed = elapsed_seconds(timestamp_ms)
+elapsed = nan(size(timestamp_ms));
+valid = isfinite(timestamp_ms);
 if any(valid)
-    start_time = min(time_of_day_s(valid));
-    elapsed(valid) = time_of_day_s(valid) - start_time;
-    missing = ~valid;
-    if any(missing)
-        elapsed(missing) = frame_sequence(missing) - min(frame_sequence);
-    end
-else
-    elapsed = frame_sequence - min(frame_sequence);
+    valid_indices = find(valid);
+    start_time_ms = timestamp_ms(valid_indices(1));
+    elapsed(valid) = (timestamp_ms(valid) - start_time_ms) / 1000;
 end
 end
