@@ -39,7 +39,7 @@ ADC 采集界面中通常包含以下配置项：
 
 不同波形对应的 ADC 数据需要使用对应配置文件进行后续解析。
 
-###  ADC 数据保存目录
+### ADC 数据保存目录
 
 ADC 数据采集完成后，数据文件默认保存至：
 
@@ -47,16 +47,23 @@ ADC 数据采集完成后，数据文件默认保存至：
 RadarTools/RadarTools_Release/adcData/
 ```
 
-采集完成后，请确认该目录下已生成对应数据文件。
+采集完成后，请确认该目录下已生成对应数据文件。RadarTools 版本不同，
+输出可能采用会话子目录或旧版平铺目录。
 
-示例目录结构：
+当前仓库同时包含以下两种格式：
 
 ```text
 RadarTools/RadarTools_Release/adcData/
-├── adc_rx0.txt
-├── adc_rx1.txt
-├── adc_rx2.txt
-└── adc_rx3.txt
+├── adc_test_20260707154459626/
+│   ├── run_001_Pf0_Rx0.txt
+│   ├── run_001_Pf0_Rx1.txt
+│   ├── run_001_Pf0_Rx2.txt
+│   └── run_001_Pf0_Rx3.txt
+├── adc_test_20260522110324_Pf0_Rx0.txt
+├── adc_test_20260522110332_Pf0_Rx1.txt
+├── adc_test_20260522110341_Pf0_Rx2.txt
+└── adc_test_20260522110350_Pf0_Rx3.txt
 ```
 
-实际文件名以采集工具生成结果为准。
+文件名中的 `Pf0` 表示采集时使用的波形配置（profile），`Rx0`～`Rx3` 表示接收通道。
+后续分析时，应选择同一会话、同一波形配置的文件，并保留实际文件名。

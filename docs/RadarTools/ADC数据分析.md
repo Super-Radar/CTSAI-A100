@@ -66,30 +66,37 @@ RadarTools/RadarTools_Release/adcData/
 ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/
 ```
 
-若数据包含多个接收通道，请确保所有通道文件均已拷贝完整。
+若数据位于会话子目录中，可以复制整个会话目录，也可以将所需文件直接复制到
+示例工程的 `data/` 目录。多通道分析应选择同一会话、同一波形配置（profile）的
+`Rx0`～`Rx3` 文件。
 
 ### 配置数据路径和文件名
 
 在 `ct_signal_processing_main_simple_CTASIA100.m` 中配置 ADC 数据所在目录：
 
 ```matlab
-cell_data_file_path = {
-    '.\data\'
-};
+cell_data_file_path = '.\data';
 ```
 
-配置接收通道对应的数据文件名：
+配置接收通道对应的数据文件名。以下示例使用仓库现有的旧版平铺文件：
 
 ```matlab
 cell_data_file_name_list = {
-    'adc_rx0.txt'
-    'adc_rx1.txt'
-    'adc_rx2.txt'
-    'adc_rx3.txt'
+    [cell_data_file_path, '\', 'adc_test_20260522110324_Pf0_Rx0.txt'];
+    [cell_data_file_path, '\', 'adc_test_20260522110332_Pf0_Rx1.txt'];
+    [cell_data_file_path, '\', 'adc_test_20260522110341_Pf0_Rx2.txt'];
+    [cell_data_file_path, '\', 'adc_test_20260522110350_Pf0_Rx3.txt'];
 };
 ```
 
-文件名需与 `data/` 目录中的实际文件保持一致。
+如果保留会话子目录，应在文件名中包含该目录。例如：
+
+```matlab
+fullfile(cell_data_file_path, 'adc_test_20260707154459626', ...
+    'run_001_Pf0_Rx0.txt')
+```
+
+文件名、波形配置和接收通道必须与本次采集文件保持一致。
 
 ### 运行 Matlab 处理脚本
 
