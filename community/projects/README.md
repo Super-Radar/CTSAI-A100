@@ -9,7 +9,8 @@ community/projects/
 ├── a100-indoor-cart-mti/
 ├── a100-matlab-adc-signal-processing/
 ├── a100-perimeter-vehicle-radar-analysis/
-└── a100-indoor-outdoor-radar-analysis/
+├── a100-indoor-outdoor-radar-analysis/
+└── a100-matlab-adc-pipeline-validation/
 ```
 ## 项目列表
 
@@ -22,6 +23,7 @@ community/projects/
 | [MATLAB ADC 信号处理](a100-matlab-adc-signal-processing/) | 雷达信号处理、FFT、CFAR、角度估计 | ADC | MATLAB | [@DwHz](https://github.com/DwHz) |
 | [车辆周界感知实测与 LFMCW 仿真](a100-perimeter-vehicle-radar-analysis/) | 车辆周界感知、Range-Doppler、MTI、LFMCW | ADC | MATLAB R2024b | [@DwHz](https://github.com/DwHz) |
 | [室内 / 室外场景实测与 LFMCW 仿真](a100-indoor-outdoor-radar-analysis/) | 室内外场景分析、Range-Doppler、MTI、LFMCW | ADC | MATLAB 2024b | HuangTao |
+| [MATLAB ADC Pipeline with Independent Validation](a100-matlab-adc-pipeline-validation/) | ADC 转换、Range FFT、Doppler FFT、CA-CFAR 与独立校验 | ADC | MATLAB R2020b+ / Python NumPy | [@btlqql](https://github.com/btlqql) |
 
 
 随着项目被正式合并，我们会持续更新本页面。
