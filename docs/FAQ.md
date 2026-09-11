@@ -19,7 +19,7 @@ content_type: 1
 * 上位机参数配置是否正确。
 * 雷达是否处于正常工作状态。
 
-###  设备管理器看不到 USB-CAN FD 设备？
+### 设备管理器看不到 USB-CAN FD 设备？
 
 请检查：
 
@@ -233,7 +233,7 @@ USB-CAN FD 端子可能还包含其他引脚，不要把中间端子直接当作
 * 远波 / 近波配置文件是否选择正确。
 * Matlab 当前工作路径是否在示例工程目录下。
 
-###  Python 脚本运行时报缺少依赖？
+### Python 脚本运行时报缺少依赖？
 
 请执行：
 
@@ -243,7 +243,7 @@ python -m pip install pandas matplotlib numpy
 
 若仍然报错，请确认当前终端使用的 Python 环境与安装依赖的 Python 环境一致。
 
-###  Python 可视化没有显示结果？
+### Python 可视化没有显示结果？
 
 请检查：
 
