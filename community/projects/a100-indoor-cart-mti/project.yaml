@@ -13,7 +13,9 @@ data_types:
   - "TraTarget track CSV"
   - "CAN ASC"
 development_environment:
-  - "MATLAB"
+  - "GNU Octave 11.3.0"
+  - "Octave signal 1.4.7"
+  - "MATLAB (compatible)"
   - "Windows"
 algorithms:
   - "LFMCW simulation"
