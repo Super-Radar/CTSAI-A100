@@ -68,6 +68,8 @@ ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/
 
 若数据包含多个接收通道，请确保所有通道文件均已拷贝完整。
 
+若采集结果位于 `adc_test_<timestamp>/` 会话子目录，请从对应会话中选取目标 `run_001_Pf0_Rx*.txt`（`Pf0` 为波形/profile，`Rx*` 为接收通道），再拷贝到 `data/`。可将文件重命名为脚本配置的 `adc_rx0.txt`–`adc_rx3.txt`，或直接修改下方 `cell_data_file_name_list` 与真实文件名一致。
+
 ### 配置数据路径和文件名
 
 在 `ct_signal_processing_main_simple_CTASIA100.m` 中配置 ADC 数据所在目录：
