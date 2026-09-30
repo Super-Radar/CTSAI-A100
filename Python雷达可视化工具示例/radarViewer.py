@@ -12,10 +12,12 @@ from collections import deque, defaultdict
 # 第三方库依赖处理
 try:
     from sklearn.cluster import DBSCAN
+except ImportError:
+    DBSCAN = None
+
+try:
     from scipy.optimize import linear_sum_assignment
 except ImportError:
-    messagebox.showwarning("依赖缺失", "请安装依赖：pip install scikit-learn scipy")
-    DBSCAN = None
     linear_sum_assignment = None
 
 plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -39,7 +41,8 @@ class RadarParser:
                 self.header_line = line.split(',')
                 break
         if self.header_line is None:
-            raise ValueError("未找到有效数据表头，文件格式不支持")
+            self._load_tabular_file()
+            return
 
         current_frame = None
         current_timestamp = None
@@ -78,22 +81,32 @@ class RadarParser:
                     }
 
         if not self.frame_index:
-            df = pd.read_csv(self.file_path, on_bad_lines='skip')
-            if 'FrameNb' not in df.columns:
-                df['FrameNb'] = 0
-            if 'Timestamp' not in df.columns:
-                df['Timestamp'] = datetime.now()
-            for fnb in df['FrameNb'].unique():
-                self.frame_index[fnb] = {
-                    'ts': df[df['FrameNb']==fnb]['Timestamp'].iloc[0],
-                    'count': len(df[df['FrameNb']==fnb])
-                }
-            self.df_all = df
+            self._load_tabular_file()
+
+    def _load_tabular_file(self):
+        """加载没有 START/END 元数据行的普通矩形 CSV。"""
+        df = pd.read_csv(self.file_path, on_bad_lines='skip')
+        required_columns = {'ObjId', 'range'}
+        missing_columns = required_columns.difference(df.columns)
+        if missing_columns:
+            missing = ', '.join(sorted(missing_columns))
+            raise ValueError(f"缺少必要数据列：{missing}")
+        if 'FrameNb' not in df.columns:
+            df['FrameNb'] = 0
+        if 'Timestamp' not in df.columns:
+            df['Timestamp'] = datetime.now()
+        for fnb in df['FrameNb'].unique():
+            frame = df[df['FrameNb'] == fnb]
+            self.frame_index[fnb] = {
+                'ts': frame['Timestamp'].iloc[0],
+                'count': len(frame)
+            }
+        self.df_all = df
 
     def get_frame(self, fnb):
         if fnb not in self.frame_index:
             return pd.DataFrame()
-        
+
         if hasattr(self, 'df_all'):
             df = self.df_all[self.df_all['FrameNb'] == fnb].copy()
         else:
@@ -114,11 +127,15 @@ class RadarParser:
             df['FrameNb'] = fnb
             df['Timestamp'] = info['ts']
 
-        numeric_cols = ['ObjId', 'range', 'speed', 'angle', 'RCS', 'snr', 'X', 'Y']
+        # 身份转换失败的行必须先移除，不能和普通数值缺失值一样填成 0。
+        if 'ObjId' in df.columns:
+            df['ObjId'] = pd.to_numeric(df['ObjId'], errors='coerce')
+            df = df.dropna(subset=['ObjId']).reset_index(drop=True)
+
+        numeric_cols = ['range', 'speed', 'angle', 'RCS', 'snr', 'X', 'Y']
         for col in numeric_cols:
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
-        df = df.dropna(subset=['ObjId']).reset_index(drop=True)
         df = df[df['range'] >= 0].reset_index(drop=True)
 
         if 'angle' in df.columns and 'range' in df.columns:
@@ -149,7 +166,7 @@ class RadarFilter:
     def apply(self, df):
         if not self.enable_filter.get() or df.empty:
             return df.copy()
-        
+
         filtered = df.copy()
         # 距离筛选
         filtered = filtered[(filtered['range'] >= self.min_range.get()) & (filtered['range'] <= self.max_range.get())]
@@ -165,13 +182,13 @@ class RadarFilter:
         # 静态目标筛选
         if self.filter_static.get() and 'speed' in filtered.columns:
             filtered = filtered[abs(filtered['speed']) >= self.static_speed_thresh.get()]
-        
+
         return filtered.reset_index(drop=True)
 
 # ---------------------- 3. 卡尔曼目标跟踪器 ----------------------
 class KalmanTracker:
     def __init__(self):
-        self.enable_tracking = BooleanVar(value=True)
+        self.enable_tracking = BooleanVar(value=linear_sum_assignment is not None)
         self.match_thresh = DoubleVar(value=5.0)  # 匹配距离阈值
         self.max_lost_frames = IntVar(value=3)    # 最大丢失帧数
         self.next_id = 0
@@ -208,10 +225,10 @@ class KalmanTracker:
         return track
 
     def track(self, df):
-        if not self.enable_tracking.get() or df.empty:
+        if not self.enable_tracking.get() or df.empty or linear_sum_assignment is None:
             df['track_id'] = df['ObjId'] if 'ObjId' in df.columns else range(len(df))
             return df
-        
+
         current_points = df[['X', 'Y']].values
         current_ids = []
 
@@ -270,7 +287,7 @@ class KalmanTracker:
         # 4. 给当前帧数据添加跟踪ID
         df['track_id'] = current_ids
         return df
-    
+
     def reset(self):
         """重置跟踪器状态"""
         self.next_id = 0
@@ -282,7 +299,7 @@ class RadarCluster:
         self.enable_clustering = BooleanVar(value=False)
         self.eps = DoubleVar(value=2.0)  # 聚类半径
         self.min_samples = IntVar(value=2)  # 最小样本数
-        self.cluster_colors = plt.cm.get_cmap('tab10', 20)  # 聚类颜色映射
+        self.cluster_colors = plt.get_cmap('tab10', 20)  # 聚类颜色映射
 
     def cluster(self, df):
         if not self.enable_clustering.get() or df.empty or DBSCAN is None:
@@ -291,7 +308,7 @@ class RadarCluster:
             df['cluster_center_y'] = df['Y']
             df['cluster_size'] = 1
             return df
-        
+
         points = df[['X', 'Y']].values
         # DBSCAN聚类
         db = DBSCAN(eps=self.eps.get(), min_samples=self.min_samples.get()).fit(points)
@@ -314,9 +331,15 @@ class RadarCluster:
 
         # 给数据添加聚类信息
         df['cluster_id'] = labels
-        df['cluster_center_x'] = df['cluster_id'].map(lambda x: cluster_info.get(x, {}).get('center_x', df['X']))
-        df['cluster_center_y'] = df['cluster_id'].map(lambda x: cluster_info.get(x, {}).get('center_y', df['Y']))
-        df['cluster_size'] = df['cluster_id'].map(lambda x: cluster_info.get(x, {}).get('size', 1))
+        # 噪点没有聚类中心，回退到该行自身坐标，确保每个单元格都是标量。
+        df['cluster_center_x'] = df['X']
+        df['cluster_center_y'] = df['Y']
+        df['cluster_size'] = 1
+        for label, info in cluster_info.items():
+            cluster_mask = df['cluster_id'] == label
+            df.loc[cluster_mask, 'cluster_center_x'] = info['center_x']
+            df.loc[cluster_mask, 'cluster_center_y'] = info['center_y']
+            df.loc[cluster_mask, 'cluster_size'] = info['size']
 
         return df
 
@@ -332,7 +355,7 @@ class TrajectoryManager:
     def draw(self, ax):
         if not self.enable_trajectory.get() or not self.tracker.enable_tracking.get():
             return
-        
+
         for track_id, track in self.tracker.tracked_targets.items():
             if len(track['history']) < 2:
                 continue
@@ -346,7 +369,7 @@ class TrajectoryManager:
             # 绘制轨迹点
             if self.show_points.get():
                 ax.scatter(x, y, s=10, alpha=0.5)
-    
+
     def reset(self):
         """清空所有轨迹"""
         for track in self.tracker.tracked_targets.values():
@@ -399,15 +422,15 @@ class RadarPlayer(tk.Tk):
             # 重置跟踪器和轨迹
             self.tracker.reset()
             self.trajectory.reset()
-            
+
             self.parser = RadarParser(path)
             self.fns = sorted(self.parser.frame_index.keys())
             self.current = self.fns[0] if self.fns else 0
-            
+
             # 更新界面显示当前文件路径
             file_name = os.path.basename(path)
             self.file_path_var.set(f"当前文件：{file_name}")
-            
+
             # 重建绘图（会先清旧colorbar）
             self.init_plot()
             self.update_frame()
@@ -507,16 +530,16 @@ class RadarPlayer(tk.Tk):
         table_panel = ttk.Frame(right_paned, padding=5)
         right_paned.add(table_panel, weight=1)
         ttk.Label(table_panel, text="当前帧目标数据", font=("微软雅黑", 12, "bold")).pack(side=tk.TOP, pady=5)
-        
+
         # 表格容器（带滚动条，自适应大小）
         table_container = ttk.Frame(table_panel)
         table_container.pack(fill=tk.BOTH, expand=True)
-        
+
         self.tree = ttk.Treeview(table_container, show='headings', height=15)  # 减少默认高度
         tree_vscroll = ttk.Scrollbar(table_container, orient=tk.VERTICAL, command=self.tree.yview)
         tree_hscroll = ttk.Scrollbar(table_container, orient=tk.HORIZONTAL, command=self.tree.xview)
         self.tree.configure(yscrollcommand=tree_vscroll.set, xscrollcommand=tree_hscroll.set)
-        
+
         # 表格布局：滚动条自适应
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         tree_vscroll.pack(side=tk.RIGHT, fill=tk.Y)
@@ -526,7 +549,7 @@ class RadarPlayer(tk.Tk):
         plot_panel = ttk.Frame(right_paned, padding=5)
         right_paned.add(plot_panel, weight=2)  # 绘图区占比更高
         ttk.Label(plot_panel, text="雷达目标XY分布", font=("微软雅黑", 12, "bold")).pack(side=tk.TOP, pady=5)
-        
+
         # 绘图容器（自适应大小）
         plot_container = ttk.Frame(plot_panel)
         plot_container.pack(fill=tk.BOTH, expand=True)
@@ -600,15 +623,19 @@ class RadarPlayer(tk.Tk):
         self.update_frame()
 
     def _setup_track_tab(self, parent):
+        if linear_sum_assignment is None:
+            ttk.Label(parent, text="请安装依赖：pip install scipy", foreground="red").pack(pady=10)
+            return
+
         ttk.Checkbutton(parent, text="启用卡尔曼跟踪", variable=self.tracker.enable_tracking).pack(anchor=tk.W, pady=(0, 8))
-        
+
         param_frame = ttk.LabelFrame(parent, text="跟踪参数", padding=8)
         param_frame.pack(fill=tk.X, pady=5)
-        
+
         ttk.Label(param_frame, text="匹配距离阈值:").grid(row=0, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.tracker.match_thresh, width=10).grid(row=0, column=1, padx=3, pady=3)
         ttk.Label(param_frame, text="m").grid(row=0, column=2, padx=3, pady=3)
-        
+
         ttk.Label(param_frame, text="最大丢失帧数:").grid(row=1, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.tracker.max_lost_frames, width=10).grid(row=1, column=1, padx=3, pady=3)
         ttk.Label(param_frame, text="帧").grid(row=1, column=2, padx=3, pady=3)
@@ -623,16 +650,16 @@ class RadarPlayer(tk.Tk):
         if DBSCAN is None:
             ttk.Label(parent, text="请安装依赖：pip install scikit-learn", foreground="red").pack(pady=10)
             return
-        
+
         ttk.Checkbutton(parent, text="启用DBSCAN聚类", variable=self.cluster.enable_clustering).pack(anchor=tk.W, pady=(0, 8))
-        
+
         param_frame = ttk.LabelFrame(parent, text="聚类参数", padding=8)
         param_frame.pack(fill=tk.X, pady=5)
-        
+
         ttk.Label(param_frame, text="聚类半径:").grid(row=0, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.cluster.eps, width=10).grid(row=0, column=1, padx=3, pady=3)
         ttk.Label(param_frame, text="m").grid(row=0, column=2, padx=3, pady=3)
-        
+
         ttk.Label(param_frame, text="最小样本数:").grid(row=1, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.cluster.min_samples, width=10).grid(row=1, column=1, padx=3, pady=3)
 
@@ -640,16 +667,16 @@ class RadarPlayer(tk.Tk):
 
     def _setup_traj_tab(self, parent):
         ttk.Checkbutton(parent, text="启用轨迹绘制", variable=self.trajectory.enable_trajectory).pack(anchor=tk.W, pady=(0, 8))
-        
+
         param_frame = ttk.LabelFrame(parent, text="轨迹参数", padding=8)
         param_frame.pack(fill=tk.X, pady=5)
-        
+
         ttk.Label(param_frame, text="最大历史帧数:").grid(row=0, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.trajectory.max_history, width=10).grid(row=0, column=1, padx=3, pady=3)
-        
+
         ttk.Label(param_frame, text="轨迹线宽:").grid(row=1, column=0, padx=3, pady=3, sticky=tk.W)
         ttk.Entry(param_frame, textvariable=self.trajectory.line_width, width=10).grid(row=1, column=1, padx=3, pady=3)
-        
+
         ttk.Checkbutton(param_frame, text="显示轨迹点", variable=self.trajectory.show_points).grid(row=2, column=0, columnspan=2, pady=3, sticky=tk.W)
 
         ttk.Button(parent, text="清空轨迹", command=self._reset_trajectory).pack(fill=tk.X, pady=10)
@@ -693,7 +720,7 @@ class RadarPlayer(tk.Tk):
     def update_frame(self):
         if not self.parser or not self.fns:
             return
-            
+
         # 1. 获取原始帧数据
         df_raw = self.parser.get_frame(self.current)
         info = self.parser.frame_index[self.current]
@@ -807,13 +834,19 @@ class RadarPlayer(tk.Tk):
     def toggle(self):
         if not self.fns:
             return
-        self.playing = not self.playing
         if self.playing:
-            self.loop()
+            self.playing = False
+            if self.timer is not None:
+                self.after_cancel(self.timer)
+                self.timer = None
+            return
+        self.playing = True
+        self.loop()
 
     def loop(self):
         if not self.playing or not self.fns:
             return
+        self.timer = None
         idx = self.fns.index(self.current)
         if idx + 1 >= len(self.fns):
             self.playing = False
