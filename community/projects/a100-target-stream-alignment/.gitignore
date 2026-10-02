@@ -1,0 +1,6 @@
+# Caches and local artefacts — everything under results/ is regenerable via cli.py
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.DS_Store
