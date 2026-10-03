@@ -1,0 +1,7 @@
+# caches and local artifacts only; results/ and figures/ are deliverables
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mpl_cache/
+*.tmp
+.DS_Store
