@@ -1,0 +1,5 @@
+dataset,dropped_rx,n_peaks,jaccard,jitter_rng_bin,jitter_vel_bin,diff_max_db,diff_min_db,top1_delta_db,top2_delta_db,top3_delta_db,top4_delta_db,top5_delta_db
+far,0,25,0.9231,0,0,16.34,-1.25,-1.2,-1.18,-1.16,-0.71,-1.2
+far,1,26,0.9615,0,0,14.46,-1.25,0.64,0.99,0.54,1.28,0.64
+far,2,27,0.9259,0,0,13.51,-1.25,0.23,1.09,1.02,-0.37,0.23
+far,3,28,0.8929,0,192,17.58,-1.25,0.6,-0.47,-0.08,0.05,0.6

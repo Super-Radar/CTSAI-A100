@@ -1,0 +1,24 @@
+name: "四接收通道非相干积累的通道消融研究（a100-rx-ablation）"
+version: "1.0.0"
+product: "CTASI-A100"
+author: "chennaji9"
+scene:
+  - "官方示例数据离线复分析（远波 f0 / 近波 f1）"
+  - "近距强反射体 + 无人机目标 + DDMA 镜像"
+data_types:
+  - "ADC（仓库内置官方示例，不复制）"
+development_environment:
+  - "Python"
+  - "WSL2 / Ubuntu 24.04"
+algorithms:
+  - "官方 .hxx 解析与派生参数复刻"
+  - "uint32 高/低 16 位交错解包"
+  - "Range/Doppler 2D-FFT（hann + 官方 FFT scalar）"
+  - "4 通道功率平均非相干积累（官方定义）"
+  - "C(4,k) 子集扫描 / 留一消融 / 峰稳定性指标（抖动、Jaccard）"
+  - "通道能量占比与逐 bin 功率相关分析"
+dependencies:
+  - "numpy"
+  - "scipy"
+  - "matplotlib"
+  - "pytest"
