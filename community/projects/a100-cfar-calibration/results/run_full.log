@@ -1,0 +1,44 @@
+project dir : /home/cnj/openSource/wt-cfar-calibration/community/projects/a100-cfar-calibration
+python      : 3.12.3, numpy 2.5.3
+seed=20260929 trials=200 full-trials=80 N_train=332 (training=(8,6), guard=(2,2))
+[grid] collecting K x rho Monte-Carlo samples (64c1021s1024/64-hann, 200 trials each) ...
+  K=1 rho=0: 6.3e+06 cells (1.4s elapsed)
+  K=2 rho=0: 6.3e+06 cells (3.7s elapsed)
+  K=2 rho=0.3: 6.3e+06 cells (6.0s elapsed)
+  K=2 rho=0.7: 6.3e+06 cells (8.3s elapsed)
+  K=2 rho=1: 6.3e+06 cells (10.8s elapsed)
+  K=3 rho=0: 6.3e+06 cells (13.2s elapsed)
+  K=3 rho=0.3: 6.3e+06 cells (16.3s elapsed)
+  K=3 rho=0.7: 6.3e+06 cells (19.2s elapsed)
+  K=3 rho=1: 6.3e+06 cells (21.8s elapsed)
+  K=4 rho=0: 6.3e+06 cells (24.7s elapsed)
+  K=4 rho=0.3: 6.3e+06 cells (28.4s elapsed)
+  K=4 rho=0.7: 6.3e+06 cells (31.6s elapsed)
+  K=4 rho=1: 6.3e+06 cells (34.7s elapsed)
+[exp1] implementation self-check ...
+  wrote exp1_selfcheck.csv (6 rows)
+[exp2] channel-count effect ...
+  wrote exp2_k_effect.csv (12 rows)
+[exp3] inter-channel correlation effect ...
+  wrote exp3_rho_effect.csv (12 rows)
+[exp4] dB-domain misuse ...
+  wrote exp4_db_domain.csv (24 rows)
+  wrote exp4_k_required.csv (12 rows)
+[exp5] alpha calibration table ...
+  wrote exp5_alpha_calibration.csv (39 rows)
+[exp6] full-size confirmation (256c1021s1024/256-hann, 80 trials) ...
+  wrote exp6_fullsize_check.csv (12 rows)
+[exp7] real-data spectral comparison (optional) ...
+  wrote exp7_real_data_inventory.csv (5 rows)
+
+=== key numbers ===
+[exp1] {'hann_pfa0.01_factor': 1.081983612804878, 'hann_pfa0.01_within_ci': False, 'hann_pfa0.01_factor_full': 0.6690485264227641, 'hann_pfa0.001_factor': 1.191723831300813, 'hann_pfa0.001_within_ci': False, 'hann_pfa0.001_factor_full': 0.9065358231707318, 'hann_pfa0.0001_factor': 1.4354674796747968, 'hann_pfa0.0001_within_ci': False, 'hann_pfa0.0001_factor_full': 1.2211001016260161, 'rect_pfa0.01_factor': 0.9994918699186991, 'rect_pfa0.01_within_ci': True, 'rect_pfa0.01_factor_full': 0.958762068089431, 'rect_pfa0.001_factor': 0.9894245426829268, 'rect_pfa0.001_within_ci': True, 'rect_pfa0.001_factor_full': 0.9846608231707317, 'rect_pfa0.0001_factor': 0.9670350609756098, 'rect_pfa0.0001_within_ci': True, 'rect_pfa0.0001_factor_full': 0.9670350609756098}
+[exp2] {'K1_pfa1e-4_factor': 1.4354674796747968, 'K1_pfa1e-4_factor_full': 1.2211001016260161, 'K2_pfa1e-4_factor': 0.0, 'K2_pfa1e-4_factor_full': 0.0, 'K3_pfa1e-4_factor': 0.0, 'K3_pfa1e-4_factor_full': 0.0, 'K4_pfa1e-4_factor': 0.0, 'K4_pfa1e-4_factor_full': 0.0}
+[exp3] {'rho1_vs_k1_max_log10_deviation': 0.013290760512467248, 'rho1_vs_k1_alphas_compared': 47}
+[exp4] {'db_k_required_1e-4_K1': 2.2763473987579346, 'db_k_required_1e-4_K2': 2.6417860984802246, 'db_k_required_1e-4_K3': 2.8132824897766113, 'db_k_required_1e-4_K4': 2.942505359649658}
+[exp5] {'alpha_cal_K4_rho0_1e-4': 4.046714782714844, 'snr_overdesign_db_K4_rho0_1e-4': np.float64(-3.632111071479231), 'alpha_cal_K4_rho0.3_1e-4': 5.095614910125732, 'snr_overdesign_db_K4_rho0.3_1e-4': np.float64(-2.6311710330655877), 'alpha_cal_K4_rho0.7_1e-4': 7.614420413970947, 'snr_overdesign_db_K4_rho0.7_1e-4': np.float64(-0.8867685124179268), 'alpha_cal_K2_rho0_1e-4': 6.0805768966674805, 'snr_overdesign_db_K2_rho0_1e-4': np.float64(-1.863689179703869), 'alpha_cal_K3_rho0_1e-4': 4.710190773010254, 'snr_overdesign_db_K3_rho0_1e-4': np.float64(-2.972752056651414)}
+[exp6] {'fullsize_K1_pfa_at_reduced_alpha': 9.487741361788618e-05, 'fullsize_K1_within_ci': True, 'fullsize_K1_alpha_ratio': 0.9944631599031254, 'fullsize_K4_pfa_at_reduced_alpha': 9.716002921747967e-05, 'fullsize_K4_within_ci': True, 'fullsize_K4_alpha_ratio': 0.9977994658858885}
+[exp7] {'real_detections_nominal': 3, 'real_detections_calibrated': 287, 'global_noise_real_db': 76.59987637331558, 'global_noise_synthetic_db': 43.76844770353254}
+
+wrote /home/cnj/openSource/wt-cfar-calibration/community/projects/a100-cfar-calibration/results/summary.json
+total wall time: 56.3s

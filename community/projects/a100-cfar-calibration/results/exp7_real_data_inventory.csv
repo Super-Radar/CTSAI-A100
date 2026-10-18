@@ -1,0 +1,6 @@
+file,sha256,values,note
+adc_远波_20260512135827_f0_0_13_58_36_748.txt,bba39d6f30c7c1530e85a2bf7b2509278fbcf03c4a025cb5978a3efdefdfb3a7,131073,"uint32 words, 2 int16 samples each"
+adc_远波_20260512135827_f0_1_13_58_45_367.txt,33d6b42ec6458934f0a2d66d547678e6604901b7fb26c7bfee44aba3a0d7448d,131073,"uint32 words, 2 int16 samples each"
+adc_远波_20260512135827_f0_2_13_58_53_977.txt,c58910a1705586758362c348f6cd347d44ea8ee7d54fe2771193bc23671c3a70,131073,"uint32 words, 2 int16 samples each"
+adc_远波_20260512135827_f0_3_13_59_02_596.txt,80ebc8a7f1735612b1f91292fefd083058acabc00980c1ed7a00739e5691226f,131073,"uint32 words, 2 int16 samples each"
+(map),,512x256,"detections nominal alpha=9.34: 3; calibrated alpha=4.05: 287; global noise 76.60 dB (real) / 43.77 dB (synthetic), counts on unlabelled data, not rates"
