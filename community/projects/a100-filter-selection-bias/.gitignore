@@ -1,0 +1,14 @@
+# caches / build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
