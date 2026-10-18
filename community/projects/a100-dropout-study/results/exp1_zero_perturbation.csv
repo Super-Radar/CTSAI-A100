@@ -1,0 +1,17 @@
+dataset,model,strategy,severity,passed,drift_range_bins,drift_doppler_bins,drift_max_bins,peak_power_error_db,total_energy_error_db,spectral_correlation,doppler_spurious_delta
+synthetic-init0,random_drop,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,random_drop,reject,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,zero_segment,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,zero_segment,reject,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,chirp_zero,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,chirp_zero,reject,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,tail_trunc,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+synthetic-init0,tail_trunc,reject,0,True,0.0,0.0,0.0,0.0,0.0,1.0,0
+real-far-init0,random_drop,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,random_drop,reject,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,zero_segment,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,zero_segment,reject,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,chirp_zero,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,chirp_zero,reject,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,tail_trunc,zerofill,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0
+real-far-init0,tail_trunc,reject,0,True,0.0,0.0,0.0,0.0,0.0,0.9999999999999999,0

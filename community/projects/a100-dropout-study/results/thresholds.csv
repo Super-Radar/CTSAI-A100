@@ -1,0 +1,25 @@
+dataset,model,strategy,max_pass_severity,power_1db_interp,drift_1bin_interp,n_rep,note
+synthetic-init0,random_drop,zerofill,0.1,0.10873763323479994,,20,
+synthetic-init0,random_drop,reject,,,,20,no tested severity passes
+synthetic-init0,zero_segment,zerofill,64.0,,,20,all tested severities pass
+synthetic-init0,zero_segment,reject,64.0,,,20,all tested severities pass
+synthetic-init0,chirp_zero,zerofill,16.0,28.426488499600644,,20,
+synthetic-init0,chirp_zero,reject,16.0,7.764659964218481,18.976097474873022,20,
+synthetic-init0,tail_trunc,zerofill,0.1,,,20,all tested severities pass
+synthetic-init0,tail_trunc,reject,0.1,,,20,all tested severities pass
+real-far-init0,random_drop,zerofill,0.1,0.10820675860053433,,20,
+real-far-init0,random_drop,reject,,,0.0008990557118496274,20,no tested severity passes
+real-far-init0,zero_segment,zerofill,64.0,,,20,all tested severities pass
+real-far-init0,zero_segment,reject,64.0,,,20,all tested severities pass
+real-far-init0,chirp_zero,zerofill,16.0,29.39087168567161,,20,
+real-far-init0,chirp_zero,reject,4.0,7.158802075475206,,20,
+real-far-init0,tail_trunc,zerofill,0.1,,,20,all tested severities pass
+real-far-init0,tail_trunc,reject,0.1,,,20,all tested severities pass
+real-near-init1,random_drop,zerofill,0.05,0.1052593833429224,,10,
+real-near-init1,random_drop,reject,,,,10,no tested severity passes
+real-near-init1,zero_segment,zerofill,64.0,,,10,all tested severities pass
+real-near-init1,zero_segment,reject,64.0,,,10,all tested severities pass
+real-near-init1,chirp_zero,zerofill,4.0,12.099718374456568,,10,
+real-near-init1,chirp_zero,reject,1.0,3.589426925709662,,10,
+real-near-init1,tail_trunc,zerofill,0.1,,,10,all tested severities pass
+real-near-init1,tail_trunc,reject,0.1,,,10,all tested severities pass
