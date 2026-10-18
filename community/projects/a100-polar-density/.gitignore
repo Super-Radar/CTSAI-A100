@@ -1,0 +1,9 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+
+# editor / OS noise
+.DS_Store
+*.swp
