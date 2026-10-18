@@ -1,0 +1,11 @@
+file,truth,zero_tail,click_asym,decision,confidence,rule
+adc_远波_20260512135827_f0_0_13_58_36_748.txt,远波 init0,1.0000,0.721,init0,high,dead-slot zero fingerprint
+adc_远波_20260512135827_f0_1_13_58_45_367.txt,远波 init0,1.0000,0.770,init0,high,dead-slot zero fingerprint
+adc_远波_20260512135827_f0_2_13_58_53_977.txt,远波 init0,1.0000,0.256,init0,high,dead-slot zero fingerprint
+adc_远波_20260512135827_f0_3_13_59_02_596.txt,远波 init0,1.0000,1.139,init0,high,dead-slot zero fingerprint
+adc_近波_20260512141857_f1_0_14_19_05_965.txt,近波 init1,0.0039,0.121,init1,high,no dead slots + click asymmetry low
+adc_近波_20260512141857_f1_1_14_19_14_570.txt,近波 init1,0.0010,0.071,init1,high,no dead slots + click asymmetry low
+adc_近波_20260512141857_f1_2_14_19_23_170.txt,近波 init1,0.0010,0.070,init1,high,no dead slots + click asymmetry low
+adc_近波_20260512141857_f1_3_14_19_31_788.txt,近波 init1,0.0049,0.116,init1,high,no dead slots + click asymmetry low
+"synthetic-empty-far (dead slots zero, noise only)",远波 init0,1.0000,0.825,init0,high,dead-slot zero fingerprint
+synthetic-pure-noise (no chirp structure),(无结构),0.0010,1.027,uncertain,-,"no dead slots, click asymmetry ~1 (no boundary structure?)"
