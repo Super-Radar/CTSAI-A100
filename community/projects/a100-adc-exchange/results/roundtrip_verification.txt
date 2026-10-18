@@ -1,0 +1,147 @@
+CTSAI-A100 ADC exchange - full roundtrip verification
+=====================================================
+generated (local time notation, UTC): 2026-09-29 04:56:53 UTC
+python : 3.12.3  numpy 2.5.3
+tool   : adc_exchange 1.0.0
+repo   : /home/cnj/openSource/wt-adc-exchange
+command: python community/projects/a100-adc-exchange/scripts/run_verification.py
+
+cycle per file: pack -> verify --txt (sha256 + byte-identical rebuild + re-ingest)
+
+[PASS] group A  adc_近波_20260512141857_f1_0_14_19_05_965.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init1 frames_shape=[128, 2048]
+      sha256=36db22359f0bc902022ec26a07a1a6cb2ed941f66f75729c42d01bf56c4d273c
+      pack ok: adc_近波_20260512141857_f1_0_14_19_05_965.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (36db22359f0bc902...)
+      | [PASS] byte-identical rebuild (1268333 bytes, 10146664 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_近波_20260512141857_f1_0_14_19_05_965.npz
+
+[PASS] group A  adc_近波_20260512141857_f1_1_14_19_14_570.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init1 frames_shape=[128, 2048]
+      sha256=4fb120427111cddaf220433bf85491a700633ca28e4b41d5ea20ee01707960ab
+      pack ok: adc_近波_20260512141857_f1_1_14_19_14_570.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (4fb120427111cdda...)
+      | [PASS] byte-identical rebuild (1294496 bytes, 10355968 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_近波_20260512141857_f1_1_14_19_14_570.npz
+
+[PASS] group A  adc_近波_20260512141857_f1_2_14_19_23_170.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init1 frames_shape=[128, 2048]
+      sha256=05f3a38d9297f35c7972d84d8f9e300b269457b3e6cd00e5f51d3172ac6c306e
+      pack ok: adc_近波_20260512141857_f1_2_14_19_23_170.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (05f3a38d9297f35c...)
+      | [PASS] byte-identical rebuild (1294254 bytes, 10354032 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_近波_20260512141857_f1_2_14_19_23_170.npz
+
+[PASS] group A  adc_近波_20260512141857_f1_3_14_19_31_788.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init1 frames_shape=[128, 2048]
+      sha256=134e89fb95ae8e2d7955163e888040ecf59fc3895c21841debc07fb51127e7bb
+      pack ok: adc_近波_20260512141857_f1_3_14_19_31_788.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (134e89fb95ae8e2d...)
+      | [PASS] byte-identical rebuild (1294726 bytes, 10357808 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_近波_20260512141857_f1_3_14_19_31_788.npz
+
+[PASS] group A  adc_远波_20260512135827_f0_0_13_58_36_748.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=bba39d6f30c7c1530e85a2bf7b2509278fbcf03c4a025cb5978a3efdefdfb3a7
+      pack ok: adc_远波_20260512135827_f0_0_13_58_36_748.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (bba39d6f30c7c153...)
+      | [PASS] byte-identical rebuild (1255826 bytes, 10046608 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_远波_20260512135827_f0_0_13_58_36_748.npz
+
+[PASS] group A  adc_远波_20260512135827_f0_1_13_58_45_367.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=33d6b42ec6458934f0a2d66d547678e6604901b7fb26c7bfee44aba3a0d7448d
+      pack ok: adc_远波_20260512135827_f0_1_13_58_45_367.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (33d6b42ec6458934...)
+      | [PASS] byte-identical rebuild (1286718 bytes, 10293744 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_远波_20260512135827_f0_1_13_58_45_367.npz
+
+[PASS] group A  adc_远波_20260512135827_f0_2_13_58_53_977.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=c58910a1705586758362c348f6cd347d44ea8ee7d54fe2771193bc23671c3a70
+      pack ok: adc_远波_20260512135827_f0_2_13_58_53_977.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (c58910a170558675...)
+      | [PASS] byte-identical rebuild (1283163 bytes, 10265304 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_远波_20260512135827_f0_2_13_58_53_977.npz
+
+[PASS] group A  adc_远波_20260512135827_f0_3_13_59_02_596.txt
+      variant=headerless header=[] trailing=[0] total_values=131073 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=80ebc8a7f1735612b1f91292fefd083058acabc00980c1ed7a00739e5691226f
+      pack ok: adc_远波_20260512135827_f0_3_13_59_02_596.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (80ebc8a7f1735612...)
+      | [PASS] byte-identical rebuild (1280814 bytes, 10246512 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_远波_20260512135827_f0_3_13_59_02_596.npz
+
+[PASS] group B  adc_test_20260527115033_Pf0_Rx0.txt
+      variant=triple_header header=[0, 1024, 256] trailing=[0] total_values=131076 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=c8c112139a1d72f9055f115204e4f97aae681db2172a2feee5cc76f2f284cb5f
+      pack ok: adc_test_20260527115033_Pf0_Rx0.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (c8c112139a1d72f9...)
+      | [PASS] byte-identical rebuild (1239576 bytes, 9916608 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_test_20260527115033_Pf0_Rx0.npz
+
+[PASS] group B  adc_test_20260527115041_Pf0_Rx1.txt
+      variant=triple_header header=[1, 1024, 256] trailing=[0] total_values=131076 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=ea15547d808e671474f5e8a94060f1c06627315d568c6f656c20e272ea9c7202
+      pack ok: adc_test_20260527115041_Pf0_Rx1.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (ea15547d808e6714...)
+      | [PASS] byte-identical rebuild (1263799 bytes, 10110392 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_test_20260527115041_Pf0_Rx1.npz
+
+[PASS] group B  adc_test_20260527115050_Pf0_Rx2.txt
+      variant=triple_header header=[2, 1024, 256] trailing=[0] total_values=131076 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=7a5ad0f39cb829dd2a3a4289eddf65f682a69e0ad07631bd4e32648bc88a65bf
+      pack ok: adc_test_20260527115050_Pf0_Rx2.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (7a5ad0f39cb829dd...)
+      | [PASS] byte-identical rebuild (1247552 bytes, 9980416 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_test_20260527115050_Pf0_Rx2.npz
+
+[PASS] group B  adc_test_20260527115059_Pf0_Rx3.txt
+      variant=triple_header header=[3, 1024, 256] trailing=[0] total_values=131076 payload_words=131072
+      profile=init0 frames_shape=[256, 1024]
+      sha256=e30d54914accca261d9327291a2c4c92fac026018392d4e2d40124734662add2
+      pack ok: adc_test_20260527115059_Pf0_Rx3.npz; rebuild rc=0; verify rc=0; bytes identical: True; compact rebuild rc=0, bytes identical: True
+      | [PASS] package consistency (keys, dtypes, shapes, unpack view, frames)
+      | [PASS] source sha256 matches package metadata (e30d54914accca26...)
+      | [PASS] byte-identical rebuild (1237074 bytes, 9896592 bits)
+      | [PASS] re-ingest of rebuilt text reproduces identical payload and trailing
+      | [PASS] verify complete for /tmp/a100-adc-exchange-verify-t55hrya_/adc_test_20260527115059_Pf0_Rx3.npz
+
+[PASS] sample package sample_near_f1_rx0_first16chirps.npz: 111149 bytes (< 1 MiB), chirps_included=16, frames_shape=[16, 2048], source sha256=36db22359f0bc902022ec26a07a1a6cb2ed941f66f75729c42d01bf56c4d273c
+
+summary: 13 PASS / 0 FAIL over 12 captures + 1 sample
+roundtrip: ALL BYTE-IDENTICAL
+exit_code: 0
