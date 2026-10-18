@@ -1,0 +1,2 @@
+declared,strong_bin,weak_bin,weak_range_m,weak_rel_strong_db,separation_bins,hann_prom_over_neighbours_db,rect_prom_over_neighbours_db,hann_resolves,rect_resolves,strong_amplitude_lsb,weak_amplitude_lsb
+two synthetic tones injected into the real chirp (declared),254.5,261,136.9047345432129,27.0,6.5,4.659972216504684,-2.475132489726601,True,False,104.17024391726925,4.653113874820783

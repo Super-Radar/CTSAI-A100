@@ -1,0 +1,2 @@
+variant_a,variant_b,valid_n,nfft,peak_bin_a,peak_bin_b,peak_delta_db,width3db_a_bins,width3db_b_bins,width3db_delta_bins,enbw_bins_a,enbw_bins_b,delta_db_median,delta_db_p95,delta_db_max
+"hann(1021) on 1021 valid samples, FFT 1024 (3 zeros)",hann(1024) forced over all 1024 samples,1021,1024,5,5,0.0038720435362070158,1.2086107934816002,1.2038153055064016,-0.004795487975198576,1.5058823529411764,1.5014662756598243,0.03142384775645546,0.17526930578653677,1.4902054295911569

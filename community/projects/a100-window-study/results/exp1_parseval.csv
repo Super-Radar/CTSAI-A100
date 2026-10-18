@@ -1,0 +1,5 @@
+window,energy_ratio_windowed_over_raw,sum_w2_over_n,abs_err,fft_parseval_ratio,fft_abs_err
+rect,1.0,1.0,0.0,1.0,0.0
+hann,0.375,0.375,0.0,1.0,0.0
+hamming,0.3974000000000001,0.39740000000000003,5.551115123125783e-17,0.9999999999999999,1.1102230246251565e-16
+blackman,0.3046,0.3046,0.0,1.0,0.0

@@ -1,0 +1,7 @@
+convention,formula,peak_bin,peak_db,offset_vs_c1_db
+C1 raw |X|,20*log10|X|,5,88.48567723016386,0.0
+C2 |X|/N,20*log10(|X|/1024),5,28.279678097367615,-60.205999132796244
+C3 |X|/sum(w),20*log10(|X|/510.0),5,34.33427370820513,-54.15140352195873
+C4 20*log10|X|,numerically identical to C1,5,88.48567723016386,0.0
+C5 10*log10|X|^2,identical to C4 (10log10 x^2 = 20log10 x),5,88.48567723016386,0.0
+official MATLAB |X|/255,20*log10(|X|/255)  [rng_fft_scalar = 0xff],5,40.35487362148476,-48.1308036086791
