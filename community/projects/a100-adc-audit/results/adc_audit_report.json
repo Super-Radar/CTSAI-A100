@@ -1,0 +1,1522 @@
+{
+  "tool": "adc_audit",
+  "version": "1.0.0",
+  "generated_at": "2026-10-21T17:29:44+08:00",
+  "data_dirs": [
+    "ADC数据采集/示例adc数据和结果",
+    "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data"
+  ],
+  "num_rx": 4,
+  "configs": [
+    {
+      "profile": 0,
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/cfg/CTASI-A100配置/sensor_config_init0.hxx",
+      "start_freq_ghz": 76.3,
+      "bandwidth_mhz": 300.0,
+      "chirp_rampup_us": 43.0,
+      "chirp_period_us": 48.0,
+      "nchirp": 256,
+      "adc_freq_mhz": 25.0,
+      "sample_start_us": 2.0,
+      "sample_end_us": 42.8,
+      "rng_nfft": 1024,
+      "vel_nfft": 256,
+      "expected_words": 131072,
+      "window_samples": 1020
+    },
+    {
+      "profile": 1,
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/cfg/CTASI-A100配置/sensor_config_init1.hxx",
+      "start_freq_ghz": 76.119,
+      "bandwidth_mhz": 750.0,
+      "chirp_rampup_us": 104.65,
+      "chirp_period_us": 108.5,
+      "nchirp": 128,
+      "adc_freq_mhz": 25.0,
+      "sample_start_us": 2.0,
+      "sample_end_us": 104.4,
+      "rng_nfft": 2048,
+      "vel_nfft": 128,
+      "expected_words": 131072,
+      "window_samples": 2560
+    }
+  ],
+  "rules": {
+    "FMT-01": {
+      "title": "格式识别与三字段头交叉核对",
+      "description": "识别无头/三字段头布局；若带 `<rx>,<rng_nfft>,<nchirp>` 头，头字段须与所用配置的 rng_nfft/nchirp 一致；文件名 f0/f1 标记须与配置 profile 一致。",
+      "level": "错误（头字段或 profile 不一致）/ 警告（无法从文件名判断 profile）"
+    },
+    "LEN-01": {
+      "title": "载荷长度审计（显式修补报告）",
+      "description": "实际合法载荷值数 vs 配置期望 (rng_nfft/2*nchirp)；多余/缺失值的数量、位置（首/尾）与数值全部写明；为继续分析所做的截断/补零修复显式输出。尾部多余零值=警告；多余非零值或缺失值=错误。",
+      "level": "错误（多余非零值、任何缺失）/ 警告（尾部多余零值）"
+    },
+    "VAL-01": {
+      "title": "数值合法性",
+      "description": "所有 token 必须是可解析的 uint32（0..2^32-1）；非数值 token 与越界值（负数 / >2^32-1）逐个列出位置与原值。",
+      "level": "错误（存在任何非法 token）"
+    },
+    "SIG-01": {
+      "title": "信号质量统计（解包后 int16 样本）",
+      "description": "按官方 adc_mem_2_real_fixed.m 语义解包后统计：饱和计数（±32767/-32768）、最长常值游程、全零 chirp 计数、DC 偏置与 RMS。阈值：饱和率 ≥1e-3 警告、≥1e-2 错误；任何全零 chirp 警告（全文件为零错误）；最长游程 ≥ rng_nfft（整 chirp 常值）警告。",
+      "level": "错误（饱和率 ≥1%、全零文件）/ 警告（饱和率 ≥0.1%、全零 chirp、整 chirp 常值）"
+    },
+    "BAT-01": {
+      "title": "跨批次 sha256 去重",
+      "description": "对全部审计文件按 sha256 分组；同一内容出现在多个批次（目录/波形组）时报『重复批次』，列出全部所在位置（不同目录重复共享=数据管理提示）。",
+      "level": "警告（跨批次重复）"
+    },
+    "BAT-02": {
+      "title": "同批通道一致性",
+      "description": "按（目录, profile）分批：文件名 Rx 序号应构成 0..N-1 的完整集合；三字段头中的 rx 序号须与文件名一致；同批不同 Rx 文件内容不得完全相同。",
+      "level": "错误（Rx 序号重复/头与文件名不符/同批内容相同）/ 警告（缺通道）"
+    }
+  },
+  "summary": {
+    "files": 16,
+    "file_status": {
+      "pass": 0,
+      "warn": 16,
+      "fail": 0
+    },
+    "rule_counts": {
+      "FMT-01": {
+        "pass": 16,
+        "warn": 0,
+        "fail": 0
+      },
+      "LEN-01": {
+        "pass": 0,
+        "warn": 16,
+        "fail": 0
+      },
+      "VAL-01": {
+        "pass": 16,
+        "warn": 0,
+        "fail": 0
+      },
+      "SIG-01": {
+        "pass": 16,
+        "warn": 0,
+        "fail": 0
+      },
+      "BAT-01": {
+        "pass": 0,
+        "warn": 4,
+        "fail": 0
+      },
+      "BAT-02": {
+        "pass": 4,
+        "warn": 0,
+        "fail": 0
+      }
+    },
+    "exit_code": 0,
+    "exit_code_strict": 1
+  },
+  "files": [
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_0_14_19_05_965.txt",
+      "label": "A·near·Rx0",
+      "group": "ADC数据采集/示例adc数据和结果/f1",
+      "sha256": "36db22359f0bc902022ec26a07a1a6cb2ed941f66f75729c42d01bf56c4d273c",
+      "size_bytes": 1268333,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 0,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=4.17, RMS=220.32, max|x|=876",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": -396,
+        "longest_run_chirp": 2,
+        "longest_run_start": 1219,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": 4.173980712890625,
+        "rms": 220.32108277829784,
+        "max_abs": 876
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_1_14_19_14_570.txt",
+      "label": "A·near·Rx1",
+      "group": "ADC数据采集/示例adc数据和结果/f1",
+      "sha256": "4fb120427111cddaf220433bf85491a700633ca28e4b41d5ea20ee01707960ab",
+      "size_bytes": 1294496,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 1,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=-7.82, RMS=562.11, max|x|=1920",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": 52,
+        "longest_run_chirp": 12,
+        "longest_run_start": 676,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": -7.822601318359375,
+        "rms": 562.110648560927,
+        "max_abs": 1920
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_2_14_19_23_170.txt",
+      "label": "A·near·Rx2",
+      "group": "ADC数据采集/示例adc数据和结果/f1",
+      "sha256": "05f3a38d9297f35c7972d84d8f9e300b269457b3e6cd00e5f51d3172ac6c306e",
+      "size_bytes": 1294254,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 2,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=3.69, RMS=533.22, max|x|=1972",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": 212,
+        "longest_run_chirp": 86,
+        "longest_run_start": 1531,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": 3.6857757568359375,
+        "rms": 533.2248466843814,
+        "max_abs": 1972
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_3_14_19_31_788.txt",
+      "label": "A·near·Rx3",
+      "group": "ADC数据采集/示例adc数据和结果/f1",
+      "sha256": "134e89fb95ae8e2d7955163e888040ecf59fc3895c21841debc07fb51127e7bb",
+      "size_bytes": 1294726,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 3,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=-8.42, RMS=522.43, max|x|=1868",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": -308,
+        "longest_run_chirp": 94,
+        "longest_run_start": 786,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": -8.422805786132812,
+        "rms": 522.4336550119643,
+        "max_abs": 1868
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_0_13_58_36_748.txt",
+      "label": "A·far·Rx0",
+      "group": "ADC数据采集/示例adc数据和结果/f0",
+      "sha256": "bba39d6f30c7c1530e85a2bf7b2509278fbcf03c4a025cb5978a3efdefdfb3a7",
+      "size_bytes": 1255826,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 0,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init0 (rng_nfft=1024, nchirp=256)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=2.11, RMS=177.88, max|x|=760",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 2,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 2.1074981689453125,
+        "rms": 177.8770678916714,
+        "max_abs": 760
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_1_13_58_45_367.txt",
+      "label": "A·far·Rx1",
+      "group": "ADC数据采集/示例adc数据和结果/f0",
+      "sha256": "33d6b42ec6458934f0a2d66d547678e6604901b7fb26c7bfee44aba3a0d7448d",
+      "size_bytes": 1286718,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 1,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init0 (rng_nfft=1024, nchirp=256)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=-6.65, RMS=435.22, max|x|=1772",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 46,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": -6.649078369140625,
+        "rms": 435.2200107574006,
+        "max_abs": 1772
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_2_13_58_53_977.txt",
+      "label": "A·far·Rx2",
+      "group": "ADC数据采集/示例adc数据和结果/f0",
+      "sha256": "c58910a1705586758362c348f6cd347d44ea8ee7d54fe2771193bc23671c3a70",
+      "size_bytes": 1283163,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 2,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init0 (rng_nfft=1024, nchirp=256)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=-1.41, RMS=431.22, max|x|=1576",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 60,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": -1.4088592529296875,
+        "rms": 431.21528201792756,
+        "max_abs": 1576
+      }
+    },
+    {
+      "path": "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_3_13_59_02_596.txt",
+      "label": "A·far·Rx3",
+      "group": "ADC数据采集/示例adc数据和结果/f0",
+      "sha256": "80ebc8a7f1735612b1f91292fefd083058acabc00980c1ed7a00739e5691226f",
+      "size_bytes": 1280814,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 3,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init0 (rng_nfft=1024, nchirp=256)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=5.13, RMS=391.77, max|x|=1236",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 103,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 5.1342620849609375,
+        "rms": 391.765941030189,
+        "max_abs": 1236
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_0_14_19_05_965.txt",
+      "label": "B·near·Rx0",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "sha256": "36db22359f0bc902022ec26a07a1a6cb2ed941f66f75729c42d01bf56c4d273c",
+      "size_bytes": 1268333,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 0,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=4.17, RMS=220.32, max|x|=876",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": -396,
+        "longest_run_chirp": 2,
+        "longest_run_start": 1219,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": 4.173980712890625,
+        "rms": 220.32108277829784,
+        "max_abs": 876
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_1_14_19_14_570.txt",
+      "label": "B·near·Rx1",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "sha256": "4fb120427111cddaf220433bf85491a700633ca28e4b41d5ea20ee01707960ab",
+      "size_bytes": 1294496,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 1,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=-7.82, RMS=562.11, max|x|=1920",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": 52,
+        "longest_run_chirp": 12,
+        "longest_run_start": 676,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": -7.822601318359375,
+        "rms": 562.110648560927,
+        "max_abs": 1920
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_2_14_19_23_170.txt",
+      "label": "B·near·Rx2",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "sha256": "05f3a38d9297f35c7972d84d8f9e300b269457b3e6cd00e5f51d3172ac6c306e",
+      "size_bytes": 1294254,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 2,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=3.69, RMS=533.22, max|x|=1972",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": 212,
+        "longest_run_chirp": 86,
+        "longest_run_start": 1531,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": 3.6857757568359375,
+        "rms": 533.2248466843814,
+        "max_abs": 1972
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_3_14_19_31_788.txt",
+      "label": "B·near·Rx3",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "sha256": "134e89fb95ae8e2d7955163e888040ecf59fc3895c21841debc07fb51127e7bb",
+      "size_bytes": 1294726,
+      "format": "headerless",
+      "header": null,
+      "token_count": 131073,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 1,
+      "filename_rx": 3,
+      "config_profile": 1,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "无头布局；长度依据配置 init1 (rng_nfft=2048, nchirp=128)",
+          "details": {
+            "format": "headerless"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131073 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=-8.42, RMS=522.43, max|x|=1868",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": -308,
+        "longest_run_chirp": 94,
+        "longest_run_start": 786,
+        "zero_chirps": 0,
+        "n_real_chirps": 128,
+        "partial_chirp": false,
+        "dc": -8.422805786132812,
+        "rms": 522.4336550119643,
+        "max_abs": 1868
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115033_Pf0_Rx0.txt",
+      "label": "B·far·Rx0",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0",
+      "sha256": "c8c112139a1d72f9055f115204e4f97aae681db2172a2feee5cc76f2f284cb5f",
+      "size_bytes": 1239576,
+      "format": "header3",
+      "header": [
+        0,
+        1024,
+        256
+      ],
+      "token_count": 131076,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 0,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "三字段头 rx=0, rng_nfft=1024, nchirp=256 与配置 init0 一致",
+          "details": {
+            "format": "header3"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131076 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=8.02, RMS=130.91, max|x|=724",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 60,
+        "longest_run_chirp": 64,
+        "longest_run_start": 524,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 8.019119262695312,
+        "rms": 130.9080243057572,
+        "max_abs": 724
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115041_Pf0_Rx1.txt",
+      "label": "B·far·Rx1",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0",
+      "sha256": "ea15547d808e671474f5e8a94060f1c06627315d568c6f656c20e272ea9c7202",
+      "size_bytes": 1263799,
+      "format": "header3",
+      "header": [
+        1,
+        1024,
+        256
+      ],
+      "token_count": 131076,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 1,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "三字段头 rx=1, rng_nfft=1024, nchirp=256 与配置 init0 一致",
+          "details": {
+            "format": "header3"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131076 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 4；DC=10.18, RMS=205.64, max|x|=1044",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 4,
+        "longest_run_value": 0,
+        "longest_run_chirp": 0,
+        "longest_run_start": 1020,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 10.184158325195312,
+        "rms": 205.63616946416437,
+        "max_abs": 1044
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115050_Pf0_Rx2.txt",
+      "label": "B·far·Rx2",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0",
+      "sha256": "7a5ad0f39cb829dd2a3a4289eddf65f682a69e0ad07631bd4e32648bc88a65bf",
+      "size_bytes": 1247552,
+      "format": "header3",
+      "header": [
+        2,
+        1024,
+        256
+      ],
+      "token_count": 131076,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 2,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "三字段头 rx=2, rng_nfft=1024, nchirp=256 与配置 init0 一致",
+          "details": {
+            "format": "header3"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131076 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=5.79, RMS=169.30, max|x|=804",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 4,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 5.7925872802734375,
+        "rms": 169.30446074231503,
+        "max_abs": 804
+      }
+    },
+    {
+      "path": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115059_Pf0_Rx3.txt",
+      "label": "B·far·Rx3",
+      "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0",
+      "sha256": "e30d54914accca261d9327291a2c4c92fac026018392d4e2d40124734662add2",
+      "size_bytes": 1237074,
+      "format": "header3",
+      "header": [
+        3,
+        1024,
+        256
+      ],
+      "token_count": 131076,
+      "payload_count": 131073,
+      "expected_words": 131072,
+      "filename_profile": 0,
+      "filename_rx": 3,
+      "config_profile": 0,
+      "repair": "尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+      "status": "warn",
+      "findings": [
+        {
+          "rule_id": "FMT-01",
+          "status": "pass",
+          "message": "三字段头 rx=3, rng_nfft=1024, nchirp=256 与配置 init0 一致",
+          "details": {
+            "format": "header3"
+          }
+        },
+        {
+          "rule_id": "VAL-01",
+          "status": "pass",
+          "message": "全部 131076 个 token 均为合法 uint32",
+          "details": {}
+        },
+        {
+          "rule_id": "LEN-01",
+          "status": "warn",
+          "message": "载荷 131073 字 > 期望 131072，多余 1 字。尾部多余 1 个零值（载荷索引 131072..131072，值全为 0）→ 截断修复：丢弃这些尾零后继续分析",
+          "details": {
+            "expected": 131072,
+            "actual": 131073,
+            "extra": 1,
+            "position": "tail",
+            "extra_values_preview": [
+              0
+            ],
+            "extra_all_zero": true,
+            "repair": "truncate-tail"
+          }
+        },
+        {
+          "rule_id": "SIG-01",
+          "status": "pass",
+          "message": "饱和率 0.000000%；无全零 chirp；最长常值游程 5；DC=15.07, RMS=163.16, max|x|=708",
+          "details": {
+            "checks": {
+              "sat": "pass",
+              "zero": "pass",
+              "run": "pass"
+            }
+          }
+        }
+      ],
+      "quality": {
+        "n_real_samples": 262144,
+        "sat_pos": 0,
+        "sat_neg": 0,
+        "sat_ratio": 0.0,
+        "longest_run": 5,
+        "longest_run_value": 0,
+        "longest_run_chirp": 126,
+        "longest_run_start": 1019,
+        "zero_chirps": 0,
+        "n_real_chirps": 256,
+        "partial_chirp": false,
+        "dc": 15.073623657226562,
+        "rms": 163.16147128059742,
+        "max_abs": 708
+      }
+    }
+  ],
+  "batch_findings": [
+    {
+      "rule_id": "BAT-01",
+      "status": "warn",
+      "message": "重复批次：sha256=05f3a38d9297… 的同一内容出现在 2 个批次 (ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1, ADC数据采集/示例adc数据和结果/f1)：A·near·Rx2 @ ADC数据采集/示例adc数据和结果/f1; B·near·Rx2 @ ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "details": {
+        "sha256": "05f3a38d9297f35c7972d84d8f9e300b269457b3e6cd00e5f51d3172ac6c306e",
+        "groups": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+          "ADC数据采集/示例adc数据和结果/f1"
+        ],
+        "files": [
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_2_14_19_23_170.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_2_14_19_23_170.txt"
+        ]
+      }
+    },
+    {
+      "rule_id": "BAT-01",
+      "status": "warn",
+      "message": "重复批次：sha256=134e89fb95ae… 的同一内容出现在 2 个批次 (ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1, ADC数据采集/示例adc数据和结果/f1)：A·near·Rx3 @ ADC数据采集/示例adc数据和结果/f1; B·near·Rx3 @ ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "details": {
+        "sha256": "134e89fb95ae8e2d7955163e888040ecf59fc3895c21841debc07fb51127e7bb",
+        "groups": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+          "ADC数据采集/示例adc数据和结果/f1"
+        ],
+        "files": [
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_3_14_19_31_788.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_3_14_19_31_788.txt"
+        ]
+      }
+    },
+    {
+      "rule_id": "BAT-01",
+      "status": "warn",
+      "message": "重复批次：sha256=36db22359f0b… 的同一内容出现在 2 个批次 (ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1, ADC数据采集/示例adc数据和结果/f1)：A·near·Rx0 @ ADC数据采集/示例adc数据和结果/f1; B·near·Rx0 @ ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "details": {
+        "sha256": "36db22359f0bc902022ec26a07a1a6cb2ed941f66f75729c42d01bf56c4d273c",
+        "groups": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+          "ADC数据采集/示例adc数据和结果/f1"
+        ],
+        "files": [
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_0_14_19_05_965.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_0_14_19_05_965.txt"
+        ]
+      }
+    },
+    {
+      "rule_id": "BAT-01",
+      "status": "warn",
+      "message": "重复批次：sha256=4fb120427111… 的同一内容出现在 2 个批次 (ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1, ADC数据采集/示例adc数据和结果/f1)：A·near·Rx1 @ ADC数据采集/示例adc数据和结果/f1; B·near·Rx1 @ ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+      "details": {
+        "sha256": "4fb120427111cddaf220433bf85491a700633ca28e4b41d5ea20ee01707960ab",
+        "groups": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+          "ADC数据采集/示例adc数据和结果/f1"
+        ],
+        "files": [
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_1_14_19_14_570.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_1_14_19_14_570.txt"
+        ]
+      }
+    },
+    {
+      "rule_id": "BAT-02",
+      "status": "pass",
+      "message": "批次 ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0: 4 个文件。Rx 序号完整 (0..3) 且内容互不相同",
+      "details": {
+        "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f0",
+        "members": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115033_Pf0_Rx0.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115041_Pf0_Rx1.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115050_Pf0_Rx2.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260527115059_Pf0_Rx3.txt"
+        ],
+        "rx_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "problems": [],
+        "warnings": []
+      }
+    },
+    {
+      "rule_id": "BAT-02",
+      "status": "pass",
+      "message": "批次 ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1: 4 个文件。Rx 序号完整 (0..3) 且内容互不相同",
+      "details": {
+        "group": "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/f1",
+        "members": [
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_0_14_19_05_965.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_1_14_19_14_570.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_2_14_19_23_170.txt",
+          "ADC数据采集/matlab_signal_processing_platform_231023_for_txt_A100/data/adc_test_20260512141857_f1_3_14_19_31_788.txt"
+        ],
+        "rx_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "problems": [],
+        "warnings": []
+      }
+    },
+    {
+      "rule_id": "BAT-02",
+      "status": "pass",
+      "message": "批次 ADC数据采集/示例adc数据和结果/f0: 4 个文件。Rx 序号完整 (0..3) 且内容互不相同",
+      "details": {
+        "group": "ADC数据采集/示例adc数据和结果/f0",
+        "members": [
+          "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_0_13_58_36_748.txt",
+          "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_1_13_58_45_367.txt",
+          "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_2_13_58_53_977.txt",
+          "ADC数据采集/示例adc数据和结果/adc_远波_20260512135827_f0_3_13_59_02_596.txt"
+        ],
+        "rx_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "problems": [],
+        "warnings": []
+      }
+    },
+    {
+      "rule_id": "BAT-02",
+      "status": "pass",
+      "message": "批次 ADC数据采集/示例adc数据和结果/f1: 4 个文件。Rx 序号完整 (0..3) 且内容互不相同",
+      "details": {
+        "group": "ADC数据采集/示例adc数据和结果/f1",
+        "members": [
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_0_14_19_05_965.txt",
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_1_14_19_14_570.txt",
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_2_14_19_23_170.txt",
+          "ADC数据采集/示例adc数据和结果/adc_近波_20260512141857_f1_3_14_19_31_788.txt"
+        ],
+        "rx_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "problems": [],
+        "warnings": []
+      }
+    }
+  ]
+}
