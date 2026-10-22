@@ -1,0 +1,111 @@
+{
+  "source_name": "2026_08_02_16_19_35_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+  "source_sha256": "1342a58ce56496f2011aae8eb65064eaa885fafbe31d5dfb0bf68d9f35f69383",
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "os": "Windows"
+  },
+  "assumptions": {
+    "sigma_range_m": 0.1,
+    "sigma_angle_deg": 1.0,
+    "independent_gaussian_errors": true,
+    "sensor_calibration": false,
+    "coordinate_convention": "X=R*cos(T), Y=R*sin(T); T in radians"
+  },
+  "counts": {
+    "frames": 207,
+    "incomplete_frames": 0,
+    "rejected_rows": 0,
+    "valid_targets": 3456
+  },
+  "range_m_quantiles": [
+    1.94,
+    6.4,
+    12.98,
+    13.0
+  ],
+  "major_sigma_m_quantiles": [
+    0.09998564554928537,
+    0.11169769371686028,
+    0.22651595872813074,
+    0.2268649610782377
+  ],
+  "near_origin_records": 0,
+  "seed": 20261022,
+  "samples_per_case": 100000,
+  "synthetic_cases": [
+    {
+      "range_m": 1.0,
+      "sigma_angle_deg": 1.0,
+      "mean_bias_m": 0.00015229711151062354,
+      "exact_major_sigma_m": 0.09998500455211863,
+      "mc_relative_covariance_error": 0.006595602213039298,
+      "linear_relative_covariance_error": 0.00042076309768947505
+    },
+    {
+      "range_m": 1.0,
+      "sigma_angle_deg": 5.0,
+      "mean_bias_m": 0.003800477582528683,
+      "exact_major_sigma_m": 0.09976572677563787,
+      "mc_relative_covariance_error": 0.006371997433901949,
+      "linear_relative_covariance_error": 0.003993976185114042
+    },
+    {
+      "range_m": 1.0,
+      "sigma_angle_deg": 20.0,
+      "mean_bias_m": 0.05910476939865028,
+      "exact_major_sigma_m": 0.33048090478811176,
+      "mc_relative_covariance_error": 0.0065990711432660516,
+      "linear_relative_covariance_error": 0.12486787370033589
+    },
+    {
+      "range_m": 10.0,
+      "sigma_angle_deg": 1.0,
+      "mean_bias_m": 0.0015229711151068936,
+      "exact_major_sigma_m": 0.17451507078762007,
+      "mc_relative_covariance_error": 0.0037443230706172095,
+      "linear_relative_covariance_error": 0.0002006631640422859
+    },
+    {
+      "range_m": 10.0,
+      "sigma_angle_deg": 5.0,
+      "mean_bias_m": 0.03800477582528603,
+      "exact_major_sigma_m": 0.8693957516551866,
+      "mc_relative_covariance_error": 0.0004891789309199922,
+      "linear_relative_covariance_error": 0.008395559909155765
+    },
+    {
+      "range_m": 10.0,
+      "sigma_angle_deg": 20.0,
+      "mean_bias_m": 0.5910476939865031,
+      "exact_major_sigma_m": 3.2885723254693313,
+      "mc_relative_covariance_error": 0.005941980496898362,
+      "linear_relative_covariance_error": 0.1402220713935249
+    },
+    {
+      "range_m": 50.0,
+      "sigma_angle_deg": 1.0,
+      "mean_bias_m": 0.007614855575537989,
+      "exact_major_sigma_m": 0.8725334735040002,
+      "mc_relative_covariance_error": 0.0008212383935528114,
+      "linear_relative_covariance_error": 0.0003352076637455794
+    },
+    {
+      "range_m": 50.0,
+      "sigma_angle_deg": 5.0,
+      "mean_bias_m": 0.19002387912643962,
+      "exact_major_sigma_m": 4.346770119151989,
+      "mc_relative_covariance_error": 0.0012106436919899946,
+      "linear_relative_covariance_error": 0.008526123852274203
+    },
+    {
+      "range_m": 50.0,
+      "sigma_angle_deg": 20.0,
+      "mean_bias_m": 2.9552384699325174,
+      "exact_major_sigma_m": 16.44207242996709,
+      "mc_relative_covariance_error": 0.004453253826484569,
+      "linear_relative_covariance_error": 0.1403701002266277
+    }
+  ]
+}
