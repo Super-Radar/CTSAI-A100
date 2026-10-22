@@ -1,0 +1,122 @@
+{
+  "profiles": [
+    {
+      "profile": 0,
+      "grid_angles": 301,
+      "ambiguous_angles": 0,
+      "maximum_separated_coherence": 0.8719196599715116,
+      "criterion": "absolute normalized inner product >= 0.95 at separation >=15 degrees"
+    },
+    {
+      "profile": 1,
+      "grid_angles": 301,
+      "ambiguous_angles": 0,
+      "maximum_separated_coherence": 0.8824426444552601,
+      "criterion": "absolute normalized inner product >= 0.95 at separation >=15 degrees"
+    },
+    {
+      "profile": 2,
+      "grid_angles": 301,
+      "ambiguous_angles": 0,
+      "maximum_separated_coherence": 0.8719196599715116,
+      "criterion": "absolute normalized inner product >= 0.95 at separation >=15 degrees"
+    },
+    {
+      "profile": 3,
+      "grid_angles": 301,
+      "ambiguous_angles": 0,
+      "maximum_separated_coherence": 0.8824426444552601,
+      "criterion": "absolute normalized inner product >= 0.95 at separation >=15 degrees"
+    }
+  ],
+  "sources": [
+    {
+      "file": "sensor_config_init0.hxx",
+      "sha256": "13120edbf2263054740e3add78cf110c12adf031abf081032d58b4cb341b9e75",
+      "physical_tx": 3,
+      "positions_lambda": [
+        0.0,
+        1.1656,
+        2.5796,
+        3.242
+      ]
+    },
+    {
+      "file": "sensor_config_init1.hxx",
+      "sha256": "7e7091029b11ab02f87eef0b2822bc3399fa6a799cb27e627a13ce09eb099fe8",
+      "physical_tx": 1,
+      "positions_lambda": [
+        0.0,
+        1.172,
+        2.5892,
+        3.2357
+      ]
+    },
+    {
+      "file": "sensor_config_init2.hxx",
+      "sha256": "97c66552d11ff00364e67aa5b77496332c530ccff75a89d4b7ffe937cb73dc62",
+      "physical_tx": 3,
+      "positions_lambda": [
+        0.0,
+        1.1656,
+        2.5796,
+        3.242
+      ]
+    },
+    {
+      "file": "sensor_config_init3.hxx",
+      "sha256": "2894f40bb692c0a59eae7d963ebfdc5bd3e5da96be67bc1c0872444d8172d226",
+      "physical_tx": 1,
+      "positions_lambda": [
+        0.0,
+        1.172,
+        2.5892,
+        3.2357
+      ]
+    }
+  ],
+  "analytic_control": {
+    "source_angle_deg": -30,
+    "one_lambda_candidates_deg": [
+      -30.0,
+      30.0
+    ],
+    "half_lambda_candidates_deg": [
+      -30.0
+    ]
+  },
+  "synthetic_noise_trials": [
+    {
+      "array": "half_lambda_ULA",
+      "runs": 400,
+      "balanced_truth_angles_deg": [
+        -30,
+        30
+      ],
+      "errors_over_15deg": 0,
+      "secondary_near_peak_cases": 0
+    },
+    {
+      "array": "one_lambda_ULA",
+      "runs": 400,
+      "balanced_truth_angles_deg": [
+        -30,
+        30
+      ],
+      "errors_over_15deg": 201,
+      "secondary_near_peak_cases": 400
+    },
+    {
+      "array": "published_Pf0_azimuth",
+      "runs": 400,
+      "balanced_truth_angles_deg": [
+        -30,
+        30
+      ],
+      "errors_over_15deg": 0,
+      "secondary_near_peak_cases": 0
+    }
+  ],
+  "seed": 20261022,
+  "caveat": "Azimuth-only model using published x/lambda coordinates, not measured phase calibration or capture synchronization. Spatial ambiguity is different from a flat no-information spectrum; 0.95 coherence and 15-degree separation are diagnostic choices, not hardware resolution specifications."
+}
