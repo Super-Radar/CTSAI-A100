@@ -1,0 +1,370 @@
+{
+  "input": {
+    "source": "2026_08_02_16_19_35_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+    "sha256": "1342a58ce56496f2011aae8eb65064eaa885fafbe31d5dfb0bf68d9f35f69383",
+    "frames": 207,
+    "records": 3456,
+    "incomplete_frames": 0,
+    "rejected_rows": 0
+  },
+  "duplicate_locations_removed": 0,
+  "skipped_empty_frames": 0,
+  "evaluated_frames": 207,
+  "analytic": [
+    {
+      "cutoff": 0.1,
+      "one_missing": {
+        "distance": 0.07071067811865477,
+        "localization_squared": 0.0,
+        "missed_squared": 0.005000000000000001,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.17320508075688776,
+        "localization_squared": 0,
+        "missed_squared": 0.015000000000000003,
+        "false_squared": 0.015000000000000003,
+        "matched": 0,
+        "pairs": []
+      },
+      "expected_missing": 0.07071067811865475,
+      "expected_shifted": 0.17320508075688773,
+      "preferred": "one_missing"
+    },
+    {
+      "cutoff": 0.25,
+      "one_missing": {
+        "distance": 0.1767766952966369,
+        "localization_squared": 0.0,
+        "missed_squared": 0.03125,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.4330127018922193,
+        "localization_squared": 0,
+        "missed_squared": 0.09375,
+        "false_squared": 0.09375,
+        "matched": 0,
+        "pairs": []
+      },
+      "expected_missing": 0.17677669529663687,
+      "expected_shifted": 0.4330127018922193,
+      "preferred": "one_missing"
+    },
+    {
+      "cutoff": 0.5,
+      "one_missing": {
+        "distance": 0.3535533905932738,
+        "localization_squared": 0.0,
+        "missed_squared": 0.125,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.519615242270664,
+        "localization_squared": 0.27000000000000085,
+        "missed_squared": 0.0,
+        "false_squared": 0.0,
+        "matched": 3,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected_missing": 0.35355339059327373,
+      "expected_shifted": 0.5196152422706631,
+      "preferred": "one_missing"
+    },
+    {
+      "cutoff": 1.0,
+      "one_missing": {
+        "distance": 0.7071067811865476,
+        "localization_squared": 0.0,
+        "missed_squared": 0.5,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.519615242270664,
+        "localization_squared": 0.27000000000000085,
+        "missed_squared": 0.0,
+        "false_squared": 0.0,
+        "matched": 3,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected_missing": 0.7071067811865475,
+      "expected_shifted": 0.5196152422706631,
+      "preferred": "all_shifted"
+    },
+    {
+      "cutoff": 2.0,
+      "one_missing": {
+        "distance": 1.4142135623730951,
+        "localization_squared": 0.0,
+        "missed_squared": 2.0,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.519615242270664,
+        "localization_squared": 0.27000000000000085,
+        "missed_squared": 0.0,
+        "false_squared": 0.0,
+        "matched": 3,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected_missing": 1.414213562373095,
+      "expected_shifted": 0.5196152422706631,
+      "preferred": "all_shifted"
+    },
+    {
+      "cutoff": 4.0,
+      "one_missing": {
+        "distance": 2.8284271247461903,
+        "localization_squared": 0.0,
+        "missed_squared": 8.0,
+        "false_squared": 0.0,
+        "matched": 2,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "all_shifted": {
+        "distance": 0.519615242270664,
+        "localization_squared": 0.27000000000000085,
+        "missed_squared": 0.0,
+        "false_squared": 0.0,
+        "matched": 3,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "expected_missing": 2.82842712474619,
+      "expected_shifted": 0.5196152422706631,
+      "preferred": "all_shifted"
+    }
+  ],
+  "measured_reference": [
+    {
+      "cutoff": 0.1,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 0.17210565382261864,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 0.02963768115942029,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 0.4083101481185006,
+          "mean_localization_squared": 0.00019812971872060393,
+          "mean_missed_squared": 0.08330917874396138,
+          "mean_false_squared": 0.08330917874396138
+        }
+      }
+    },
+    {
+      "cutoff": 0.25,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 0.43026413455654666,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 0.1852355072463768,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 1.0181565684155367,
+          "mean_localization_squared": 0.014242076015700168,
+          "mean_missed_squared": 0.5114734299516909,
+          "mean_false_squared": 0.5114734299516909
+        }
+      }
+    },
+    {
+      "cutoff": 0.5,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 0.8605282691130933,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 0.7409420289855072,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 1.22543575267459,
+          "mean_localization_squared": 1.5026086956521743,
+          "mean_missed_squared": 0.0,
+          "mean_false_squared": 0.0
+        }
+      }
+    },
+    {
+      "cutoff": 1.0,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 1.7210565382261866,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 2.963768115942029,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 1.22543575267459,
+          "mean_localization_squared": 1.5026086956521743,
+          "mean_missed_squared": 0.0,
+          "mean_false_squared": 0.0
+        }
+      }
+    },
+    {
+      "cutoff": 2.0,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 3.4421130764523733,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 11.855072463768115,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 1.22543575267459,
+          "mean_localization_squared": 1.5026086956521743,
+          "mean_missed_squared": 0.0,
+          "mean_false_squared": 0.0
+        }
+      }
+    },
+    {
+      "cutoff": 4.0,
+      "methods": {
+        "one_third_missing": {
+          "frames": 207,
+          "mean_distance": 6.884226152904747,
+          "mean_localization_squared": 0.0,
+          "mean_missed_squared": 47.42028985507246,
+          "mean_false_squared": 0.0
+        },
+        "all_shifted_0.3m": {
+          "frames": 207,
+          "mean_distance": 1.22543575267459,
+          "mean_localization_squared": 1.5026086956521743,
+          "mean_missed_squared": 0.0,
+          "mean_false_squared": 0.0
+        }
+      }
+    }
+  ],
+  "limits": "Cutoffs are declared evaluation preferences, not fitted detector parameters. Point snapshots are numeric references; perturbations and three-point oracle are synthetic. Same snapshots/estimates at every cutoff; no object truth, temporal identity metric, or claim that a specific cutoff is correct. Mean distances and mean squared components are reported separately."
+}

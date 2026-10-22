@@ -1,0 +1,49 @@
+{
+  "p": 2,
+  "alpha": 2,
+  "cutoff_m": 2,
+  "evaluated_frames": 207,
+  "duplicate_locations_removed": 0,
+  "mean_scores": {
+    "noise_only": {
+      "distance": 0.2822073242173544,
+      "localization_squared": 0.08085341355211342,
+      "missed_squared": 0.0,
+      "false_squared": 0.0
+    },
+    "misses": {
+      "distance": 3.4421130764523733,
+      "localization_squared": 0.0,
+      "missed_squared": 11.855072463768115,
+      "false_squared": 0.0
+    },
+    "false_points": {
+      "distance": 2.449489742783178,
+      "localization_squared": 0.0,
+      "missed_squared": 0.0,
+      "false_squared": 6.0
+    },
+    "mixed": {
+      "distance": 4.231175887214687,
+      "localization_squared": 0.05227518266228585,
+      "missed_squared": 11.855072463768115,
+      "false_squared": 6.0
+    }
+  },
+  "misses_only_one_way_nn_rmse_m": 0.0,
+  "caveat": "Reference is the recorded point set, not physical object truth. This measures injected corruption, not detector accuracy or track identity.",
+  "input": {
+    "source": "2026_08_02_16_19_35_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+    "sha256": "1342a58ce56496f2011aae8eb65064eaa885fafbe31d5dfb0bf68d9f35f69383",
+    "frames": 207,
+    "records": 3456,
+    "incomplete_frames": 0,
+    "rejected_rows": 0
+  },
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "os": "Windows"
+  },
+  "seed": 20261022
+}
