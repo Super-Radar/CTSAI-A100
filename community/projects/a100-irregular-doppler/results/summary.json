@@ -1,0 +1,169 @@
+{
+  "seed": 20261022,
+  "synthetic": [
+    {
+      "jitter_periods": 0.0,
+      "runs": 40,
+      "truth_cycles_per_period": 0.14453125,
+      "timestamp_peak_error_median": 0.0,
+      "compressed_fft_peak_error_median": 0.0390625,
+      "timestamp_max_error": 0.0
+    },
+    {
+      "jitter_periods": 0.3,
+      "runs": 40,
+      "truth_cycles_per_period": 0.14453125,
+      "timestamp_peak_error_median": 0.0,
+      "compressed_fft_peak_error_median": 0.03515625,
+      "timestamp_max_error": 0.0
+    }
+  ],
+  "real_integer_index_replays": [
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "a8fb10cf93c9a89c306ac1033f04ed78a280350b978d50dffaeed721baeaa420",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.3441420622661486e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "15eeb8f3c3d3b4c1072bb61f198b8edafb0ca7c791ccfd666d19b15fd7962993",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.1867261740766964e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 1,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "5fe7c9d31f8a2497f0b39e675b77d872a3876146f3b362e21b0757b58d843dc8",
+        "source": "run_001_Pf0_Rx1.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.450091031929599e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 2,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "c992631191b4778ad835946845fdeea4ea9c7b6ad3810abf345c65be79b1847b",
+        "source": "run_001_Pf0_Rx2.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.0453711642801996e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 3,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "2027bfa2ba18e84c555f3010fa3846910fcc659a5348ec43b4119e5d674540a6",
+        "source": "run_001_Pf0_Rx3.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.5880529433338247e-14,
+      "full_peak_cycles_per_period": -0.5,
+      "missing_peak_cycles_per_period": -0.5
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "903c9e884709e38e2ca97b544289a46fb99665915d7f2dbe26e56c93a5cc67a8",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "range_bin": 8,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.2592323432733081e-14,
+      "full_peak_cycles_per_period": 0.125,
+      "missing_peak_cycles_per_period": 0.125
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "9e62456d855923cc6702bc65b8621c408a7f0b293fc5546a3b6a0529b0f79954",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.0715760200301623e-14,
+      "full_peak_cycles_per_period": 0.125,
+      "missing_peak_cycles_per_period": 0.125
+    },
+    {
+      "input": {
+        "rx": 1,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "405e85e5ba70f301df6d0d5c8c53bebbaf3c8224e7a8af113e41a5a0dda2eb60",
+        "source": "run_001_Pf0_Rx1.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.0714017494690236e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 2,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "9793c951db11ff2ca790ce64da578f1b365950058f1ba4b254a1c14240343f0a",
+        "source": "run_001_Pf0_Rx2.txt"
+      },
+      "range_bin": 6,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.0944851460850516e-14,
+      "full_peak_cycles_per_period": -0.25,
+      "missing_peak_cycles_per_period": -0.25
+    },
+    {
+      "input": {
+        "rx": 3,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "b539243d8641540a07c50e98d542d5cd4a993390332cf273ca513a689813c1d1",
+        "source": "run_001_Pf0_Rx3.txt"
+      },
+      "range_bin": 5,
+      "kept_chirps": 192,
+      "zero_fill_oracle_relative_error": 1.5312350740187417e-14,
+      "full_peak_cycles_per_period": -0.5,
+      "missing_peak_cycles_per_period": -0.5
+    }
+  ],
+  "regular_decimation_window_power": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "caveat": "Real capture indices are assumed nominal uniform periods; masks/jitter are injected, not measured timing. No physical velocity/DDMA inference. Integer-grid missing samples equal correctly normalized zero-fill FFT; NUDFT is useful for genuinely nonuniform timestamps, not an accuracy upgrade for uniform data."
+}
