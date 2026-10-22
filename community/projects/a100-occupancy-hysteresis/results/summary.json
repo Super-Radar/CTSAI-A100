@@ -1,0 +1,52 @@
+{
+  "parameters": {
+    "enter_count": 2,
+    "exit_count": 0,
+    "enter_s": 0.3,
+    "exit_s": 0.7,
+    "max_gap_s": 0.25
+  },
+  "synthetic": {
+    "observations": 200,
+    "common_known_available_samples": 185,
+    "debounced_wrong_common_samples": 10,
+    "instant_wrong_common_samples": 6,
+    "debounced_unknown_samples": 15,
+    "instant_unavailable_samples": 5,
+    "known_fraction": 0.925,
+    "debounced_wrong_known_samples": 10,
+    "instant_wrong_available_samples": 6,
+    "debounced_transitions": 2,
+    "instant_transitions": 16
+  },
+  "real_log": {
+    "roi_m": {
+      "x": [
+        1,
+        5
+      ],
+      "y": [
+        -2,
+        2
+      ]
+    },
+    "occupied_samples": 201,
+    "clear_samples": 0,
+    "unknown_samples": 6
+  },
+  "caveat": "ROI detections are not people/vehicle identities. Synthetic delays trade response latency for chatter suppression. No safety/control validation.",
+  "input": {
+    "source": "2026_08_02_16_19_35_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+    "sha256": "1342a58ce56496f2011aae8eb65064eaa885fafbe31d5dfb0bf68d9f35f69383",
+    "frames": 207,
+    "records": 3456,
+    "incomplete_frames": 0,
+    "rejected_rows": 0
+  },
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "os": "Windows"
+  },
+  "seed": 20261022
+}

@@ -1,0 +1,111 @@
+{
+  "parameters": {
+    "range_m": [
+      2.5,
+      3.1
+    ],
+    "angle_deg": [
+      -20,
+      5
+    ],
+    "enter_count": 1,
+    "enter_s": 0,
+    "exit_s": 0.7,
+    "max_gap_s": 0.25
+  },
+  "roi_origin": "a100-indoor-cart-mti published stationary-person ROI; no parameter sweep or fitting here",
+  "real_sessions": [
+    {
+      "scenario": "empty_room_person_session",
+      "input": {
+        "source": "2026_08_02_19_13_58_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+        "sha256": "271e0f6e22503547ee56cf6f5756c0cb75885d67a5b89031a74276f73888d026",
+        "frames": 268,
+        "records": 1264,
+        "incomplete_frames": 0,
+        "rejected_rows": 0
+      },
+      "session_label": false,
+      "broad_roi_original": {
+        "total_frames": 268,
+        "known_frames": 263,
+        "occupied": 263,
+        "clear": 0,
+        "unknown": 5,
+        "disagreements_with_session_label": 263,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "narrow_roi_instant": {
+        "total_frames": 268,
+        "known_frames": 268,
+        "occupied": 0,
+        "clear": 268,
+        "unknown": 0,
+        "disagreements_with_session_label": 0,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "narrow_roi_hysteresis": {
+        "total_frames": 268,
+        "known_frames": 256,
+        "occupied": 0,
+        "clear": 256,
+        "unknown": 12,
+        "disagreements_with_session_label": 0,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "common_known_frames": 256,
+      "instant_disagreements_on_common_frames": 0,
+      "hysteresis_disagreements_on_common_frames": 0
+    },
+    {
+      "scenario": "stationary_person_3m",
+      "input": {
+        "source": "2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+        "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+        "frames": 266,
+        "records": 1434,
+        "incomplete_frames": 0,
+        "rejected_rows": 0
+      },
+      "session_label": true,
+      "broad_roi_original": {
+        "total_frames": 266,
+        "known_frames": 261,
+        "occupied": 261,
+        "clear": 0,
+        "unknown": 5,
+        "disagreements_with_session_label": 0,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "narrow_roi_instant": {
+        "total_frames": 266,
+        "known_frames": 266,
+        "occupied": 163,
+        "clear": 103,
+        "unknown": 0,
+        "disagreements_with_session_label": 103,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "narrow_roi_hysteresis": {
+        "total_frames": 266,
+        "known_frames": 266,
+        "occupied": 260,
+        "clear": 6,
+        "unknown": 0,
+        "disagreements_with_session_label": 6,
+        "label_caveat": "Session description only; no frame-level person/ROI annotation."
+      },
+      "common_known_frames": 266,
+      "instant_disagreements_on_common_frames": 103,
+      "hysteresis_disagreements_on_common_frames": 6
+    }
+  ],
+  "no_input_watchdog": {
+    "last_pre_outage_measurement_s": 1.0,
+    "first_unknown_poll_s": 1.3,
+    "resume_measurement_s": 2.0,
+    "poll_period_s": 0.05,
+    "unknown_polls": 14
+  },
+  "limits": "Narrow ROI results characterize detection persistence, not a validated person classifier. Session descriptions are weak proxy labels, not per-frame truth."
+}

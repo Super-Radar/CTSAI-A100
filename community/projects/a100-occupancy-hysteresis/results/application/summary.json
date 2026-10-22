@@ -1,0 +1,538 @@
+{
+  "sources": {
+    "empty_room_person_session": {
+      "source": "2026_08_02_19_13_58_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "271e0f6e22503547ee56cf6f5756c0cb75885d67a5b89031a74276f73888d026",
+      "frames": 268,
+      "records": 1264,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "stationary_person_3m": {
+      "source": "2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+      "frames": 266,
+      "records": 1434,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "approaching_cart": {
+      "source": "2026_08_02_16_27_16_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "bea5d1ad5fff2b07bea4ed16b117db4022ab5e7e9a85980c4f65ef225bf2a6c9",
+      "frames": 1226,
+      "records": 22408,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "receding_cart": {
+      "source": "2026_08_02_16_34_07_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "c5413051e576b949a3c5cd7ca244b8fee71c7686044eccff3e566e15d1e8965f",
+      "frames": 904,
+      "records": 15486,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "receding_person_short": {
+      "source": "2026_08_02_21_39_26_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "15a23d7cd035de59ac886ad1672bbd4ae0c7c941f1e1f37dd38762fc266689c1",
+      "frames": 238,
+      "records": 1292,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    }
+  },
+  "parameters": {
+    "enter_count": 1,
+    "exit_count": 0,
+    "enter_seconds": 0.3,
+    "exit_seconds": 0.7,
+    "max_gap": 0.25
+  },
+  "roi": {
+    "near": 2.5,
+    "far": 3.1,
+    "left_degrees": -20.0,
+    "right_degrees": 5.0
+  },
+  "cases": [
+    {
+      "received_packets": 268,
+      "duration_s": 15.658,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 0.0,
+          "clear_s": 15.450000000000001,
+          "unknown_s": 0.2079999999999984
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 0.0,
+          "clear_s": 14.744000000000002,
+          "unknown_s": 0.9139999999999984
+        },
+        "ordered_application": {
+          "occupied_s": 0.0,
+          "clear_s": 14.744000000000002,
+          "unknown_s": 0.9139999999999984
+        }
+      },
+      "common_known_s": 14.744000000000002,
+      "session_label": false,
+      "disagreement_s_on_common_known": {
+        "instant": 0.0,
+        "receipt_hysteresis": 0.0,
+        "ordered_application": 0.0
+      },
+      "packet_reasons": {
+        "measurement": 268
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.706,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 15.450000000000001,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "empty_room_person_session",
+      "source_scene": "empty_room_person_session",
+      "injection": null
+    },
+    {
+      "received_packets": 266,
+      "duration_s": 15.631,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 9.409999999999993,
+          "clear_s": 5.990000000000007,
+          "unknown_s": 0.23099999999999987
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.5349999999999999
+        },
+        "ordered_application": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.5349999999999999
+        }
+      },
+      "common_known_s": 15.096,
+      "session_label": true,
+      "disagreement_s_on_common_known": {
+        "instant": 5.990000000000007,
+        "receipt_hysteresis": 0.9700000000000006,
+        "ordered_application": 0.9700000000000006
+      },
+      "packet_reasons": {
+        "measurement": 266
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.304,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 12.581,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 13.551,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 15.4,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "stationary_person_3m",
+      "source_scene": "stationary_person_3m",
+      "injection": null
+    },
+    {
+      "received_packets": 1226,
+      "duration_s": 70.676,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 0.10899999999999466,
+          "clear_s": 70.34100000000001,
+          "unknown_s": 0.2259999999999991
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 0.0,
+          "clear_s": 69.715,
+          "unknown_s": 0.9609999999999991
+        },
+        "ordered_application": {
+          "occupied_s": 0.0,
+          "clear_s": 69.715,
+          "unknown_s": 0.9609999999999991
+        }
+      },
+      "common_known_s": 69.715,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 1226
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.735,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 70.45,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "approaching_cart",
+      "source_scene": "approaching_cart",
+      "injection": null
+    },
+    {
+      "received_packets": 904,
+      "duration_s": 52.087,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 0.0,
+          "clear_s": 51.85,
+          "unknown_s": 0.23700000000000188
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 0.0,
+          "clear_s": 51.087,
+          "unknown_s": 1.0000000000000018
+        },
+        "ordered_application": {
+          "occupied_s": 0.0,
+          "clear_s": 51.087,
+          "unknown_s": 1.0000000000000018
+        }
+      },
+      "common_known_s": 51.087,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 904
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.763,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 51.85,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "receding_cart",
+      "source_scene": "receding_cart",
+      "injection": null
+    },
+    {
+      "received_packets": 238,
+      "duration_s": 13.938,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 4.821000000000001,
+          "clear_s": 8.879000000000001,
+          "unknown_s": 0.23799999999999955
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 10.809999999999999,
+          "clear_s": 1.9970000000000017,
+          "unknown_s": 1.1309999999999996
+        },
+        "ordered_application": {
+          "occupied_s": 10.809999999999999,
+          "clear_s": 1.9970000000000017,
+          "unknown_s": 1.1309999999999996
+        }
+      },
+      "common_known_s": 12.807,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 238
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.893,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 11.703,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 13.700000000000001,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "receding_person_short",
+      "source_scene": "receding_person_short",
+      "injection": null
+    },
+    {
+      "received_packets": 231,
+      "duration_s": 15.631,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 7.622999999999993,
+          "clear_s": 5.990000000000007,
+          "unknown_s": 2.018
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 12.029,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 2.6320000000000006
+        },
+        "ordered_application": {
+          "occupied_s": 12.029,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 2.6320000000000006
+        }
+      },
+      "common_known_s": 12.999,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 231
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.304,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 4.25,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        },
+        {
+          "received_at_s": 6.347,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 12.581,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 13.551,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 15.4,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "injected_silence",
+      "source_scene": "stationary_person_3m",
+      "injection": {
+        "type": "remove_packets",
+        "arrival_interval_s": [
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "received_packets": 272,
+      "duration_s": 16.531,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 10.178999999999993,
+          "clear_s": 5.990000000000007,
+          "unknown_s": 0.3619999999999983
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 14.594999999999999,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.9659999999999991
+        },
+        "ordered_application": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 1.4349999999999985
+        }
+      },
+      "common_known_s": 15.096,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 265,
+        "duplicate_or_out_of_order": 7
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.304,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 12.581,
+          "epoch": 0,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 13.551,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 15.4,
+          "epoch": 0,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "injected_late_and_duplicate",
+      "source_scene": "stationary_person_3m",
+      "injection": {
+        "type": "delay_and_duplicate",
+        "delayed_source_order": 30,
+        "delayed_arrival_s": 2.3009999999999997,
+        "duplicate_source_order": 20,
+        "duplicate_arrivals_s": [
+          15.531,
+          15.631,
+          15.731,
+          15.831000000000001,
+          15.931000000000001,
+          16.031
+        ]
+      }
+    },
+    {
+      "received_packets": 267,
+      "duration_s": 15.631,
+      "poll_period_s": 0.05,
+      "methods": {
+        "instant": {
+          "occupied_s": 9.409999999999993,
+          "clear_s": 5.990000000000007,
+          "unknown_s": 0.23099999999999987
+        },
+        "receipt_hysteresis": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.5349999999999999
+        },
+        "ordered_application": {
+          "occupied_s": 13.792,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.8689999999999996
+        }
+      },
+      "common_known_s": 14.762,
+      "session_label": null,
+      "disagreement_s_on_common_known": null,
+      "packet_reasons": {
+        "measurement": 266,
+        "wrong_epoch": 1
+      },
+      "state_events": [
+        {
+          "received_at_s": 0.304,
+          "epoch": 0,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 5.703,
+          "epoch": 1,
+          "state": null,
+          "reason": "source_restart"
+        },
+        {
+          "received_at_s": 6.037,
+          "epoch": 1,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 12.581,
+          "epoch": 1,
+          "state": false,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 13.551,
+          "epoch": 1,
+          "state": true,
+          "reason": "measurement"
+        },
+        {
+          "received_at_s": 15.4,
+          "epoch": 1,
+          "state": null,
+          "reason": "stale"
+        }
+      ],
+      "name": "injected_source_restart",
+      "source_scene": "stationary_person_3m",
+      "injection": {
+        "type": "explicit_restart",
+        "source_order": 100,
+        "restart_s": 5.703,
+        "old_epoch_packet_order": 90,
+        "old_epoch_arrival_s": 5.713
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "system": "Windows"
+  },
+  "interpretation": "Original measurements are reused. Receipt clocks are simulated from log times. Faults are explicit injections, not observed sensor failures. Duration totals integrate displayed states between event/timer ticks. Only two session-level weak labels are used; movement cases have no occupancy truth. No person classification, entry/exit accuracy or transport-latency guarantee."
+}

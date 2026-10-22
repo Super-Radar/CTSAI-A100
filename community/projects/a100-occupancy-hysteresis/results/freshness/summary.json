@@ -1,0 +1,260 @@
+{
+  "input": {
+    "source": "2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+    "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+    "frames": 266,
+    "records": 1434,
+    "incomplete_frames": 0,
+    "rejected_rows": 0
+  },
+  "parameters": {
+    "enter_count": 1,
+    "exit_count": 0,
+    "enter_seconds": 0.3,
+    "exit_seconds": 0.7,
+    "max_gap": 0.25
+  },
+  "poll_period_s": 0.05,
+  "seed": 20261022,
+  "cases": [
+    {
+      "duration_s": 15.681000000000001,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.5849999999999999,
+          "known_beyond_true_capture_deadline_s": 0.06900000000000084,
+          "stale_known_at_observed_ticks": 1,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 0
+        },
+        "capture_bound": {
+          "occupied_s": 14.075999999999999,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.6350000000000006,
+          "known_beyond_true_capture_deadline_s": 0.019000000000000128,
+          "stale_known_at_observed_ticks": 0,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 0
+        }
+      },
+      "name": "normal_50ms",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0,
+        "error_seconds": 0.01,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": true
+    },
+    {
+      "duration_s": 16.631,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 14.126000000000001,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 1.5349999999999981,
+          "known_beyond_true_capture_deadline_s": 15.096000000000002,
+          "stale_known_at_observed_ticks": 562,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 266,
+          "rejected_physically_fresh_packets": 0
+        },
+        "capture_bound": {
+          "occupied_s": 0.0,
+          "clear_s": 0.0,
+          "unknown_s": 16.631,
+          "known_beyond_true_capture_deadline_s": 0.0,
+          "stale_known_at_observed_ticks": 0,
+          "packet_reasons": {
+            "old_or_uncertain_capture": 266
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 0
+        }
+      },
+      "name": "constant_1s_delay",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0,
+        "error_seconds": 0.01,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": true
+    },
+    {
+      "duration_s": 15.681000000000001,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 12.08,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 2.6310000000000002,
+          "known_beyond_true_capture_deadline_s": 0.15700000000000092,
+          "stale_known_at_observed_ticks": 2,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 32,
+          "rejected_physically_fresh_packets": 0
+        },
+        "capture_bound": {
+          "occupied_s": 11.979999999999999,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 2.7310000000000008,
+          "known_beyond_true_capture_deadline_s": 0.057000000000000384,
+          "stale_known_at_observed_ticks": 0,
+          "packet_reasons": {
+            "measurement": 234,
+            "old_or_uncertain_capture": 32
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 0
+        }
+      },
+      "name": "queue_release",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0,
+        "error_seconds": 0.01,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": true
+    },
+    {
+      "duration_s": 15.93766077968053,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 6.882112360782458,
+          "clear_s": 0.0,
+          "unknown_s": 9.05554841889807,
+          "known_beyond_true_capture_deadline_s": 1.2231709276515972,
+          "stale_known_at_observed_ticks": 31,
+          "packet_reasons": {
+            "measurement": 134,
+            "duplicate_or_out_of_order": 132
+          },
+          "accepted_old_packets": 17,
+          "rejected_physically_fresh_packets": 43
+        },
+        "capture_bound": {
+          "occupied_s": 2.5887294954302478,
+          "clear_s": 0.0,
+          "unknown_s": 13.348931284250282,
+          "known_beyond_true_capture_deadline_s": 0.05647782227580933,
+          "stale_known_at_observed_ticks": 0,
+          "packet_reasons": {
+            "measurement": 113,
+            "duplicate_or_out_of_order": 129,
+            "old_or_uncertain_capture": 24
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 47
+        }
+      },
+      "name": "jitter_0_to_400ms",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0,
+        "error_seconds": 0.01,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": true
+    },
+    {
+      "duration_s": 15.681000000000001,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 14.126,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 0.5849999999999999,
+          "known_beyond_true_capture_deadline_s": 0.06900000000000084,
+          "stale_known_at_observed_ticks": 1,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 0
+        },
+        "capture_bound": {
+          "occupied_s": 0.0,
+          "clear_s": 0.0,
+          "unknown_s": 15.681000000000001,
+          "known_beyond_true_capture_deadline_s": 0.0,
+          "stale_known_at_observed_ticks": 0,
+          "packet_reasons": {
+            "old_or_uncertain_capture": 266
+          },
+          "accepted_old_packets": 0,
+          "rejected_physically_fresh_packets": 266
+        }
+      },
+      "name": "conservative_300ms_uncertainty",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0,
+        "error_seconds": 0.3,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": true
+    },
+    {
+      "duration_s": 16.631,
+      "packets": 266,
+      "methods": {
+        "receipt_only": {
+          "occupied_s": 14.126000000000001,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 1.5349999999999981,
+          "known_beyond_true_capture_deadline_s": 15.096000000000002,
+          "stale_known_at_observed_ticks": 562,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 266,
+          "rejected_physically_fresh_packets": 0
+        },
+        "capture_bound": {
+          "occupied_s": 14.076,
+          "clear_s": 0.9700000000000006,
+          "unknown_s": 1.5849999999999989,
+          "known_beyond_true_capture_deadline_s": 15.046000000000001,
+          "stale_known_at_observed_ticks": 561,
+          "packet_reasons": {
+            "measurement": 266
+          },
+          "accepted_old_packets": 266,
+          "rejected_physically_fresh_packets": 0
+        }
+      },
+      "name": "incorrect_anchor_negative_control",
+      "clock": {
+        "device_anchor": 10000,
+        "local_anchor": 0.95,
+        "error_seconds": 0.01,
+        "rate": 1.0,
+        "drift_ppm": 0.0
+      },
+      "clock_bound_contains_truth": false
+    }
+  ],
+  "limits": "Physical capture times and transport delays are simulation truth over public measured point frames. Clock mappings are supplied externally, not inferred or measured on hardware. Incorrect-bound negative control is expected to fail. Known beyond deadline integrates sample-and-hold display state, including polling latency. Receipt-time dwell is retained and is not a proof of continuous physical occupancy."
+}
