@@ -63,6 +63,9 @@ run_configuration_tests;
 
 ## 算法
 
+DML 的幅度缩放修复与原生回归方法见 [docs/DML_SCALE.md](docs/DML_SCALE.md)。
+在项目目录执行 `addpath('tests'); run_dml_scale_tests;`；返回谱为逆相对残差，不含绝对输入功率。
+
 - ADC：32 位无符号字拆成高 16 位、低 16 位两个有符号采样。
 - 数据立方体：原始 ADC 为 `[sample, raw chirp, RX]`；Range FFT 后再组织为 `[range, slow-time chirp, virtual channel]`。
 - Range FFT：距离维加窗、FFT、保留正频率半谱。

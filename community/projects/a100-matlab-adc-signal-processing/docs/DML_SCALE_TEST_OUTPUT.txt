@@ -1,0 +1,14 @@
+Runtime: GNU Octave 8.4.0, Ubuntu 24.04 container, 2026-10-22
+Project command:
+  addpath('tests'); run_dml_scale_tests; run_configuration_tests;
+Exit code: 0
+
+amplitude,original_angle_deg,normalized_angle_deg
+1e+00,30,30
+1e-06,29.75,30
+1e-08,-60,30
+1e-10,-60,30
+PASS: 252 amplitude/phase/geometry/SNR comparisons; zero and four invalid-input cases.
+All CTSAI-A100 configuration/MIMO tests passed.
+
+Synthetic known-direction snapshots. No MATLAB GUI or hardware validation.
