@@ -1,0 +1,60 @@
+{
+  "training": {
+    "scene": "empty_room_person_session",
+    "indices": [
+      0,
+      133
+    ],
+    "frames": 134
+  },
+  "config": {
+    "range_step": 0.25,
+    "angle_step": 5.0,
+    "max_range": 30.0,
+    "threshold": 0.2,
+    "min_frames": 20
+  },
+  "sources": {
+    "empty_room_person_session": {
+      "source": "2026_08_02_19_13_58_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "271e0f6e22503547ee56cf6f5756c0cb75885d67a5b89031a74276f73888d026",
+      "frames": 268,
+      "records": 1264,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "stationary_person_3m": {
+      "source": "2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+      "frames": 266,
+      "records": 1434,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    }
+  },
+  "evaluation": [
+    {
+      "scene": "held_out_empty",
+      "frames": 134,
+      "points": 641,
+      "retained_points": 47,
+      "removed_fraction": 0.9266770670826833,
+      "roi_frames_before": 0,
+      "roi_frames_after": 0
+    },
+    {
+      "scene": "person_session",
+      "frames": 266,
+      "points": 1434,
+      "retained_points": 876,
+      "removed_fraction": 0.38912133891213385,
+      "roi_frames_before": 163,
+      "roi_frames_after": 163
+    }
+  ],
+  "contaminated_negative_control": {
+    "training_includes_person": true,
+    "person_roi_frames_retained": 4
+  },
+  "caveat": "Same-session chronological holdout, not independent-site validation. Frame correlation means Wilson lower score is not a calibrated 95% confidence guarantee. Point removal is not object detection accuracy."
+}

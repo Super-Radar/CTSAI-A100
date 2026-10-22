@@ -1,0 +1,306 @@
+{
+  "sources": {
+    "empty_room_person_session": {
+      "source": "2026_08_02_19_13_58_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "271e0f6e22503547ee56cf6f5756c0cb75885d67a5b89031a74276f73888d026",
+      "frames": 268,
+      "records": 1264,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    },
+    "stationary_person_3m": {
+      "source": "2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+      "frames": 266,
+      "records": 1434,
+      "incomplete_frames": 0,
+      "rejected_rows": 0
+    }
+  },
+  "training_frames": 134,
+  "config": {
+    "range_step": 0.25,
+    "angle_step": 5.0,
+    "max_range": 30.0,
+    "threshold": 0.2,
+    "min_frames": 20
+  },
+  "cases": [
+    {
+      "case": "unchanged",
+      "lateral_m": 0,
+      "yaw_degrees": 0,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 47,
+          "decision_flips": 0,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 876,
+          "decision_flips": 0,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_-5deg",
+      "lateral_m": 0,
+      "yaw_degrees": -5,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 641,
+          "decision_flips": 594,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1434,
+          "decision_flips": 558,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_-2.5deg",
+      "lateral_m": 0,
+      "yaw_degrees": -2.5,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 525,
+          "decision_flips": 478,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1243,
+          "decision_flips": 367,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_-1deg",
+      "lateral_m": 0,
+      "yaw_degrees": -1,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 378,
+          "decision_flips": 339,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1192,
+          "decision_flips": 316,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_+1deg",
+      "lateral_m": 0,
+      "yaw_degrees": 1,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 44,
+          "decision_flips": 3,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 876,
+          "decision_flips": 4,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_+2.5deg",
+      "lateral_m": 0,
+      "yaw_degrees": 2.5,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 173,
+          "decision_flips": 126,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1063,
+          "decision_flips": 195,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "yaw_+5deg",
+      "lateral_m": 0,
+      "yaw_degrees": 5,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 641,
+          "decision_flips": 594,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1433,
+          "decision_flips": 559,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "lateral_-0.1m",
+      "lateral_m": -0.1,
+      "yaw_degrees": 0,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 419,
+          "decision_flips": 372,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1275,
+          "decision_flips": 399,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "lateral_-0.05m",
+      "lateral_m": -0.05,
+      "yaw_degrees": 0,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 355,
+          "decision_flips": 308,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 1156,
+          "decision_flips": 280,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "lateral_+0.05m",
+      "lateral_m": 0.05,
+      "yaw_degrees": 0,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 40,
+          "decision_flips": 7,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 852,
+          "decision_flips": 24,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    },
+    {
+      "case": "lateral_+0.1m",
+      "lateral_m": 0.1,
+      "yaw_degrees": 0,
+      "sessions": {
+        "held_out_empty": {
+          "frames": 134,
+          "points": 641,
+          "retained": 39,
+          "decision_flips": 8,
+          "original_roi_frames": 0,
+          "original_roi_frames_retained": 0,
+          "outside_view": 0
+        },
+        "person": {
+          "frames": 266,
+          "points": 1434,
+          "retained": 839,
+          "decision_flips": 41,
+          "original_roi_frames": 163,
+          "original_roi_frames_retained": 163,
+          "outside_view": 0
+        }
+      }
+    }
+  ],
+  "limits": "Declared geometric perturbations of recorded points; no new acquisition, changed visibility, multipath, or hardware pose measurement. Original ROI membership is held fixed. Out-of-view transformed points are retained and counted separately. No labels for false alarms or person detection; no threshold retuning or automatic drift detector."
+}
