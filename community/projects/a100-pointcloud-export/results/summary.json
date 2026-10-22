@@ -1,0 +1,65 @@
+{
+  "python": "3.11.15",
+  "rosbags": "0.11.9",
+  "pypcd4": "1.5.1",
+  "sessions": [
+    {
+      "scenario": "static_plastic_target",
+      "source": "data/targets/2026_08_02_16_19_35_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "1342a58ce56496f2011aae8eb65064eaa885fafbe31d5dfb0bf68d9f35f69383",
+      "frames_verified": 207,
+      "points_verified": 3456,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "empty_background",
+      "source": "data/targets/2026_08_02_16_23_49_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "f4885a3af4cc93b98620083a9868c5713a4a4f02b7f7c51a9f02a38cbeff0baa",
+      "frames_verified": 211,
+      "points_verified": 4184,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "approaching_cart",
+      "source": "data/targets/2026_08_02_16_27_16_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "bea5d1ad5fff2b07bea4ed16b117db4022ab5e7e9a85980c4f65ef225bf2a6c9",
+      "frames_verified": 1226,
+      "points_verified": 22408,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "receding_cart",
+      "source": "data/targets/2026_08_02_16_34_07_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "c5413051e576b949a3c5cd7ca244b8fee71c7686044eccff3e566e15d1e8965f",
+      "frames_verified": 904,
+      "points_verified": 15486,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "empty_room_person_session",
+      "source": "data/targets/2026_08_02_19_13_58_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "271e0f6e22503547ee56cf6f5756c0cb75885d67a5b89031a74276f73888d026",
+      "frames_verified": 268,
+      "points_verified": 1264,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "stationary_person_3m",
+      "source": "data/targets/2026_08_02_21_35_30_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "8573b19754e77f09015163de126390442396c7de9ce806808583f4849899206a",
+      "frames_verified": 266,
+      "points_verified": 1434,
+      "pcd_and_bag_payload_equal": true
+    },
+    {
+      "scenario": "receding_person_short",
+      "source": "data/targets/2026_08_02_21_39_26_Tatget_CTLRR-300-V2_1_RawTarget.csv",
+      "sha256": "15a23d7cd035de59ac886ad1672bbd4ae0c7c941f1e1f37dd38762fc266689c1",
+      "frames_verified": 238,
+      "points_verified": 1292,
+      "pcd_and_bag_payload_equal": true
+    }
+  ],
+  "replay_frames": 80,
+  "validation": "Independent PCD and bag readers on every frame; GIF renders deserialized bag data at fixed 10fps, not hardware/ROS2/RViz execution."
+}

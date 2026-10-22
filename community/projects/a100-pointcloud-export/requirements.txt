@@ -1,0 +1,5 @@
+numpy>=1.26,<3
+rosbags==0.11.9
+pypcd4==1.5.1
+matplotlib>=3.8,<4
+pillow>=10,<13
