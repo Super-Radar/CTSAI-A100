@@ -1,0 +1,128 @@
+{
+  "parameters": {
+    "band_m": 0.1,
+    "confirm_s": 0.3,
+    "rearm_s": 0.6,
+    "max_gap_s": 0.5,
+    "real_replay_max_gap_s": 2.0
+  },
+  "synthetic": [
+    {
+      "case": "clean",
+      "expected_events": 2,
+      "naive_sign_changes": 2,
+      "confirmed_events": [
+        {
+          "track_id": "a",
+          "epoch": 0,
+          "time_s": 2.3000000000000003,
+          "direction": "negative",
+          "confirmation_started_s": 2.0
+        },
+        {
+          "track_id": "a",
+          "epoch": 0,
+          "time_s": 4.3,
+          "direction": "positive",
+          "confirmation_started_s": 4.0
+        }
+      ],
+      "latency_s": [
+        0.30000000000000027,
+        0.2999999999999998
+      ]
+    },
+    {
+      "case": "short_excursions",
+      "expected_events": 2,
+      "naive_sign_changes": 10,
+      "confirmed_events": [
+        {
+          "track_id": "a",
+          "epoch": 0,
+          "time_s": 2.3000000000000003,
+          "direction": "negative",
+          "confirmation_started_s": 2.0
+        },
+        {
+          "track_id": "a",
+          "epoch": 0,
+          "time_s": 4.3,
+          "direction": "positive",
+          "confirmation_started_s": 4.0
+        }
+      ],
+      "latency_s": [
+        0.30000000000000027,
+        0.2999999999999998
+      ]
+    }
+  ],
+  "clock_reset_aggregation": {
+    "expected_passes": 2,
+    "events": [
+      {
+        "track_id": "a",
+        "epoch": 0,
+        "time_s": 0.7,
+        "direction": "negative",
+        "confirmation_started_s": 0.4
+      },
+      {
+        "track_id": "a",
+        "epoch": 1,
+        "time_s": 0.7,
+        "direction": "negative",
+        "confirmation_started_s": 0.4
+      }
+    ],
+    "deduplicated_without_epoch": 1,
+    "deduplicated_with_epoch": 2,
+    "limits": "Synthetic reset scenario; epoch is local to this counter instance. Persistent sinks must additionally supply a unique run/source identifier."
+  },
+  "published_envelope": [
+    {
+      "scene": "approaching_box",
+      "gate_m": 2.0,
+      "samples": 110,
+      "simple_band_changes": 7,
+      "confirmed_events": [
+        {
+          "track_id": "envelope",
+          "epoch": 0,
+          "time_s": 38.08,
+          "direction": "negative",
+          "confirmation_started_s": 37.75
+        }
+      ],
+      "ground_truth_available": false
+    },
+    {
+      "scene": "receding_box",
+      "gate_m": 2.0,
+      "samples": 100,
+      "simple_band_changes": 1,
+      "confirmed_events": [
+        {
+          "track_id": "envelope",
+          "epoch": 0,
+          "time_s": 19.659,
+          "direction": "positive",
+          "confirmation_started_s": 19.319
+        }
+      ],
+      "ground_truth_available": false
+    },
+    {
+      "scene": "receding_person_short",
+      "gate_m": 3.5,
+      "samples": 84,
+      "simple_band_changes": 1,
+      "confirmed_events": [],
+      "ground_truth_available": false
+    }
+  ],
+  "source": "a100-indoor-cart-mti/results/motion_trajectory.csv",
+  "sha256": "d87d2429d1c57ecb9231c43466f023976ef778b2cf9d1f5904acb575a4822632",
+  "limits": "Real input is a published single detection envelope, not identity tracking or event truth; count changes are diagnostics, not accuracy. Fast real returns inside rearm dwell are intentionally suppressed."
+}
