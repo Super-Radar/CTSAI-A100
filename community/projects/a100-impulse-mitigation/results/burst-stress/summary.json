@@ -1,0 +1,2180 @@
+{
+  "seed": 20261022,
+  "inputs": [
+    {
+      "rx": 0,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "a8fb10cf93c9a89c306ac1033f04ed78a280350b978d50dffaeed721baeaa420",
+      "source": "run_001_Pf0_Rx0.txt"
+    },
+    {
+      "rx": 0,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "15eeb8f3c3d3b4c1072bb61f198b8edafb0ca7c791ccfd666d19b15fd7962993",
+      "source": "run_001_Pf0_Rx0.txt"
+    },
+    {
+      "rx": 1,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "5fe7c9d31f8a2497f0b39e675b77d872a3876146f3b362e21b0757b58d843dc8",
+      "source": "run_001_Pf0_Rx1.txt"
+    },
+    {
+      "rx": 2,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "c992631191b4778ad835946845fdeea4ea9c7b6ad3810abf345c65be79b1847b",
+      "source": "run_001_Pf0_Rx2.txt"
+    },
+    {
+      "rx": 3,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "2027bfa2ba18e84c555f3010fa3846910fcc659a5348ec43b4119e5d674540a6",
+      "source": "run_001_Pf0_Rx3.txt"
+    },
+    {
+      "rx": 0,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "903c9e884709e38e2ca97b544289a46fb99665915d7f2dbe26e56c93a5cc67a8",
+      "source": "run_001_Pf0_Rx0.txt"
+    },
+    {
+      "rx": 0,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "9e62456d855923cc6702bc65b8621c408a7f0b293fc5546a3b6a0529b0f79954",
+      "source": "run_001_Pf0_Rx0.txt"
+    },
+    {
+      "rx": 1,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "405e85e5ba70f301df6d0d5c8c53bebbaf3c8224e7a8af113e41a5a0dda2eb60",
+      "source": "run_001_Pf0_Rx1.txt"
+    },
+    {
+      "rx": 2,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "9793c951db11ff2ca790ce64da578f1b365950058f1ba4b254a1c14240343f0a",
+      "source": "run_001_Pf0_Rx2.txt"
+    },
+    {
+      "rx": 3,
+      "samples": 1024,
+      "chirps": 256,
+      "sha256": "b539243d8641540a07c50e98d542d5cd4a993390332cf273ca513a689813c1d1",
+      "source": "run_001_Pf0_Rx3.txt"
+    }
+  ],
+  "cases": [
+    {
+      "case": "interior_1",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 320,
+      "injected_samples": 320,
+      "detected_injected_samples": 320,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": 14.421173569377498,
+        "zero": 0.045157493950592695,
+        "linear": 0.025929968102210706
+      }
+    },
+    {
+      "case": "interior_3",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 320,
+      "injected_samples": 960,
+      "detected_injected_samples": 960,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": 24.994272965222994,
+        "zero": 0.07403090509527205,
+        "linear": 0.04344740196072309
+      }
+    },
+    {
+      "case": "interior_8",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 320,
+      "injected_samples": 2560,
+      "detected_injected_samples": 2560,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": 40.906402515845784,
+        "zero": 0.1274116268681576,
+        "linear": 0.0755986280034523
+      }
+    },
+    {
+      "case": "interior_9",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 0,
+      "injected_samples": 2880,
+      "detected_injected_samples": 2880,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": null,
+        "zero": null,
+        "linear": null
+      }
+    },
+    {
+      "case": "interior_16",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 0,
+      "injected_samples": 5120,
+      "detected_injected_samples": 5120,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": null,
+        "zero": null,
+        "linear": null
+      }
+    },
+    {
+      "case": "left_edge",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 0,
+      "injected_samples": 960,
+      "detected_injected_samples": 960,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": null,
+        "zero": null,
+        "linear": null
+      }
+    },
+    {
+      "case": "right_edge",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 0,
+      "injected_samples": 960,
+      "detected_injected_samples": 960,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": null,
+        "zero": null,
+        "linear": null
+      }
+    },
+    {
+      "case": "distributed_6pct",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 0,
+      "injected_samples": 19840,
+      "detected_injected_samples": 19840,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": null,
+        "zero": null,
+        "linear": null
+      }
+    },
+    {
+      "case": "half_chirp",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 320,
+      "injected_samples": 163840,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": 330.43862318973027,
+        "zero": 330.43862318973027,
+        "linear": 330.43862318973027
+      }
+    },
+    {
+      "case": "weak_interior_3",
+      "files": 10,
+      "injected_chirps": 320,
+      "retained_injected_chirps": 320,
+      "injected_samples": 960,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "rejected_other_chirps": 0,
+      "median_spectrum_error": {
+        "damaged": 0.2499427296522299,
+        "zero": 0.2499427296522299,
+        "linear": 0.2499427296522299
+      }
+    }
+  ],
+  "runs": [
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 9.847190967300277,
+        "relative_complex_spectrum_l2": 16.350815524704498
+      },
+      "zero": {
+        "relative_time_l2": 0.020036069564124296,
+        "relative_complex_spectrum_l2": 0.033268987914526024
+      },
+      "linear": {
+        "relative_time_l2": 0.016462783482765364,
+        "relative_complex_spectrum_l2": 0.02733570788296061
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 17.0558350671974,
+        "relative_complex_spectrum_l2": 28.338660821354427
+      },
+      "zero": {
+        "relative_time_l2": 0.03561703245393736,
+        "relative_complex_spectrum_l2": 0.059163377067190444
+      },
+      "linear": {
+        "relative_time_l2": 0.023595403507798665,
+        "relative_complex_spectrum_l2": 0.039185235033260456
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 27.852062034467778,
+        "relative_complex_spectrum_l2": 46.37993143194476
+      },
+      "zero": {
+        "relative_time_l2": 0.0629796958285825,
+        "relative_complex_spectrum_l2": 0.10475980039653679
+      },
+      "linear": {
+        "relative_time_l2": 0.05167056579339677,
+        "relative_complex_spectrum_l2": 0.08586636453979772
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 222.81649627574222,
+        "relative_complex_spectrum_l2": 374.6533487042584
+      },
+      "zero": {
+        "relative_time_l2": 222.81649627574222,
+        "relative_complex_spectrum_l2": 374.6533487042584
+      },
+      "linear": {
+        "relative_time_l2": 222.81649627574222,
+        "relative_complex_spectrum_l2": 374.6533487042584
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.170558350671974,
+        "relative_complex_spectrum_l2": 0.2833866082135442
+      },
+      "zero": {
+        "relative_time_l2": 0.170558350671974,
+        "relative_complex_spectrum_l2": 0.2833866082135442
+      },
+      "linear": {
+        "relative_time_l2": 0.170558350671974,
+        "relative_complex_spectrum_l2": 0.2833866082135442
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 9.741025408746458,
+        "relative_complex_spectrum_l2": 15.669372330290303
+      },
+      "zero": {
+        "relative_time_l2": 0.022121995237577484,
+        "relative_complex_spectrum_l2": 0.03558534810465279
+      },
+      "linear": {
+        "relative_time_l2": 0.0165767454484465,
+        "relative_complex_spectrum_l2": 0.02666528271478755
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 16.871950925768257,
+        "relative_complex_spectrum_l2": 27.157607342624456
+      },
+      "zero": {
+        "relative_time_l2": 0.03539257849963407,
+        "relative_complex_spectrum_l2": 0.05694698612060745
+      },
+      "linear": {
+        "relative_time_l2": 0.02986392903533662,
+        "relative_complex_spectrum_l2": 0.04804661594455038
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 27.551780488940327,
+        "relative_complex_spectrum_l2": 44.44698266960669
+      },
+      "zero": {
+        "relative_time_l2": 0.057821827546764695,
+        "relative_complex_spectrum_l2": 0.09314694167234346
+      },
+      "linear": {
+        "relative_time_l2": 0.04818453719799963,
+        "relative_complex_spectrum_l2": 0.0775793257256605
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 220.41424391152262,
+        "relative_complex_spectrum_l2": 359.03914436360856
+      },
+      "zero": {
+        "relative_time_l2": 220.41424391152262,
+        "relative_complex_spectrum_l2": 359.03914436360856
+      },
+      "linear": {
+        "relative_time_l2": 220.41424391152262,
+        "relative_complex_spectrum_l2": 359.03914436360856
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.1687195092576826,
+        "relative_complex_spectrum_l2": 0.27157607342624457
+      },
+      "zero": {
+        "relative_time_l2": 0.1687195092576826,
+        "relative_complex_spectrum_l2": 0.27157607342624457
+      },
+      "linear": {
+        "relative_time_l2": 0.1687195092576826,
+        "relative_complex_spectrum_l2": 0.27157607342624457
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 8.245804351444585,
+        "relative_complex_spectrum_l2": 13.576630010096858
+      },
+      "zero": {
+        "relative_time_l2": 0.025415275904893758,
+        "relative_complex_spectrum_l2": 0.04184598407368496
+      },
+      "linear": {
+        "relative_time_l2": 0.013956343584000011,
+        "relative_complex_spectrum_l2": 0.022978972706351224
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 14.282152085974555,
+        "relative_complex_spectrum_l2": 23.530539646285312
+      },
+      "zero": {
+        "relative_time_l2": 0.04451684412940631,
+        "relative_complex_spectrum_l2": 0.07333043710509654
+      },
+      "linear": {
+        "relative_time_l2": 0.02532020883316126,
+        "relative_complex_spectrum_l2": 0.04169394433956135
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 23.32265669297603,
+        "relative_complex_spectrum_l2": 38.510811157632205
+      },
+      "zero": {
+        "relative_time_l2": 0.07565160376499168,
+        "relative_complex_spectrum_l2": 0.12483114373211521
+      },
+      "linear": {
+        "relative_time_l2": 0.04181173032394377,
+        "relative_complex_spectrum_l2": 0.06889927346851885
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 186.58125354380823,
+        "relative_complex_spectrum_l2": 311.08722924041695
+      },
+      "zero": {
+        "relative_time_l2": 186.58125354380823,
+        "relative_complex_spectrum_l2": 311.08722924041695
+      },
+      "linear": {
+        "relative_time_l2": 186.58125354380823,
+        "relative_complex_spectrum_l2": 311.08722924041695
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.14282152085974556,
+        "relative_complex_spectrum_l2": 0.2353053964628531
+      },
+      "zero": {
+        "relative_time_l2": 0.14282152085974556,
+        "relative_complex_spectrum_l2": 0.2353053964628531
+      },
+      "linear": {
+        "relative_time_l2": 0.14282152085974556,
+        "relative_complex_spectrum_l2": 0.2353053964628531
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 8.047394507482412,
+        "relative_complex_spectrum_l2": 11.378121874677806
+      },
+      "zero": {
+        "relative_time_l2": 0.036545937742211855,
+        "relative_complex_spectrum_l2": 0.0516718961980357
+      },
+      "linear": {
+        "relative_time_l2": 0.01606017314163942,
+        "relative_complex_spectrum_l2": 0.02270730074983835
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 13.938496155510261,
+        "relative_complex_spectrum_l2": 19.720162343177986
+      },
+      "zero": {
+        "relative_time_l2": 0.06301423359674899,
+        "relative_complex_spectrum_l2": 0.08914540202421202
+      },
+      "linear": {
+        "relative_time_l2": 0.028181324665483908,
+        "relative_complex_spectrum_l2": 0.03985170311465527
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 22.761468908496767,
+        "relative_complex_spectrum_l2": 32.27462945652704
+      },
+      "zero": {
+        "relative_time_l2": 0.10621455699781349,
+        "relative_complex_spectrum_l2": 0.1505218360059899
+      },
+      "linear": {
+        "relative_time_l2": 0.053177032300742916,
+        "relative_complex_spectrum_l2": 0.07526189151937708
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 182.09175126797413,
+        "relative_complex_spectrum_l2": 260.71185598494816
+      },
+      "zero": {
+        "relative_time_l2": 182.09175126797413,
+        "relative_complex_spectrum_l2": 260.71185598494816
+      },
+      "linear": {
+        "relative_time_l2": 182.09175126797413,
+        "relative_complex_spectrum_l2": 260.71185598494816
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.13938496155510263,
+        "relative_complex_spectrum_l2": 0.19720162343177988
+      },
+      "zero": {
+        "relative_time_l2": 0.13938496155510263,
+        "relative_complex_spectrum_l2": 0.19720162343177988
+      },
+      "linear": {
+        "relative_time_l2": 0.13938496155510263,
+        "relative_complex_spectrum_l2": 0.19720162343177988
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 9.01820133877797,
+        "relative_complex_spectrum_l2": 14.994766822075285
+      },
+      "zero": {
+        "relative_time_l2": 0.023572722693398808,
+        "relative_complex_spectrum_l2": 0.039194897837228244
+      },
+      "linear": {
+        "relative_time_l2": 0.016293708735753774,
+        "relative_complex_spectrum_l2": 0.027091917110884333
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 15.619982911649116,
+        "relative_complex_spectrum_l2": 25.9884047021422
+      },
+      "zero": {
+        "relative_time_l2": 0.03555619589448263,
+        "relative_complex_spectrum_l2": 0.05913904359091834
+      },
+      "linear": {
+        "relative_time_l2": 0.02740113548065043,
+        "relative_complex_spectrum_l2": 0.04556546777873544
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 25.50732528302202,
+        "relative_complex_spectrum_l2": 42.5334293567856
+      },
+      "zero": {
+        "relative_time_l2": 0.061762335508549676,
+        "relative_complex_spectrum_l2": 0.10284382919825416
+      },
+      "linear": {
+        "relative_time_l2": 0.048692990758320016,
+        "relative_complex_spectrum_l2": 0.08101447267400214
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 204.05860226417616,
+        "relative_complex_spectrum_l2": 343.58161490122643
+      },
+      "zero": {
+        "relative_time_l2": 204.05860226417616,
+        "relative_complex_spectrum_l2": 343.58161490122643
+      },
+      "linear": {
+        "relative_time_l2": 204.05860226417616,
+        "relative_complex_spectrum_l2": 343.58161490122643
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.15619982911649116,
+        "relative_complex_spectrum_l2": 0.259884047021422
+      },
+      "zero": {
+        "relative_time_l2": 0.15619982911649116,
+        "relative_complex_spectrum_l2": 0.259884047021422
+      },
+      "linear": {
+        "relative_time_l2": 0.15619982911649116,
+        "relative_complex_spectrum_l2": 0.259884047021422
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 10.59547742240509,
+        "relative_complex_spectrum_l2": 16.312819511384028
+      },
+      "zero": {
+        "relative_time_l2": 0.032738996531942226,
+        "relative_complex_spectrum_l2": 0.05040502849641037
+      },
+      "linear": {
+        "relative_time_l2": 0.02044439857201726,
+        "relative_complex_spectrum_l2": 0.031476239401811844
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 18.35190522605454,
+        "relative_complex_spectrum_l2": 28.2728074617819
+      },
+      "zero": {
+        "relative_time_l2": 0.05513976442218455,
+        "relative_complex_spectrum_l2": 0.08493295421961797
+      },
+      "linear": {
+        "relative_time_l2": 0.03593076800637368,
+        "relative_complex_spectrum_l2": 0.05532534323296575
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 29.968535741166402,
+        "relative_complex_spectrum_l2": 46.27215378074271
+      },
+      "zero": {
+        "relative_time_l2": 0.08533060358121676,
+        "relative_complex_spectrum_l2": 0.1316504597076582
+      },
+      "linear": {
+        "relative_time_l2": 0.05262385885368001,
+        "relative_complex_spectrum_l2": 0.08107410553023975
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 239.74828592933122,
+        "relative_complex_spectrum_l2": 373.7827295228226
+      },
+      "zero": {
+        "relative_time_l2": 239.74828592933122,
+        "relative_complex_spectrum_l2": 373.7827295228226
+      },
+      "linear": {
+        "relative_time_l2": 239.74828592933122,
+        "relative_complex_spectrum_l2": 373.7827295228226
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.18351905226054543,
+        "relative_complex_spectrum_l2": 0.28272807461781896
+      },
+      "zero": {
+        "relative_time_l2": 0.18351905226054543,
+        "relative_complex_spectrum_l2": 0.28272807461781896
+      },
+      "linear": {
+        "relative_time_l2": 0.18351905226054543,
+        "relative_complex_spectrum_l2": 0.28272807461781896
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 9.269071219731202,
+        "relative_complex_spectrum_l2": 15.479073069938739
+      },
+      "zero": {
+        "relative_time_l2": 0.03316365653754342,
+        "relative_complex_spectrum_l2": 0.055382319397678854
+      },
+      "linear": {
+        "relative_time_l2": 0.016477876121757277,
+        "relative_complex_spectrum_l2": 0.027517562707159385
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 16.054502291548868,
+        "relative_complex_spectrum_l2": 26.827787329334633
+      },
+      "zero": {
+        "relative_time_l2": 0.05808350897219427,
+        "relative_complex_spectrum_l2": 0.09705276948351554
+      },
+      "linear": {
+        "relative_time_l2": 0.027006113451599402,
+        "relative_complex_spectrum_l2": 0.045102760152913354
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 26.216892459091987,
+        "relative_complex_spectrum_l2": 43.90718900406628
+      },
+      "zero": {
+        "relative_time_l2": 0.09069550551162307,
+        "relative_complex_spectrum_l2": 0.15182614471734943
+      },
+      "linear": {
+        "relative_time_l2": 0.04543329072755183,
+        "relative_complex_spectrum_l2": 0.07593536448752752
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 209.7351396727359,
+        "relative_complex_spectrum_l2": 354.67873463120503
+      },
+      "zero": {
+        "relative_time_l2": 209.7351396727359,
+        "relative_complex_spectrum_l2": 354.67873463120503
+      },
+      "linear": {
+        "relative_time_l2": 209.7351396727359,
+        "relative_complex_spectrum_l2": 354.67873463120503
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx0.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.1605450229154887,
+        "relative_complex_spectrum_l2": 0.2682778732933463
+      },
+      "zero": {
+        "relative_time_l2": 0.1605450229154887,
+        "relative_complex_spectrum_l2": 0.2682778732933463
+      },
+      "linear": {
+        "relative_time_l2": 0.1605450229154887,
+        "relative_complex_spectrum_l2": 0.2682778732933463
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 8.104367731075866,
+        "relative_complex_spectrum_l2": 13.690383306053231
+      },
+      "zero": {
+        "relative_time_l2": 0.020584535657567068,
+        "relative_complex_spectrum_l2": 0.034772630349511904
+      },
+      "linear": {
+        "relative_time_l2": 0.013904217347656895,
+        "relative_complex_spectrum_l2": 0.023487836605709876
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 14.037176673445105,
+        "relative_complex_spectrum_l2": 23.727692874914684
+      },
+      "zero": {
+        "relative_time_l2": 0.037757135087775597,
+        "relative_complex_spectrum_l2": 0.06381429464700587
+      },
+      "linear": {
+        "relative_time_l2": 0.023775090296085852,
+        "relative_complex_spectrum_l2": 0.04016419776123025
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 22.922613519492717,
+        "relative_complex_spectrum_l2": 38.833478247762535
+      },
+      "zero": {
+        "relative_time_l2": 0.06406488594618648,
+        "relative_complex_spectrum_l2": 0.10844153853755338
+      },
+      "linear": {
+        "relative_time_l2": 0.037005221408951953,
+        "relative_complex_spectrum_l2": 0.0625444113294236
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 183.38090815594174,
+        "relative_complex_spectrum_l2": 313.69370799322354
+      },
+      "zero": {
+        "relative_time_l2": 183.38090815594174,
+        "relative_complex_spectrum_l2": 313.69370799322354
+      },
+      "linear": {
+        "relative_time_l2": 183.38090815594174,
+        "relative_complex_spectrum_l2": 313.69370799322354
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx1.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.14037176673445106,
+        "relative_complex_spectrum_l2": 0.23727692874914688
+      },
+      "zero": {
+        "relative_time_l2": 0.14037176673445106,
+        "relative_complex_spectrum_l2": 0.23727692874914688
+      },
+      "linear": {
+        "relative_time_l2": 0.14037176673445106,
+        "relative_complex_spectrum_l2": 0.23727692874914688
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 7.614238734376617,
+        "relative_complex_spectrum_l2": 11.024351317334121
+      },
+      "zero": {
+        "relative_time_l2": 0.04418637274872555,
+        "relative_complex_spectrum_l2": 0.06397567946239477
+      },
+      "linear": {
+        "relative_time_l2": 0.0153073897109603,
+        "relative_complex_spectrum_l2": 0.022162956509766952
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 13.188248348899245,
+        "relative_complex_spectrum_l2": 19.107019603111183
+      },
+      "zero": {
+        "relative_time_l2": 0.07386596503701202,
+        "relative_complex_spectrum_l2": 0.10700606876325801
+      },
+      "linear": {
+        "relative_time_l2": 0.030122892227190043,
+        "relative_complex_spectrum_l2": 0.04361503135481405
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 21.536319370603923,
+        "relative_complex_spectrum_l2": 31.271141027008014
+      },
+      "zero": {
+        "relative_time_l2": 0.1183034394540749,
+        "relative_complex_spectrum_l2": 0.17170112860881342
+      },
+      "linear": {
+        "relative_time_l2": 0.05147141532014095,
+        "relative_complex_spectrum_l2": 0.07455685525738476
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 172.2905549648314,
+        "relative_complex_spectrum_l2": 252.60575731473037
+      },
+      "zero": {
+        "relative_time_l2": 172.2905549648314,
+        "relative_complex_spectrum_l2": 252.60575731473037
+      },
+      "linear": {
+        "relative_time_l2": 172.2905549648314,
+        "relative_complex_spectrum_l2": 252.60575731473037
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx2.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.13188248348899245,
+        "relative_complex_spectrum_l2": 0.1910701960311118
+      },
+      "zero": {
+        "relative_time_l2": 0.13188248348899245,
+        "relative_complex_spectrum_l2": 0.1910701960311118
+      },
+      "linear": {
+        "relative_time_l2": 0.13188248348899245,
+        "relative_complex_spectrum_l2": 0.1910701960311118
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_1",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 32,
+      "changed_samples": 32,
+      "detected_injected_samples": 32,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 7.744821414817709,
+        "relative_complex_spectrum_l2": 13.84758031667971
+      },
+      "zero": {
+        "relative_time_l2": 0.027108257920407147,
+        "relative_complex_spectrum_l2": 0.048469003827500426
+      },
+      "linear": {
+        "relative_time_l2": 0.014091132704996267,
+        "relative_complex_spectrum_l2": 0.025194653489633862
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_3",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 13.414424186011749,
+        "relative_complex_spectrum_l2": 24.000141228303786
+      },
+      "zero": {
+        "relative_time_l2": 0.041778986698457546,
+        "relative_complex_spectrum_l2": 0.07473137308544757
+      },
+      "linear": {
+        "relative_time_l2": 0.024206051840045924,
+        "relative_complex_spectrum_l2": 0.043279772566632124
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_8",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 256,
+      "changed_samples": 256,
+      "detected_injected_samples": 256,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 21.905662965985574,
+        "relative_complex_spectrum_l2": 39.27937567490598
+      },
+      "zero": {
+        "relative_time_l2": 0.07255114153861618,
+        "relative_complex_spectrum_l2": 0.1299921100042
+      },
+      "linear": {
+        "relative_time_l2": 0.04061148527198391,
+        "relative_complex_spectrum_l2": 0.0726674013324696
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_9",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 288,
+      "changed_samples": 288,
+      "detected_injected_samples": 288,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "interior_16",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 512,
+      "changed_samples": 512,
+      "detected_injected_samples": 512,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "left_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "right_edge",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 96,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "distributed_6pct",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 1984,
+      "changed_samples": 1984,
+      "detected_injected_samples": 1984,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 0,
+      "rejected_other_chirps": 0,
+      "damaged": null,
+      "zero": null,
+      "linear": null
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "half_chirp",
+      "amplitude": 20000,
+      "injected_chirps": 32,
+      "injected_samples": 16384,
+      "changed_samples": 16384,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 175.2453037278846,
+        "relative_complex_spectrum_l2": 317.29563147823416
+      },
+      "zero": {
+        "relative_time_l2": 175.2453037278846,
+        "relative_complex_spectrum_l2": 317.29563147823416
+      },
+      "linear": {
+        "relative_time_l2": 175.2453037278846,
+        "relative_complex_spectrum_l2": 317.29563147823416
+      }
+    },
+    {
+      "source": "run_001_Pf0_Rx3.txt",
+      "case": "weak_interior_3",
+      "amplitude": 200,
+      "injected_chirps": 32,
+      "injected_samples": 96,
+      "changed_samples": 96,
+      "detected_injected_samples": 0,
+      "flagged_outside_injection": 0,
+      "retained_injected_chirps": 32,
+      "rejected_other_chirps": 0,
+      "damaged": {
+        "relative_time_l2": 0.1341442418601175,
+        "relative_complex_spectrum_l2": 0.2400014122830378
+      },
+      "zero": {
+        "relative_time_l2": 0.1341442418601175,
+        "relative_complex_spectrum_l2": 0.2400014122830378
+      },
+      "linear": {
+        "relative_time_l2": 0.1341442418601175,
+        "relative_complex_spectrum_l2": 0.2400014122830378
+      }
+    }
+  ],
+  "limits": "Synthetic positive additive bursts clipped to int16 over public recorded ADC. Original samples are a numeric reference, not interference-free truth. Error methods share retained injected chirps; no retained chirps means null, never zero error. Rejected chirps retain original indices; coverage is reported separately. No real RF interference or detection performance claim."
+}

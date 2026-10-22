@@ -1,0 +1,4788 @@
+{
+  "parameters": {
+    "threshold_mad": 8,
+    "max_fraction": 0.05,
+    "max_run": 8,
+    "injection_counts": [
+      200,
+      2000,
+      8000,
+      20000
+    ],
+    "injected_run": 3,
+    "chirps_per_run": 32
+  },
+  "captures": [
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "a8fb10cf93c9a89c306ac1033f04ed78a280350b978d50dffaeed721baeaa420",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.170558350671974,
+            "relative_complex_spectrum_l2": 0.1691589796209398
+          },
+          "zero": {
+            "relative_time_l2": 0.170558350671974,
+            "relative_complex_spectrum_l2": 0.1691589796209398
+          },
+          "linear": {
+            "relative_time_l2": 0.170558350671974,
+            "relative_complex_spectrum_l2": 0.1691589796209398
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1723607604489133,
+            "relative_complex_spectrum_l2": 0.16612652397081976
+          },
+          "zero": {
+            "relative_time_l2": 0.1723607604489133,
+            "relative_complex_spectrum_l2": 0.16612652397081976
+          },
+          "linear": {
+            "relative_time_l2": 0.1723607604489133,
+            "relative_complex_spectrum_l2": 0.16612652397081976
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.18723436226736873,
+            "relative_complex_spectrum_l2": 0.18191720411726828
+          },
+          "zero": {
+            "relative_time_l2": 0.18723436226736873,
+            "relative_complex_spectrum_l2": 0.18191720411726828
+          },
+          "linear": {
+            "relative_time_l2": 0.18723436226736873,
+            "relative_complex_spectrum_l2": 0.18191720411726828
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.17244524732299898,
+            "relative_complex_spectrum_l2": 0.18821141448238496
+          },
+          "zero": {
+            "relative_time_l2": 0.17244524732299898,
+            "relative_complex_spectrum_l2": 0.18821141448238496
+          },
+          "linear": {
+            "relative_time_l2": 0.17244524732299898,
+            "relative_complex_spectrum_l2": 0.18821141448238496
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.16538347212842455,
+            "relative_complex_spectrum_l2": 0.20551317452869783
+          },
+          "zero": {
+            "relative_time_l2": 0.16538347212842455,
+            "relative_complex_spectrum_l2": 0.20551317452869783
+          },
+          "linear": {
+            "relative_time_l2": 0.16538347212842455,
+            "relative_complex_spectrum_l2": 0.20551317452869783
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.7055835067197398,
+            "relative_complex_spectrum_l2": 1.6915897962093978
+          },
+          "zero": {
+            "relative_time_l2": 0.05282951418463514,
+            "relative_complex_spectrum_l2": 0.040987766517057656
+          },
+          "linear": {
+            "relative_time_l2": 0.02824316168158644,
+            "relative_complex_spectrum_l2": 0.024610192087503004
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.7236076044891329,
+            "relative_complex_spectrum_l2": 1.6612652397081975
+          },
+          "zero": {
+            "relative_time_l2": 0.05264062419637773,
+            "relative_complex_spectrum_l2": 0.04560660158504017
+          },
+          "linear": {
+            "relative_time_l2": 0.029816159408243285,
+            "relative_complex_spectrum_l2": 0.02924618290878923
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.872343622673687,
+            "relative_complex_spectrum_l2": 1.8191720411726826
+          },
+          "zero": {
+            "relative_time_l2": 0.05381563117347198,
+            "relative_complex_spectrum_l2": 0.043760889529264595
+          },
+          "linear": {
+            "relative_time_l2": 0.033926542242726676,
+            "relative_complex_spectrum_l2": 0.02781322783400344
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.7244524732299895,
+            "relative_complex_spectrum_l2": 1.88211414482385
+          },
+          "zero": {
+            "relative_time_l2": 0.060851633193175096,
+            "relative_complex_spectrum_l2": 0.05855724739048481
+          },
+          "linear": {
+            "relative_time_l2": 0.0246017940994086,
+            "relative_complex_spectrum_l2": 0.028663587274873056
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6538347212842452,
+            "relative_complex_spectrum_l2": 2.0551317452869786
+          },
+          "zero": {
+            "relative_time_l2": 0.053812140966991016,
+            "relative_complex_spectrum_l2": 0.05921633819669962
+          },
+          "linear": {
+            "relative_time_l2": 0.029884607314672334,
+            "relative_complex_spectrum_l2": 0.03461102108771684
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.822334026878959,
+            "relative_complex_spectrum_l2": 6.766359184837591
+          },
+          "zero": {
+            "relative_time_l2": 0.05282951418463514,
+            "relative_complex_spectrum_l2": 0.040987766517057656
+          },
+          "linear": {
+            "relative_time_l2": 0.02824316168158644,
+            "relative_complex_spectrum_l2": 0.024610192087503004
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.894430417956531,
+            "relative_complex_spectrum_l2": 6.64506095883279
+          },
+          "zero": {
+            "relative_time_l2": 0.05264062419637773,
+            "relative_complex_spectrum_l2": 0.04560660158504017
+          },
+          "linear": {
+            "relative_time_l2": 0.029816159408243285,
+            "relative_complex_spectrum_l2": 0.02924618290878923
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.489374490694748,
+            "relative_complex_spectrum_l2": 7.276688164690732
+          },
+          "zero": {
+            "relative_time_l2": 0.05381563117347198,
+            "relative_complex_spectrum_l2": 0.043760889529264595
+          },
+          "linear": {
+            "relative_time_l2": 0.033926542242726676,
+            "relative_complex_spectrum_l2": 0.02781322783400344
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.897809892919958,
+            "relative_complex_spectrum_l2": 7.528456579295399
+          },
+          "zero": {
+            "relative_time_l2": 0.060851633193175096,
+            "relative_complex_spectrum_l2": 0.05855724739048481
+          },
+          "linear": {
+            "relative_time_l2": 0.0246017940994086,
+            "relative_complex_spectrum_l2": 0.028663587274873056
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.615338885136981,
+            "relative_complex_spectrum_l2": 8.220526981147914
+          },
+          "zero": {
+            "relative_time_l2": 0.053812140966991016,
+            "relative_complex_spectrum_l2": 0.05921633819669962
+          },
+          "linear": {
+            "relative_time_l2": 0.029884607314672334,
+            "relative_complex_spectrum_l2": 0.03461102108771684
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 17.0558350671974,
+            "relative_complex_spectrum_l2": 16.91589796209398
+          },
+          "zero": {
+            "relative_time_l2": 0.05282951418463514,
+            "relative_complex_spectrum_l2": 0.040987766517057656
+          },
+          "linear": {
+            "relative_time_l2": 0.02824316168158644,
+            "relative_complex_spectrum_l2": 0.024610192087503004
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 17.236076044891327,
+            "relative_complex_spectrum_l2": 16.612652397081973
+          },
+          "zero": {
+            "relative_time_l2": 0.05264062419637773,
+            "relative_complex_spectrum_l2": 0.04560660158504017
+          },
+          "linear": {
+            "relative_time_l2": 0.029816159408243285,
+            "relative_complex_spectrum_l2": 0.02924618290878923
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.72343622673687,
+            "relative_complex_spectrum_l2": 18.19172041172683
+          },
+          "zero": {
+            "relative_time_l2": 0.05381563117347198,
+            "relative_complex_spectrum_l2": 0.043760889529264595
+          },
+          "linear": {
+            "relative_time_l2": 0.033926542242726676,
+            "relative_complex_spectrum_l2": 0.02781322783400344
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 17.244524732299897,
+            "relative_complex_spectrum_l2": 18.821141448238496
+          },
+          "zero": {
+            "relative_time_l2": 0.060851633193175096,
+            "relative_complex_spectrum_l2": 0.05855724739048481
+          },
+          "linear": {
+            "relative_time_l2": 0.0246017940994086,
+            "relative_complex_spectrum_l2": 0.028663587274873056
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.538347212842453,
+            "relative_complex_spectrum_l2": 20.551317452869785
+          },
+          "zero": {
+            "relative_time_l2": 0.053812140966991016,
+            "relative_complex_spectrum_l2": 0.05921633819669962
+          },
+          "linear": {
+            "relative_time_l2": 0.029884607314672334,
+            "relative_complex_spectrum_l2": 0.03461102108771684
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "15eeb8f3c3d3b4c1072bb61f198b8edafb0ca7c791ccfd666d19b15fd7962993",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1687195092576826,
+            "relative_complex_spectrum_l2": 0.1621090416369552
+          },
+          "zero": {
+            "relative_time_l2": 0.1687195092576826,
+            "relative_complex_spectrum_l2": 0.1621090416369552
+          },
+          "linear": {
+            "relative_time_l2": 0.1687195092576826,
+            "relative_complex_spectrum_l2": 0.1621090416369552
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.17430089084478276,
+            "relative_complex_spectrum_l2": 0.1637168955689199
+          },
+          "zero": {
+            "relative_time_l2": 0.17430089084478276,
+            "relative_complex_spectrum_l2": 0.1637168955689199
+          },
+          "linear": {
+            "relative_time_l2": 0.17430089084478276,
+            "relative_complex_spectrum_l2": 0.1637168955689199
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.19272159312510312,
+            "relative_complex_spectrum_l2": 0.18334475265755532
+          },
+          "zero": {
+            "relative_time_l2": 0.19272159312510312,
+            "relative_complex_spectrum_l2": 0.18334475265755532
+          },
+          "linear": {
+            "relative_time_l2": 0.19272159312510312,
+            "relative_complex_spectrum_l2": 0.18334475265755532
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1763725806893653,
+            "relative_complex_spectrum_l2": 0.18173471653262266
+          },
+          "zero": {
+            "relative_time_l2": 0.1763725806893653,
+            "relative_complex_spectrum_l2": 0.18173471653262266
+          },
+          "linear": {
+            "relative_time_l2": 0.1763725806893653,
+            "relative_complex_spectrum_l2": 0.18173471653262266
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1653983451997089,
+            "relative_complex_spectrum_l2": 0.19658799821761352
+          },
+          "zero": {
+            "relative_time_l2": 0.1653983451997089,
+            "relative_complex_spectrum_l2": 0.19658799821761352
+          },
+          "linear": {
+            "relative_time_l2": 0.1653983451997089,
+            "relative_complex_spectrum_l2": 0.19658799821761352
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6871950925768255,
+            "relative_complex_spectrum_l2": 1.6210904163695523
+          },
+          "zero": {
+            "relative_time_l2": 0.04643491741614913,
+            "relative_complex_spectrum_l2": 0.05060181008656434
+          },
+          "linear": {
+            "relative_time_l2": 0.030458963348932427,
+            "relative_complex_spectrum_l2": 0.028895897952453956
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.7430089084478273,
+            "relative_complex_spectrum_l2": 1.6371689556891993
+          },
+          "zero": {
+            "relative_time_l2": 0.05637001476066231,
+            "relative_complex_spectrum_l2": 0.051096344115376155
+          },
+          "linear": {
+            "relative_time_l2": 0.03189411620333133,
+            "relative_complex_spectrum_l2": 0.030435788700081533
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.927215931251031,
+            "relative_complex_spectrum_l2": 1.8334475265755532
+          },
+          "zero": {
+            "relative_time_l2": 0.05813945516596125,
+            "relative_complex_spectrum_l2": 0.05388072796199354
+          },
+          "linear": {
+            "relative_time_l2": 0.03478400084745746,
+            "relative_complex_spectrum_l2": 0.034662805267119276
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.7637258068936528,
+            "relative_complex_spectrum_l2": 1.8173471653262265
+          },
+          "zero": {
+            "relative_time_l2": 0.05533294447734279,
+            "relative_complex_spectrum_l2": 0.06152779601294349
+          },
+          "linear": {
+            "relative_time_l2": 0.02246696108210871,
+            "relative_complex_spectrum_l2": 0.023616254504868466
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6539834519970888,
+            "relative_complex_spectrum_l2": 1.9658799821761352
+          },
+          "zero": {
+            "relative_time_l2": 0.047711760872398826,
+            "relative_complex_spectrum_l2": 0.05862310192627663
+          },
+          "linear": {
+            "relative_time_l2": 0.029660463022254217,
+            "relative_complex_spectrum_l2": 0.035443890242966625
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.748780370307302,
+            "relative_complex_spectrum_l2": 6.484361665478209
+          },
+          "zero": {
+            "relative_time_l2": 0.04643491741614913,
+            "relative_complex_spectrum_l2": 0.05060181008656434
+          },
+          "linear": {
+            "relative_time_l2": 0.030458963348932427,
+            "relative_complex_spectrum_l2": 0.028895897952453956
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.972035633791309,
+            "relative_complex_spectrum_l2": 6.548675822756797
+          },
+          "zero": {
+            "relative_time_l2": 0.05637001476066231,
+            "relative_complex_spectrum_l2": 0.051096344115376155
+          },
+          "linear": {
+            "relative_time_l2": 0.03189411620333133,
+            "relative_complex_spectrum_l2": 0.030435788700081533
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.708863725004124,
+            "relative_complex_spectrum_l2": 7.333790106302214
+          },
+          "zero": {
+            "relative_time_l2": 0.05813945516596125,
+            "relative_complex_spectrum_l2": 0.05388072796199354
+          },
+          "linear": {
+            "relative_time_l2": 0.03478400084745746,
+            "relative_complex_spectrum_l2": 0.034662805267119276
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.054903227574611,
+            "relative_complex_spectrum_l2": 7.269388661304906
+          },
+          "zero": {
+            "relative_time_l2": 0.05533294447734279,
+            "relative_complex_spectrum_l2": 0.06152779601294349
+          },
+          "linear": {
+            "relative_time_l2": 0.02246696108210871,
+            "relative_complex_spectrum_l2": 0.023616254504868466
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.615933807988355,
+            "relative_complex_spectrum_l2": 7.863519928704543
+          },
+          "zero": {
+            "relative_time_l2": 0.047711760872398826,
+            "relative_complex_spectrum_l2": 0.05862310192627663
+          },
+          "linear": {
+            "relative_time_l2": 0.029660463022254217,
+            "relative_complex_spectrum_l2": 0.035443890242966625
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.871950925768257,
+            "relative_complex_spectrum_l2": 16.21090416369552
+          },
+          "zero": {
+            "relative_time_l2": 0.04643491741614913,
+            "relative_complex_spectrum_l2": 0.05060181008656434
+          },
+          "linear": {
+            "relative_time_l2": 0.030458963348932427,
+            "relative_complex_spectrum_l2": 0.028895897952453956
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 17.430089084478276,
+            "relative_complex_spectrum_l2": 16.37168955689199
+          },
+          "zero": {
+            "relative_time_l2": 0.05637001476066231,
+            "relative_complex_spectrum_l2": 0.051096344115376155
+          },
+          "linear": {
+            "relative_time_l2": 0.03189411620333133,
+            "relative_complex_spectrum_l2": 0.030435788700081533
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 19.27215931251031,
+            "relative_complex_spectrum_l2": 18.33447526575553
+          },
+          "zero": {
+            "relative_time_l2": 0.05813945516596125,
+            "relative_complex_spectrum_l2": 0.05388072796199354
+          },
+          "linear": {
+            "relative_time_l2": 0.03478400084745746,
+            "relative_complex_spectrum_l2": 0.034662805267119276
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 17.63725806893653,
+            "relative_complex_spectrum_l2": 18.173471653262265
+          },
+          "zero": {
+            "relative_time_l2": 0.05533294447734279,
+            "relative_complex_spectrum_l2": 0.06152779601294349
+          },
+          "linear": {
+            "relative_time_l2": 0.02246696108210871,
+            "relative_complex_spectrum_l2": 0.023616254504868466
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.53983451997089,
+            "relative_complex_spectrum_l2": 19.658799821761352
+          },
+          "zero": {
+            "relative_time_l2": 0.047711760872398826,
+            "relative_complex_spectrum_l2": 0.05862310192627663
+          },
+          "linear": {
+            "relative_time_l2": 0.029660463022254217,
+            "relative_complex_spectrum_l2": 0.035443890242966625
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 1,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "5fe7c9d31f8a2497f0b39e675b77d872a3876146f3b362e21b0757b58d843dc8",
+        "source": "run_001_Pf0_Rx1.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14282152085974556,
+            "relative_complex_spectrum_l2": 0.14045836892533342
+          },
+          "zero": {
+            "relative_time_l2": 0.14282152085974556,
+            "relative_complex_spectrum_l2": 0.14045836892533342
+          },
+          "linear": {
+            "relative_time_l2": 0.14282152085974556,
+            "relative_complex_spectrum_l2": 0.14045836892533342
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1438059374741097,
+            "relative_complex_spectrum_l2": 0.14160213925001297
+          },
+          "zero": {
+            "relative_time_l2": 0.1438059374741097,
+            "relative_complex_spectrum_l2": 0.14160213925001297
+          },
+          "linear": {
+            "relative_time_l2": 0.1438059374741097,
+            "relative_complex_spectrum_l2": 0.14160213925001297
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14771230702007349,
+            "relative_complex_spectrum_l2": 0.15470009855287778
+          },
+          "zero": {
+            "relative_time_l2": 0.14771230702007349,
+            "relative_complex_spectrum_l2": 0.15470009855287778
+          },
+          "linear": {
+            "relative_time_l2": 0.14771230702007349,
+            "relative_complex_spectrum_l2": 0.15470009855287778
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14384248114818124,
+            "relative_complex_spectrum_l2": 0.15543782530062064
+          },
+          "zero": {
+            "relative_time_l2": 0.14384248114818124,
+            "relative_complex_spectrum_l2": 0.15543782530062064
+          },
+          "linear": {
+            "relative_time_l2": 0.14384248114818124,
+            "relative_complex_spectrum_l2": 0.15543782530062064
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13881559870288082,
+            "relative_complex_spectrum_l2": 0.17242323263524242
+          },
+          "zero": {
+            "relative_time_l2": 0.13881559870288082,
+            "relative_complex_spectrum_l2": 0.17242323263524242
+          },
+          "linear": {
+            "relative_time_l2": 0.13881559870288082,
+            "relative_complex_spectrum_l2": 0.17242323263524242
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4282152085974553,
+            "relative_complex_spectrum_l2": 1.4045836892533343
+          },
+          "zero": {
+            "relative_time_l2": 0.053173451535357324,
+            "relative_complex_spectrum_l2": 0.053058756313441945
+          },
+          "linear": {
+            "relative_time_l2": 0.024240026483113696,
+            "relative_complex_spectrum_l2": 0.02574588569302372
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4380593747410968,
+            "relative_complex_spectrum_l2": 1.4160213925001297
+          },
+          "zero": {
+            "relative_time_l2": 0.050700516301552374,
+            "relative_complex_spectrum_l2": 0.04948305863367745
+          },
+          "linear": {
+            "relative_time_l2": 0.026980185812343658,
+            "relative_complex_spectrum_l2": 0.026762048334840655
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4771230702007347,
+            "relative_complex_spectrum_l2": 1.5470009855287776
+          },
+          "zero": {
+            "relative_time_l2": 0.05925086612288014,
+            "relative_complex_spectrum_l2": 0.059462657396736646
+          },
+          "linear": {
+            "relative_time_l2": 0.02355280918500476,
+            "relative_complex_spectrum_l2": 0.02658066615471331
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4384248114818123,
+            "relative_complex_spectrum_l2": 1.5543782530062062
+          },
+          "zero": {
+            "relative_time_l2": 0.05009767442847531,
+            "relative_complex_spectrum_l2": 0.051982285529570696
+          },
+          "linear": {
+            "relative_time_l2": 0.02813099825964251,
+            "relative_complex_spectrum_l2": 0.025868590293482506
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.388155987028808,
+            "relative_complex_spectrum_l2": 1.7242323263524248
+          },
+          "zero": {
+            "relative_time_l2": 0.057670461137335406,
+            "relative_complex_spectrum_l2": 0.07186777164739484
+          },
+          "linear": {
+            "relative_time_l2": 0.025477642089713325,
+            "relative_complex_spectrum_l2": 0.03263023344352975
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.712860834389821,
+            "relative_complex_spectrum_l2": 5.618334757013338
+          },
+          "zero": {
+            "relative_time_l2": 0.053173451535357324,
+            "relative_complex_spectrum_l2": 0.053058756313441945
+          },
+          "linear": {
+            "relative_time_l2": 0.024240026483113696,
+            "relative_complex_spectrum_l2": 0.02574588569302372
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.752237498964387,
+            "relative_complex_spectrum_l2": 5.664085570000519
+          },
+          "zero": {
+            "relative_time_l2": 0.050700516301552374,
+            "relative_complex_spectrum_l2": 0.04948305863367745
+          },
+          "linear": {
+            "relative_time_l2": 0.026980185812343658,
+            "relative_complex_spectrum_l2": 0.026762048334840655
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.908492280802939,
+            "relative_complex_spectrum_l2": 6.188003942115111
+          },
+          "zero": {
+            "relative_time_l2": 0.05925086612288014,
+            "relative_complex_spectrum_l2": 0.059462657396736646
+          },
+          "linear": {
+            "relative_time_l2": 0.02355280918500476,
+            "relative_complex_spectrum_l2": 0.02658066615471331
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.753699245927249,
+            "relative_complex_spectrum_l2": 6.217513012024825
+          },
+          "zero": {
+            "relative_time_l2": 0.05009767442847531,
+            "relative_complex_spectrum_l2": 0.051982285529570696
+          },
+          "linear": {
+            "relative_time_l2": 0.02813099825964251,
+            "relative_complex_spectrum_l2": 0.025868590293482506
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.552623948115232,
+            "relative_complex_spectrum_l2": 6.896929305409699
+          },
+          "zero": {
+            "relative_time_l2": 0.057670461137335406,
+            "relative_complex_spectrum_l2": 0.07186777164739484
+          },
+          "linear": {
+            "relative_time_l2": 0.025477642089713325,
+            "relative_complex_spectrum_l2": 0.03263023344352975
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.282152085974555,
+            "relative_complex_spectrum_l2": 14.045836892533345
+          },
+          "zero": {
+            "relative_time_l2": 0.053173451535357324,
+            "relative_complex_spectrum_l2": 0.053058756313441945
+          },
+          "linear": {
+            "relative_time_l2": 0.024240026483113696,
+            "relative_complex_spectrum_l2": 0.02574588569302372
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.38059374741097,
+            "relative_complex_spectrum_l2": 14.160213925001296
+          },
+          "zero": {
+            "relative_time_l2": 0.050700516301552374,
+            "relative_complex_spectrum_l2": 0.04948305863367745
+          },
+          "linear": {
+            "relative_time_l2": 0.026980185812343658,
+            "relative_complex_spectrum_l2": 0.026762048334840655
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.77123070200735,
+            "relative_complex_spectrum_l2": 15.470009855287778
+          },
+          "zero": {
+            "relative_time_l2": 0.05925086612288014,
+            "relative_complex_spectrum_l2": 0.059462657396736646
+          },
+          "linear": {
+            "relative_time_l2": 0.02355280918500476,
+            "relative_complex_spectrum_l2": 0.02658066615471331
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.384248114818122,
+            "relative_complex_spectrum_l2": 15.543782530062062
+          },
+          "zero": {
+            "relative_time_l2": 0.05009767442847531,
+            "relative_complex_spectrum_l2": 0.051982285529570696
+          },
+          "linear": {
+            "relative_time_l2": 0.02813099825964251,
+            "relative_complex_spectrum_l2": 0.025868590293482506
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.881559870288081,
+            "relative_complex_spectrum_l2": 17.242323263524245
+          },
+          "zero": {
+            "relative_time_l2": 0.057670461137335406,
+            "relative_complex_spectrum_l2": 0.07186777164739484
+          },
+          "linear": {
+            "relative_time_l2": 0.025477642089713325,
+            "relative_complex_spectrum_l2": 0.03263023344352975
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 2,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "c992631191b4778ad835946845fdeea4ea9c7b6ad3810abf345c65be79b1847b",
+        "source": "run_001_Pf0_Rx2.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13938496155510263,
+            "relative_complex_spectrum_l2": 0.11771348550872826
+          },
+          "zero": {
+            "relative_time_l2": 0.13938496155510263,
+            "relative_complex_spectrum_l2": 0.11771348550872826
+          },
+          "linear": {
+            "relative_time_l2": 0.13938496155510263,
+            "relative_complex_spectrum_l2": 0.11771348550872826
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1404958672887922,
+            "relative_complex_spectrum_l2": 0.11886424087330809
+          },
+          "zero": {
+            "relative_time_l2": 0.1404958672887922,
+            "relative_complex_spectrum_l2": 0.11886424087330809
+          },
+          "linear": {
+            "relative_time_l2": 0.1404958672887922,
+            "relative_complex_spectrum_l2": 0.11886424087330809
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.15027696442752955,
+            "relative_complex_spectrum_l2": 0.1348280763200653
+          },
+          "zero": {
+            "relative_time_l2": 0.15027696442752955,
+            "relative_complex_spectrum_l2": 0.1348280763200653
+          },
+          "linear": {
+            "relative_time_l2": 0.15027696442752955,
+            "relative_complex_spectrum_l2": 0.1348280763200653
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1424119295882308,
+            "relative_complex_spectrum_l2": 0.13352562478473518
+          },
+          "zero": {
+            "relative_time_l2": 0.1424119295882308,
+            "relative_complex_spectrum_l2": 0.13352562478473518
+          },
+          "linear": {
+            "relative_time_l2": 0.1424119295882308,
+            "relative_complex_spectrum_l2": 0.13352562478473518
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13951956306547522,
+            "relative_complex_spectrum_l2": 0.14862888156538548
+          },
+          "zero": {
+            "relative_time_l2": 0.13951956306547522,
+            "relative_complex_spectrum_l2": 0.14862888156538548
+          },
+          "linear": {
+            "relative_time_l2": 0.13951956306547522,
+            "relative_complex_spectrum_l2": 0.14862888156538548
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.393849615551026,
+            "relative_complex_spectrum_l2": 1.1771348550872827
+          },
+          "zero": {
+            "relative_time_l2": 0.05565589328194902,
+            "relative_complex_spectrum_l2": 0.0539519737038579
+          },
+          "linear": {
+            "relative_time_l2": 0.028128852792573673,
+            "relative_complex_spectrum_l2": 0.02335933498556906
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4049586728879218,
+            "relative_complex_spectrum_l2": 1.188642408733081
+          },
+          "zero": {
+            "relative_time_l2": 0.046567192194425344,
+            "relative_complex_spectrum_l2": 0.044480080463329734
+          },
+          "linear": {
+            "relative_time_l2": 0.029943224633741102,
+            "relative_complex_spectrum_l2": 0.023562901231165462
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5027696442752954,
+            "relative_complex_spectrum_l2": 1.3482807632006533
+          },
+          "zero": {
+            "relative_time_l2": 0.0536587324977291,
+            "relative_complex_spectrum_l2": 0.05178401614457492
+          },
+          "linear": {
+            "relative_time_l2": 0.032187361900348904,
+            "relative_complex_spectrum_l2": 0.030661665481883055
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4241192958823077,
+            "relative_complex_spectrum_l2": 1.3352562478473518
+          },
+          "zero": {
+            "relative_time_l2": 0.055598439286593304,
+            "relative_complex_spectrum_l2": 0.06035768970881168
+          },
+          "linear": {
+            "relative_time_l2": 0.02777279858898608,
+            "relative_complex_spectrum_l2": 0.027277690766673877
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3951956306547522,
+            "relative_complex_spectrum_l2": 1.4862888156538552
+          },
+          "zero": {
+            "relative_time_l2": 0.05920272819471935,
+            "relative_complex_spectrum_l2": 0.0623876793120604
+          },
+          "linear": {
+            "relative_time_l2": 0.034656818137711785,
+            "relative_complex_spectrum_l2": 0.034730391154525066
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.575398462204104,
+            "relative_complex_spectrum_l2": 4.708539420349131
+          },
+          "zero": {
+            "relative_time_l2": 0.05565589328194902,
+            "relative_complex_spectrum_l2": 0.0539519737038579
+          },
+          "linear": {
+            "relative_time_l2": 0.028128852792573673,
+            "relative_complex_spectrum_l2": 0.02335933498556906
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.619834691551687,
+            "relative_complex_spectrum_l2": 4.754569634932324
+          },
+          "zero": {
+            "relative_time_l2": 0.046567192194425344,
+            "relative_complex_spectrum_l2": 0.044480080463329734
+          },
+          "linear": {
+            "relative_time_l2": 0.029943224633741102,
+            "relative_complex_spectrum_l2": 0.023562901231165462
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.011078577101181,
+            "relative_complex_spectrum_l2": 5.393123052802613
+          },
+          "zero": {
+            "relative_time_l2": 0.0536587324977291,
+            "relative_complex_spectrum_l2": 0.05178401614457492
+          },
+          "linear": {
+            "relative_time_l2": 0.032187361900348904,
+            "relative_complex_spectrum_l2": 0.030661665481883055
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.696477183529231,
+            "relative_complex_spectrum_l2": 5.341024991389407
+          },
+          "zero": {
+            "relative_time_l2": 0.055598439286593304,
+            "relative_complex_spectrum_l2": 0.06035768970881168
+          },
+          "linear": {
+            "relative_time_l2": 0.02777279858898608,
+            "relative_complex_spectrum_l2": 0.027277690766673877
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.580782522619009,
+            "relative_complex_spectrum_l2": 5.945155262615421
+          },
+          "zero": {
+            "relative_time_l2": 0.05920272819471935,
+            "relative_complex_spectrum_l2": 0.0623876793120604
+          },
+          "linear": {
+            "relative_time_l2": 0.034656818137711785,
+            "relative_complex_spectrum_l2": 0.034730391154525066
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.938496155510261,
+            "relative_complex_spectrum_l2": 11.771348550872828
+          },
+          "zero": {
+            "relative_time_l2": 0.05565589328194902,
+            "relative_complex_spectrum_l2": 0.0539519737038579
+          },
+          "linear": {
+            "relative_time_l2": 0.028128852792573673,
+            "relative_complex_spectrum_l2": 0.02335933498556906
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.04958672887922,
+            "relative_complex_spectrum_l2": 11.886424087330807
+          },
+          "zero": {
+            "relative_time_l2": 0.046567192194425344,
+            "relative_complex_spectrum_l2": 0.044480080463329734
+          },
+          "linear": {
+            "relative_time_l2": 0.029943224633741102,
+            "relative_complex_spectrum_l2": 0.023562901231165462
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.027696442752955,
+            "relative_complex_spectrum_l2": 13.482807632006532
+          },
+          "zero": {
+            "relative_time_l2": 0.0536587324977291,
+            "relative_complex_spectrum_l2": 0.05178401614457492
+          },
+          "linear": {
+            "relative_time_l2": 0.032187361900348904,
+            "relative_complex_spectrum_l2": 0.030661665481883055
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.241192958823078,
+            "relative_complex_spectrum_l2": 13.352562478473516
+          },
+          "zero": {
+            "relative_time_l2": 0.055598439286593304,
+            "relative_complex_spectrum_l2": 0.06035768970881168
+          },
+          "linear": {
+            "relative_time_l2": 0.02777279858898608,
+            "relative_complex_spectrum_l2": 0.027277690766673877
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.951956306547523,
+            "relative_complex_spectrum_l2": 14.86288815653855
+          },
+          "zero": {
+            "relative_time_l2": 0.05920272819471935,
+            "relative_complex_spectrum_l2": 0.0623876793120604
+          },
+          "linear": {
+            "relative_time_l2": 0.034656818137711785,
+            "relative_complex_spectrum_l2": 0.034730391154525066
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 3,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "2027bfa2ba18e84c555f3010fa3846910fcc659a5348ec43b4119e5d674540a6",
+        "source": "run_001_Pf0_Rx3.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.15619982911649116,
+            "relative_complex_spectrum_l2": 0.1551298436120065
+          },
+          "zero": {
+            "relative_time_l2": 0.15619982911649116,
+            "relative_complex_spectrum_l2": 0.1551298436120065
+          },
+          "linear": {
+            "relative_time_l2": 0.15619982911649116,
+            "relative_complex_spectrum_l2": 0.1551298436120065
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.15778747726725822,
+            "relative_complex_spectrum_l2": 0.15131224720502393
+          },
+          "zero": {
+            "relative_time_l2": 0.15778747726725822,
+            "relative_complex_spectrum_l2": 0.15131224720502393
+          },
+          "linear": {
+            "relative_time_l2": 0.15778747726725822,
+            "relative_complex_spectrum_l2": 0.15131224720502393
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.16784542263635507,
+            "relative_complex_spectrum_l2": 0.15636723136672953
+          },
+          "zero": {
+            "relative_time_l2": 0.16784542263635507,
+            "relative_complex_spectrum_l2": 0.15636723136672953
+          },
+          "linear": {
+            "relative_time_l2": 0.16784542263635507,
+            "relative_complex_spectrum_l2": 0.15636723136672953
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.15584948410026228,
+            "relative_complex_spectrum_l2": 0.16755546190040663
+          },
+          "zero": {
+            "relative_time_l2": 0.15584948410026228,
+            "relative_complex_spectrum_l2": 0.16755546190040663
+          },
+          "linear": {
+            "relative_time_l2": 0.15584948410026228,
+            "relative_complex_spectrum_l2": 0.16755546190040663
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.15615720280304912,
+            "relative_complex_spectrum_l2": 0.19047591217805435
+          },
+          "zero": {
+            "relative_time_l2": 0.15615720280304912,
+            "relative_complex_spectrum_l2": 0.19047591217805435
+          },
+          "linear": {
+            "relative_time_l2": 0.15615720280304912,
+            "relative_complex_spectrum_l2": 0.19047591217805435
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5619982911649115,
+            "relative_complex_spectrum_l2": 1.551298436120065
+          },
+          "zero": {
+            "relative_time_l2": 0.049424556649350665,
+            "relative_complex_spectrum_l2": 0.05328318953114361
+          },
+          "linear": {
+            "relative_time_l2": 0.02856747481524829,
+            "relative_complex_spectrum_l2": 0.022704404174693382
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5778747726725821,
+            "relative_complex_spectrum_l2": 1.5131224720502394
+          },
+          "zero": {
+            "relative_time_l2": 0.0629767755255128,
+            "relative_complex_spectrum_l2": 0.057310003423626445
+          },
+          "linear": {
+            "relative_time_l2": 0.028173230962362725,
+            "relative_complex_spectrum_l2": 0.02584311236230009
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6784542263635505,
+            "relative_complex_spectrum_l2": 1.5636723136672954
+          },
+          "zero": {
+            "relative_time_l2": 0.052236972412221964,
+            "relative_complex_spectrum_l2": 0.05482137764054575
+          },
+          "linear": {
+            "relative_time_l2": 0.027535890773086318,
+            "relative_complex_spectrum_l2": 0.02792873059640563
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5584948410026227,
+            "relative_complex_spectrum_l2": 1.6755546190040664
+          },
+          "zero": {
+            "relative_time_l2": 0.056125652716966956,
+            "relative_complex_spectrum_l2": 0.0630108991800945
+          },
+          "linear": {
+            "relative_time_l2": 0.026748644351428045,
+            "relative_complex_spectrum_l2": 0.030322818843997217
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5615720280304912,
+            "relative_complex_spectrum_l2": 1.904759121780544
+          },
+          "zero": {
+            "relative_time_l2": 0.046725547386775555,
+            "relative_complex_spectrum_l2": 0.06016730602935438
+          },
+          "linear": {
+            "relative_time_l2": 0.03088035007644753,
+            "relative_complex_spectrum_l2": 0.037731433501841875
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.247993164659646,
+            "relative_complex_spectrum_l2": 6.20519374448026
+          },
+          "zero": {
+            "relative_time_l2": 0.049424556649350665,
+            "relative_complex_spectrum_l2": 0.05328318953114361
+          },
+          "linear": {
+            "relative_time_l2": 0.02856747481524829,
+            "relative_complex_spectrum_l2": 0.022704404174693382
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.3114990906903286,
+            "relative_complex_spectrum_l2": 6.052489888200958
+          },
+          "zero": {
+            "relative_time_l2": 0.0629767755255128,
+            "relative_complex_spectrum_l2": 0.057310003423626445
+          },
+          "linear": {
+            "relative_time_l2": 0.028173230962362725,
+            "relative_complex_spectrum_l2": 0.02584311236230009
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.713816905454202,
+            "relative_complex_spectrum_l2": 6.254689254669181
+          },
+          "zero": {
+            "relative_time_l2": 0.052236972412221964,
+            "relative_complex_spectrum_l2": 0.05482137764054575
+          },
+          "linear": {
+            "relative_time_l2": 0.027535890773086318,
+            "relative_complex_spectrum_l2": 0.02792873059640563
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.233979364010491,
+            "relative_complex_spectrum_l2": 6.702218476016266
+          },
+          "zero": {
+            "relative_time_l2": 0.056125652716966956,
+            "relative_complex_spectrum_l2": 0.0630108991800945
+          },
+          "linear": {
+            "relative_time_l2": 0.026748644351428045,
+            "relative_complex_spectrum_l2": 0.030322818843997217
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.246288112121965,
+            "relative_complex_spectrum_l2": 7.619036487122176
+          },
+          "zero": {
+            "relative_time_l2": 0.046725547386775555,
+            "relative_complex_spectrum_l2": 0.06016730602935438
+          },
+          "linear": {
+            "relative_time_l2": 0.03088035007644753,
+            "relative_complex_spectrum_l2": 0.037731433501841875
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.619982911649116,
+            "relative_complex_spectrum_l2": 15.512984361200651
+          },
+          "zero": {
+            "relative_time_l2": 0.049424556649350665,
+            "relative_complex_spectrum_l2": 0.05328318953114361
+          },
+          "linear": {
+            "relative_time_l2": 0.02856747481524829,
+            "relative_complex_spectrum_l2": 0.022704404174693382
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.778747726725822,
+            "relative_complex_spectrum_l2": 15.131224720502392
+          },
+          "zero": {
+            "relative_time_l2": 0.0629767755255128,
+            "relative_complex_spectrum_l2": 0.057310003423626445
+          },
+          "linear": {
+            "relative_time_l2": 0.028173230962362725,
+            "relative_complex_spectrum_l2": 0.02584311236230009
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.784542263635505,
+            "relative_complex_spectrum_l2": 15.636723136672954
+          },
+          "zero": {
+            "relative_time_l2": 0.052236972412221964,
+            "relative_complex_spectrum_l2": 0.05482137764054575
+          },
+          "linear": {
+            "relative_time_l2": 0.027535890773086318,
+            "relative_complex_spectrum_l2": 0.02792873059640563
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.584948410026229,
+            "relative_complex_spectrum_l2": 16.755546190040665
+          },
+          "zero": {
+            "relative_time_l2": 0.056125652716966956,
+            "relative_complex_spectrum_l2": 0.0630108991800945
+          },
+          "linear": {
+            "relative_time_l2": 0.026748644351428045,
+            "relative_complex_spectrum_l2": 0.030322818843997217
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.615720280304913,
+            "relative_complex_spectrum_l2": 19.047591217805437
+          },
+          "zero": {
+            "relative_time_l2": 0.046725547386775555,
+            "relative_complex_spectrum_l2": 0.06016730602935438
+          },
+          "linear": {
+            "relative_time_l2": 0.03088035007644753,
+            "relative_complex_spectrum_l2": 0.037731433501841875
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "903c9e884709e38e2ca97b544289a46fb99665915d7f2dbe26e56c93a5cc67a8",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.18351905226054543,
+            "relative_complex_spectrum_l2": 0.16876588810613166
+          },
+          "zero": {
+            "relative_time_l2": 0.18351905226054543,
+            "relative_complex_spectrum_l2": 0.16876588810613166
+          },
+          "linear": {
+            "relative_time_l2": 0.18351905226054543,
+            "relative_complex_spectrum_l2": 0.16876588810613166
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.18490795445595526,
+            "relative_complex_spectrum_l2": 0.16878768127347285
+          },
+          "zero": {
+            "relative_time_l2": 0.18490795445595526,
+            "relative_complex_spectrum_l2": 0.16878768127347285
+          },
+          "linear": {
+            "relative_time_l2": 0.18490795445595526,
+            "relative_complex_spectrum_l2": 0.16878768127347285
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.18523557439990987,
+            "relative_complex_spectrum_l2": 0.17117520586167434
+          },
+          "zero": {
+            "relative_time_l2": 0.18523557439990987,
+            "relative_complex_spectrum_l2": 0.17117520586167434
+          },
+          "linear": {
+            "relative_time_l2": 0.18523557439990987,
+            "relative_complex_spectrum_l2": 0.17117520586167434
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.18618916697342477,
+            "relative_complex_spectrum_l2": 0.1822485172124246
+          },
+          "zero": {
+            "relative_time_l2": 0.18618916697342477,
+            "relative_complex_spectrum_l2": 0.1822485172124246
+          },
+          "linear": {
+            "relative_time_l2": 0.18618916697342477,
+            "relative_complex_spectrum_l2": 0.1822485172124246
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 1,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 1,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1971669854804859,
+            "relative_complex_spectrum_l2": 0.22201180421780548
+          },
+          "zero": {
+            "relative_time_l2": 0.19621830161810314,
+            "relative_complex_spectrum_l2": 0.22196626103425507
+          },
+          "linear": {
+            "relative_time_l2": 0.1967969501487489,
+            "relative_complex_spectrum_l2": 0.22199401502377047
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.8351905226054541,
+            "relative_complex_spectrum_l2": 1.687658881061317
+          },
+          "zero": {
+            "relative_time_l2": 0.05295884178053509,
+            "relative_complex_spectrum_l2": 0.05276116213922454
+          },
+          "linear": {
+            "relative_time_l2": 0.032663899609728084,
+            "relative_complex_spectrum_l2": 0.027774218816263206
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.8490795445595523,
+            "relative_complex_spectrum_l2": 1.6878768127347286
+          },
+          "zero": {
+            "relative_time_l2": 0.05464960772139017,
+            "relative_complex_spectrum_l2": 0.05456562666876125
+          },
+          "linear": {
+            "relative_time_l2": 0.030582393577390496,
+            "relative_complex_spectrum_l2": 0.028202369238808086
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.8523557439990983,
+            "relative_complex_spectrum_l2": 1.711752058616743
+          },
+          "zero": {
+            "relative_time_l2": 0.0510183072260812,
+            "relative_complex_spectrum_l2": 0.050210701566268556
+          },
+          "linear": {
+            "relative_time_l2": 0.034304806127764924,
+            "relative_complex_spectrum_l2": 0.03431526840466038
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.8618916697342476,
+            "relative_complex_spectrum_l2": 1.8224851721242459
+          },
+          "zero": {
+            "relative_time_l2": 0.057597140563619705,
+            "relative_complex_spectrum_l2": 0.06457459234668987
+          },
+          "linear": {
+            "relative_time_l2": 0.026207751186986122,
+            "relative_complex_spectrum_l2": 0.02498028261714697
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.9716698548048588,
+            "relative_complex_spectrum_l2": 2.2201180421780546
+          },
+          "zero": {
+            "relative_time_l2": 0.05484172912402732,
+            "relative_complex_spectrum_l2": 0.05858075708801301
+          },
+          "linear": {
+            "relative_time_l2": 0.03277715821057676,
+            "relative_complex_spectrum_l2": 0.03545016687524932
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.3407620904218165,
+            "relative_complex_spectrum_l2": 6.750635524245268
+          },
+          "zero": {
+            "relative_time_l2": 0.05295884178053509,
+            "relative_complex_spectrum_l2": 0.05276116213922454
+          },
+          "linear": {
+            "relative_time_l2": 0.032663899609728084,
+            "relative_complex_spectrum_l2": 0.027774218816263206
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.396318178238209,
+            "relative_complex_spectrum_l2": 6.751507250938914
+          },
+          "zero": {
+            "relative_time_l2": 0.05464960772139017,
+            "relative_complex_spectrum_l2": 0.05456562666876125
+          },
+          "linear": {
+            "relative_time_l2": 0.030582393577390496,
+            "relative_complex_spectrum_l2": 0.028202369238808086
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.409422975996393,
+            "relative_complex_spectrum_l2": 6.847008234466973
+          },
+          "zero": {
+            "relative_time_l2": 0.0510183072260812,
+            "relative_complex_spectrum_l2": 0.050210701566268556
+          },
+          "linear": {
+            "relative_time_l2": 0.034304806127764924,
+            "relative_complex_spectrum_l2": 0.03431526840466038
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.44756667893699,
+            "relative_complex_spectrum_l2": 7.2899406884969835
+          },
+          "zero": {
+            "relative_time_l2": 0.057597140563619705,
+            "relative_complex_spectrum_l2": 0.06457459234668987
+          },
+          "linear": {
+            "relative_time_l2": 0.026207751186986122,
+            "relative_complex_spectrum_l2": 0.02498028261714697
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.886679419219435,
+            "relative_complex_spectrum_l2": 8.88047216871222
+          },
+          "zero": {
+            "relative_time_l2": 0.05484172912402732,
+            "relative_complex_spectrum_l2": 0.05858075708801301
+          },
+          "linear": {
+            "relative_time_l2": 0.03277715821057676,
+            "relative_complex_spectrum_l2": 0.03545016687524932
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.35190522605454,
+            "relative_complex_spectrum_l2": 16.876588810613168
+          },
+          "zero": {
+            "relative_time_l2": 0.05295884178053509,
+            "relative_complex_spectrum_l2": 0.05276116213922454
+          },
+          "linear": {
+            "relative_time_l2": 0.032663899609728084,
+            "relative_complex_spectrum_l2": 0.027774218816263206
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.490795445595523,
+            "relative_complex_spectrum_l2": 16.878768127347282
+          },
+          "zero": {
+            "relative_time_l2": 0.05464960772139017,
+            "relative_complex_spectrum_l2": 0.05456562666876125
+          },
+          "linear": {
+            "relative_time_l2": 0.030582393577390496,
+            "relative_complex_spectrum_l2": 0.028202369238808086
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.523557439990984,
+            "relative_complex_spectrum_l2": 17.117520586167426
+          },
+          "zero": {
+            "relative_time_l2": 0.0510183072260812,
+            "relative_complex_spectrum_l2": 0.050210701566268556
+          },
+          "linear": {
+            "relative_time_l2": 0.034304806127764924,
+            "relative_complex_spectrum_l2": 0.03431526840466038
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.618916697342478,
+            "relative_complex_spectrum_l2": 18.22485172124246
+          },
+          "zero": {
+            "relative_time_l2": 0.057597140563619705,
+            "relative_complex_spectrum_l2": 0.06457459234668987
+          },
+          "linear": {
+            "relative_time_l2": 0.026207751186986122,
+            "relative_complex_spectrum_l2": 0.02498028261714697
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 19.716698548048587,
+            "relative_complex_spectrum_l2": 22.201180421780546
+          },
+          "zero": {
+            "relative_time_l2": 0.05484172912402732,
+            "relative_complex_spectrum_l2": 0.05858075708801301
+          },
+          "linear": {
+            "relative_time_l2": 0.03277715821057676,
+            "relative_complex_spectrum_l2": 0.03545016687524932
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 0,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "9e62456d855923cc6702bc65b8621c408a7f0b293fc5546a3b6a0529b0f79954",
+        "source": "run_001_Pf0_Rx0.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1605450229154887,
+            "relative_complex_spectrum_l2": 0.16014028181240378
+          },
+          "zero": {
+            "relative_time_l2": 0.1605450229154887,
+            "relative_complex_spectrum_l2": 0.16014028181240378
+          },
+          "linear": {
+            "relative_time_l2": 0.1605450229154887,
+            "relative_complex_spectrum_l2": 0.16014028181240378
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.16603170459636896,
+            "relative_complex_spectrum_l2": 0.16416486507408865
+          },
+          "zero": {
+            "relative_time_l2": 0.16603170459636896,
+            "relative_complex_spectrum_l2": 0.16416486507408865
+          },
+          "linear": {
+            "relative_time_l2": 0.16603170459636896,
+            "relative_complex_spectrum_l2": 0.16416486507408865
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1848523443781272,
+            "relative_complex_spectrum_l2": 0.18426850032332173
+          },
+          "zero": {
+            "relative_time_l2": 0.1848523443781272,
+            "relative_complex_spectrum_l2": 0.18426850032332173
+          },
+          "linear": {
+            "relative_time_l2": 0.1848523443781272,
+            "relative_complex_spectrum_l2": 0.18426850032332173
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.16637718342450084,
+            "relative_complex_spectrum_l2": 0.180970476474463
+          },
+          "zero": {
+            "relative_time_l2": 0.16637718342450084,
+            "relative_complex_spectrum_l2": 0.180970476474463
+          },
+          "linear": {
+            "relative_time_l2": 0.16637718342450084,
+            "relative_complex_spectrum_l2": 0.180970476474463
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1582999866432776,
+            "relative_complex_spectrum_l2": 0.19563479068210834
+          },
+          "zero": {
+            "relative_time_l2": 0.1582999866432776,
+            "relative_complex_spectrum_l2": 0.19563479068210834
+          },
+          "linear": {
+            "relative_time_l2": 0.1582999866432776,
+            "relative_complex_spectrum_l2": 0.19563479068210834
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6054502291548867,
+            "relative_complex_spectrum_l2": 1.6014028181240378
+          },
+          "zero": {
+            "relative_time_l2": 0.04772784192107849,
+            "relative_complex_spectrum_l2": 0.045576955394841155
+          },
+          "linear": {
+            "relative_time_l2": 0.029483078287629257,
+            "relative_complex_spectrum_l2": 0.028732991314989444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6603170459636893,
+            "relative_complex_spectrum_l2": 1.6416486507408865
+          },
+          "zero": {
+            "relative_time_l2": 0.057664653914448284,
+            "relative_complex_spectrum_l2": 0.04640129572767016
+          },
+          "linear": {
+            "relative_time_l2": 0.028509076798807077,
+            "relative_complex_spectrum_l2": 0.023267853962983986
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.8485234437812716,
+            "relative_complex_spectrum_l2": 1.8426850032332174
+          },
+          "zero": {
+            "relative_time_l2": 0.05699280874639489,
+            "relative_complex_spectrum_l2": 0.061060521674491094
+          },
+          "linear": {
+            "relative_time_l2": 0.03340793824776539,
+            "relative_complex_spectrum_l2": 0.03567875513889351
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.6637718342450083,
+            "relative_complex_spectrum_l2": 1.80970476474463
+          },
+          "zero": {
+            "relative_time_l2": 0.05230306979527093,
+            "relative_complex_spectrum_l2": 0.055447914931711556
+          },
+          "linear": {
+            "relative_time_l2": 0.025774203378694086,
+            "relative_complex_spectrum_l2": 0.0301432095115629
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.5829998664327758,
+            "relative_complex_spectrum_l2": 1.956347906821084
+          },
+          "zero": {
+            "relative_time_l2": 0.04999206144566538,
+            "relative_complex_spectrum_l2": 0.062434676408935255
+          },
+          "linear": {
+            "relative_time_l2": 0.02581895752209196,
+            "relative_complex_spectrum_l2": 0.030702751253733392
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.421800916619547,
+            "relative_complex_spectrum_l2": 6.405611272496151
+          },
+          "zero": {
+            "relative_time_l2": 0.04772784192107849,
+            "relative_complex_spectrum_l2": 0.045576955394841155
+          },
+          "linear": {
+            "relative_time_l2": 0.029483078287629257,
+            "relative_complex_spectrum_l2": 0.028732991314989444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.641268183854757,
+            "relative_complex_spectrum_l2": 6.566594602963546
+          },
+          "zero": {
+            "relative_time_l2": 0.057664653914448284,
+            "relative_complex_spectrum_l2": 0.04640129572767016
+          },
+          "linear": {
+            "relative_time_l2": 0.028509076798807077,
+            "relative_complex_spectrum_l2": 0.023267853962983986
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 7.394093775125087,
+            "relative_complex_spectrum_l2": 7.3707400129328695
+          },
+          "zero": {
+            "relative_time_l2": 0.05699280874639489,
+            "relative_complex_spectrum_l2": 0.061060521674491094
+          },
+          "linear": {
+            "relative_time_l2": 0.03340793824776539,
+            "relative_complex_spectrum_l2": 0.03567875513889351
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.655087336980033,
+            "relative_complex_spectrum_l2": 7.23881905897852
+          },
+          "zero": {
+            "relative_time_l2": 0.05230306979527093,
+            "relative_complex_spectrum_l2": 0.055447914931711556
+          },
+          "linear": {
+            "relative_time_l2": 0.025774203378694086,
+            "relative_complex_spectrum_l2": 0.0301432095115629
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 6.331999465731103,
+            "relative_complex_spectrum_l2": 7.825391627284336
+          },
+          "zero": {
+            "relative_time_l2": 0.04999206144566538,
+            "relative_complex_spectrum_l2": 0.062434676408935255
+          },
+          "linear": {
+            "relative_time_l2": 0.02581895752209196,
+            "relative_complex_spectrum_l2": 0.030702751253733392
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.054502291548868,
+            "relative_complex_spectrum_l2": 16.01402818124038
+          },
+          "zero": {
+            "relative_time_l2": 0.04772784192107849,
+            "relative_complex_spectrum_l2": 0.045576955394841155
+          },
+          "linear": {
+            "relative_time_l2": 0.029483078287629257,
+            "relative_complex_spectrum_l2": 0.028732991314989444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.603170459636893,
+            "relative_complex_spectrum_l2": 16.416486507408866
+          },
+          "zero": {
+            "relative_time_l2": 0.057664653914448284,
+            "relative_complex_spectrum_l2": 0.04640129572767016
+          },
+          "linear": {
+            "relative_time_l2": 0.028509076798807077,
+            "relative_complex_spectrum_l2": 0.023267853962983986
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 18.485234437812718,
+            "relative_complex_spectrum_l2": 18.42685003233217
+          },
+          "zero": {
+            "relative_time_l2": 0.05699280874639489,
+            "relative_complex_spectrum_l2": 0.061060521674491094
+          },
+          "linear": {
+            "relative_time_l2": 0.03340793824776539,
+            "relative_complex_spectrum_l2": 0.03567875513889351
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 16.637718342450082,
+            "relative_complex_spectrum_l2": 18.0970476474463
+          },
+          "zero": {
+            "relative_time_l2": 0.05230306979527093,
+            "relative_complex_spectrum_l2": 0.055447914931711556
+          },
+          "linear": {
+            "relative_time_l2": 0.025774203378694086,
+            "relative_complex_spectrum_l2": 0.0301432095115629
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 15.829998664327757,
+            "relative_complex_spectrum_l2": 19.56347906821084
+          },
+          "zero": {
+            "relative_time_l2": 0.04999206144566538,
+            "relative_complex_spectrum_l2": 0.062434676408935255
+          },
+          "linear": {
+            "relative_time_l2": 0.02581895752209196,
+            "relative_complex_spectrum_l2": 0.030702751253733392
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 1,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "405e85e5ba70f301df6d0d5c8c53bebbaf3c8224e7a8af113e41a5a0dda2eb60",
+        "source": "run_001_Pf0_Rx1.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14037176673445106,
+            "relative_complex_spectrum_l2": 0.14163521490243014
+          },
+          "zero": {
+            "relative_time_l2": 0.14037176673445106,
+            "relative_complex_spectrum_l2": 0.14163521490243014
+          },
+          "linear": {
+            "relative_time_l2": 0.14037176673445106,
+            "relative_complex_spectrum_l2": 0.14163521490243014
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14223007026089202,
+            "relative_complex_spectrum_l2": 0.14034093892395086
+          },
+          "zero": {
+            "relative_time_l2": 0.14223007026089202,
+            "relative_complex_spectrum_l2": 0.14034093892395086
+          },
+          "linear": {
+            "relative_time_l2": 0.14223007026089202,
+            "relative_complex_spectrum_l2": 0.14034093892395086
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14477597734693504,
+            "relative_complex_spectrum_l2": 0.1461336650719574
+          },
+          "zero": {
+            "relative_time_l2": 0.14477597734693504,
+            "relative_complex_spectrum_l2": 0.1461336650719574
+          },
+          "linear": {
+            "relative_time_l2": 0.14477597734693504,
+            "relative_complex_spectrum_l2": 0.1461336650719574
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14013305024483952,
+            "relative_complex_spectrum_l2": 0.15161309359725203
+          },
+          "zero": {
+            "relative_time_l2": 0.14013305024483952,
+            "relative_complex_spectrum_l2": 0.15161309359725203
+          },
+          "linear": {
+            "relative_time_l2": 0.14013305024483952,
+            "relative_complex_spectrum_l2": 0.15161309359725203
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.14243161006639635,
+            "relative_complex_spectrum_l2": 0.18015508271875422
+          },
+          "zero": {
+            "relative_time_l2": 0.14243161006639635,
+            "relative_complex_spectrum_l2": 0.18015508271875422
+          },
+          "linear": {
+            "relative_time_l2": 0.14243161006639635,
+            "relative_complex_spectrum_l2": 0.18015508271875422
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4037176673445104,
+            "relative_complex_spectrum_l2": 1.4163521490243014
+          },
+          "zero": {
+            "relative_time_l2": 0.06105230590394265,
+            "relative_complex_spectrum_l2": 0.0501348973008945
+          },
+          "linear": {
+            "relative_time_l2": 0.02809993029934517,
+            "relative_complex_spectrum_l2": 0.026923977619914597
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.42230070260892,
+            "relative_complex_spectrum_l2": 1.4034093892395088
+          },
+          "zero": {
+            "relative_time_l2": 0.05477165942272339,
+            "relative_complex_spectrum_l2": 0.053026871210155216
+          },
+          "linear": {
+            "relative_time_l2": 0.025211592221013487,
+            "relative_complex_spectrum_l2": 0.023157190589954264
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4477597734693501,
+            "relative_complex_spectrum_l2": 1.4613366507195737
+          },
+          "zero": {
+            "relative_time_l2": 0.05300494827337574,
+            "relative_complex_spectrum_l2": 0.050536142898201394
+          },
+          "linear": {
+            "relative_time_l2": 0.027434315541036664,
+            "relative_complex_spectrum_l2": 0.0266485271281577
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.401330502448395,
+            "relative_complex_spectrum_l2": 1.5161309359725206
+          },
+          "zero": {
+            "relative_time_l2": 0.061744737997607706,
+            "relative_complex_spectrum_l2": 0.05820322686819378
+          },
+          "linear": {
+            "relative_time_l2": 0.029146467350378638,
+            "relative_complex_spectrum_l2": 0.028758769246813594
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4243161006639633,
+            "relative_complex_spectrum_l2": 1.8015508271875427
+          },
+          "zero": {
+            "relative_time_l2": 0.04917759448407536,
+            "relative_complex_spectrum_l2": 0.061952195280228675
+          },
+          "linear": {
+            "relative_time_l2": 0.028237089147042874,
+            "relative_complex_spectrum_l2": 0.03603580299761162
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.614870669378042,
+            "relative_complex_spectrum_l2": 5.665408596097206
+          },
+          "zero": {
+            "relative_time_l2": 0.06105230590394265,
+            "relative_complex_spectrum_l2": 0.0501348973008945
+          },
+          "linear": {
+            "relative_time_l2": 0.02809993029934517,
+            "relative_complex_spectrum_l2": 0.026923977619914597
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.68920281043568,
+            "relative_complex_spectrum_l2": 5.613637556958035
+          },
+          "zero": {
+            "relative_time_l2": 0.05477165942272339,
+            "relative_complex_spectrum_l2": 0.053026871210155216
+          },
+          "linear": {
+            "relative_time_l2": 0.025211592221013487,
+            "relative_complex_spectrum_l2": 0.023157190589954264
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.791039093877401,
+            "relative_complex_spectrum_l2": 5.845346602878295
+          },
+          "zero": {
+            "relative_time_l2": 0.05300494827337574,
+            "relative_complex_spectrum_l2": 0.050536142898201394
+          },
+          "linear": {
+            "relative_time_l2": 0.027434315541036664,
+            "relative_complex_spectrum_l2": 0.0266485271281577
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.60532200979358,
+            "relative_complex_spectrum_l2": 6.064523743890083
+          },
+          "zero": {
+            "relative_time_l2": 0.061744737997607706,
+            "relative_complex_spectrum_l2": 0.05820322686819378
+          },
+          "linear": {
+            "relative_time_l2": 0.029146467350378638,
+            "relative_complex_spectrum_l2": 0.028758769246813594
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.697264402655853,
+            "relative_complex_spectrum_l2": 7.206203308750171
+          },
+          "zero": {
+            "relative_time_l2": 0.04917759448407536,
+            "relative_complex_spectrum_l2": 0.061952195280228675
+          },
+          "linear": {
+            "relative_time_l2": 0.028237089147042874,
+            "relative_complex_spectrum_l2": 0.03603580299761162
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.037176673445105,
+            "relative_complex_spectrum_l2": 14.163521490243015
+          },
+          "zero": {
+            "relative_time_l2": 0.06105230590394265,
+            "relative_complex_spectrum_l2": 0.0501348973008945
+          },
+          "linear": {
+            "relative_time_l2": 0.02809993029934517,
+            "relative_complex_spectrum_l2": 0.026923977619914597
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.223007026089201,
+            "relative_complex_spectrum_l2": 14.034093892395088
+          },
+          "zero": {
+            "relative_time_l2": 0.05477165942272339,
+            "relative_complex_spectrum_l2": 0.053026871210155216
+          },
+          "linear": {
+            "relative_time_l2": 0.025211592221013487,
+            "relative_complex_spectrum_l2": 0.023157190589954264
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.477597734693502,
+            "relative_complex_spectrum_l2": 14.613366507195737
+          },
+          "zero": {
+            "relative_time_l2": 0.05300494827337574,
+            "relative_complex_spectrum_l2": 0.050536142898201394
+          },
+          "linear": {
+            "relative_time_l2": 0.027434315541036664,
+            "relative_complex_spectrum_l2": 0.0266485271281577
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.01330502448395,
+            "relative_complex_spectrum_l2": 15.161309359725204
+          },
+          "zero": {
+            "relative_time_l2": 0.061744737997607706,
+            "relative_complex_spectrum_l2": 0.05820322686819378
+          },
+          "linear": {
+            "relative_time_l2": 0.029146467350378638,
+            "relative_complex_spectrum_l2": 0.028758769246813594
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.243161006639635,
+            "relative_complex_spectrum_l2": 18.015508271875422
+          },
+          "zero": {
+            "relative_time_l2": 0.04917759448407536,
+            "relative_complex_spectrum_l2": 0.061952195280228675
+          },
+          "linear": {
+            "relative_time_l2": 0.028237089147042874,
+            "relative_complex_spectrum_l2": 0.03603580299761162
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 2,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "9793c951db11ff2ca790ce64da578f1b365950058f1ba4b254a1c14240343f0a",
+        "source": "run_001_Pf0_Rx2.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13188248348899245,
+            "relative_complex_spectrum_l2": 0.11405351720869018
+          },
+          "zero": {
+            "relative_time_l2": 0.13188248348899245,
+            "relative_complex_spectrum_l2": 0.11405351720869018
+          },
+          "linear": {
+            "relative_time_l2": 0.13188248348899245,
+            "relative_complex_spectrum_l2": 0.11405351720869018
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1315397258650765,
+            "relative_complex_spectrum_l2": 0.11327918908388353
+          },
+          "zero": {
+            "relative_time_l2": 0.1315397258650765,
+            "relative_complex_spectrum_l2": 0.11327918908388353
+          },
+          "linear": {
+            "relative_time_l2": 0.1315397258650765,
+            "relative_complex_spectrum_l2": 0.11327918908388353
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1433596236711905,
+            "relative_complex_spectrum_l2": 0.12688268591036125
+          },
+          "zero": {
+            "relative_time_l2": 0.1433596236711905,
+            "relative_complex_spectrum_l2": 0.12688268591036125
+          },
+          "linear": {
+            "relative_time_l2": 0.1433596236711905,
+            "relative_complex_spectrum_l2": 0.12688268591036125
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1318802805110107,
+            "relative_complex_spectrum_l2": 0.12567787779245143
+          },
+          "zero": {
+            "relative_time_l2": 0.1318802805110107,
+            "relative_complex_spectrum_l2": 0.12567787779245143
+          },
+          "linear": {
+            "relative_time_l2": 0.1318802805110107,
+            "relative_complex_spectrum_l2": 0.12567787779245143
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13442047652100858,
+            "relative_complex_spectrum_l2": 0.14552662769678207
+          },
+          "zero": {
+            "relative_time_l2": 0.13442047652100858,
+            "relative_complex_spectrum_l2": 0.14552662769678207
+          },
+          "linear": {
+            "relative_time_l2": 0.13442047652100858,
+            "relative_complex_spectrum_l2": 0.14552662769678207
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3188248348899245,
+            "relative_complex_spectrum_l2": 1.1405351720869017
+          },
+          "zero": {
+            "relative_time_l2": 0.05286483756586088,
+            "relative_complex_spectrum_l2": 0.06021790018020335
+          },
+          "linear": {
+            "relative_time_l2": 0.028813631550681756,
+            "relative_complex_spectrum_l2": 0.026953182622816943
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3153972586507647,
+            "relative_complex_spectrum_l2": 1.1327918908388352
+          },
+          "zero": {
+            "relative_time_l2": 0.05399407998409439,
+            "relative_complex_spectrum_l2": 0.05009433084093378
+          },
+          "linear": {
+            "relative_time_l2": 0.030469623709674112,
+            "relative_complex_spectrum_l2": 0.030680703984856682
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4335962367119048,
+            "relative_complex_spectrum_l2": 1.2688268591036127
+          },
+          "zero": {
+            "relative_time_l2": 0.05434603055128633,
+            "relative_complex_spectrum_l2": 0.052540880396702204
+          },
+          "linear": {
+            "relative_time_l2": 0.029512662808913643,
+            "relative_complex_spectrum_l2": 0.02609554456614706
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3188028051101068,
+            "relative_complex_spectrum_l2": 1.2567787779245143
+          },
+          "zero": {
+            "relative_time_l2": 0.053681511386425136,
+            "relative_complex_spectrum_l2": 0.06028299467720542
+          },
+          "linear": {
+            "relative_time_l2": 0.030282400677382894,
+            "relative_complex_spectrum_l2": 0.027593219253976974
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3442047652100857,
+            "relative_complex_spectrum_l2": 1.4552662769678213
+          },
+          "zero": {
+            "relative_time_l2": 0.058185074661298644,
+            "relative_complex_spectrum_l2": 0.06911984154615212
+          },
+          "linear": {
+            "relative_time_l2": 0.02534328820803805,
+            "relative_complex_spectrum_l2": 0.028281378735105157
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.275299339559698,
+            "relative_complex_spectrum_l2": 4.562140688347607
+          },
+          "zero": {
+            "relative_time_l2": 0.05286483756586088,
+            "relative_complex_spectrum_l2": 0.06021790018020335
+          },
+          "linear": {
+            "relative_time_l2": 0.028813631550681756,
+            "relative_complex_spectrum_l2": 0.026953182622816943
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.261589034603059,
+            "relative_complex_spectrum_l2": 4.531167563355341
+          },
+          "zero": {
+            "relative_time_l2": 0.05399407998409439,
+            "relative_complex_spectrum_l2": 0.05009433084093378
+          },
+          "linear": {
+            "relative_time_l2": 0.030469623709674112,
+            "relative_complex_spectrum_l2": 0.030680703984856682
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.734384946847619,
+            "relative_complex_spectrum_l2": 5.075307436414451
+          },
+          "zero": {
+            "relative_time_l2": 0.05434603055128633,
+            "relative_complex_spectrum_l2": 0.052540880396702204
+          },
+          "linear": {
+            "relative_time_l2": 0.029512662808913643,
+            "relative_complex_spectrum_l2": 0.02609554456614706
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.275211220440427,
+            "relative_complex_spectrum_l2": 5.027115111698057
+          },
+          "zero": {
+            "relative_time_l2": 0.053681511386425136,
+            "relative_complex_spectrum_l2": 0.06028299467720542
+          },
+          "linear": {
+            "relative_time_l2": 0.030282400677382894,
+            "relative_complex_spectrum_l2": 0.027593219253976974
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.376819060840343,
+            "relative_complex_spectrum_l2": 5.821065107871285
+          },
+          "zero": {
+            "relative_time_l2": 0.058185074661298644,
+            "relative_complex_spectrum_l2": 0.06911984154615212
+          },
+          "linear": {
+            "relative_time_l2": 0.02534328820803805,
+            "relative_complex_spectrum_l2": 0.028281378735105157
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.188248348899245,
+            "relative_complex_spectrum_l2": 11.40535172086902
+          },
+          "zero": {
+            "relative_time_l2": 0.05286483756586088,
+            "relative_complex_spectrum_l2": 0.06021790018020335
+          },
+          "linear": {
+            "relative_time_l2": 0.028813631550681756,
+            "relative_complex_spectrum_l2": 0.026953182622816943
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.153972586507649,
+            "relative_complex_spectrum_l2": 11.327918908388353
+          },
+          "zero": {
+            "relative_time_l2": 0.05399407998409439,
+            "relative_complex_spectrum_l2": 0.05009433084093378
+          },
+          "linear": {
+            "relative_time_l2": 0.030469623709674112,
+            "relative_complex_spectrum_l2": 0.030680703984856682
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.335962367119048,
+            "relative_complex_spectrum_l2": 12.688268591036126
+          },
+          "zero": {
+            "relative_time_l2": 0.05434603055128633,
+            "relative_complex_spectrum_l2": 0.052540880396702204
+          },
+          "linear": {
+            "relative_time_l2": 0.029512662808913643,
+            "relative_complex_spectrum_l2": 0.02609554456614706
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.18802805110107,
+            "relative_complex_spectrum_l2": 12.567787779245142
+          },
+          "zero": {
+            "relative_time_l2": 0.053681511386425136,
+            "relative_complex_spectrum_l2": 0.06028299467720542
+          },
+          "linear": {
+            "relative_time_l2": 0.030282400677382894,
+            "relative_complex_spectrum_l2": 0.027593219253976974
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.442047652100857,
+            "relative_complex_spectrum_l2": 14.552662769678209
+          },
+          "zero": {
+            "relative_time_l2": 0.058185074661298644,
+            "relative_complex_spectrum_l2": 0.06911984154615212
+          },
+          "linear": {
+            "relative_time_l2": 0.02534328820803805,
+            "relative_complex_spectrum_l2": 0.028281378735105157
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "rx": 3,
+        "samples": 1024,
+        "chirps": 256,
+        "sha256": "b539243d8641540a07c50e98d542d5cd4a993390332cf273ca513a689813c1d1",
+        "source": "run_001_Pf0_Rx3.txt"
+      },
+      "clean_flagged_samples": 0,
+      "clean_usable_chirps": 256,
+      "clean_effect": {
+        "relative_time_l2": 0.0,
+        "relative_complex_spectrum_l2": 0.0
+      },
+      "runs": [
+        {
+          "seed": 20261022,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1341442418601175,
+            "relative_complex_spectrum_l2": 0.1432615121275967
+          },
+          "zero": {
+            "relative_time_l2": 0.1341442418601175,
+            "relative_complex_spectrum_l2": 0.1432615121275967
+          },
+          "linear": {
+            "relative_time_l2": 0.1341442418601175,
+            "relative_complex_spectrum_l2": 0.1432615121275967
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1356600808745892,
+            "relative_complex_spectrum_l2": 0.14258153653794012
+          },
+          "zero": {
+            "relative_time_l2": 0.1356600808745892,
+            "relative_complex_spectrum_l2": 0.14258153653794012
+          },
+          "linear": {
+            "relative_time_l2": 0.1356600808745892,
+            "relative_complex_spectrum_l2": 0.14258153653794012
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.1410471725130367,
+            "relative_complex_spectrum_l2": 0.1503556770188684
+          },
+          "zero": {
+            "relative_time_l2": 0.1410471725130367,
+            "relative_complex_spectrum_l2": 0.1503556770188684
+          },
+          "linear": {
+            "relative_time_l2": 0.1410471725130367,
+            "relative_complex_spectrum_l2": 0.1503556770188684
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13216915991620537,
+            "relative_complex_spectrum_l2": 0.15473151280058234
+          },
+          "zero": {
+            "relative_time_l2": 0.13216915991620537,
+            "relative_complex_spectrum_l2": 0.15473151280058234
+          },
+          "linear": {
+            "relative_time_l2": 0.13216915991620537,
+            "relative_complex_spectrum_l2": 0.15473151280058234
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 200,
+          "injected_samples": 96,
+          "detected_injected_samples": 0,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 0,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 0.13491381201789657,
+            "relative_complex_spectrum_l2": 0.18006583165090317
+          },
+          "zero": {
+            "relative_time_l2": 0.13491381201789657,
+            "relative_complex_spectrum_l2": 0.18006583165090317
+          },
+          "linear": {
+            "relative_time_l2": 0.13491381201789657,
+            "relative_complex_spectrum_l2": 0.18006583165090317
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3414424186011749,
+            "relative_complex_spectrum_l2": 1.432615121275967
+          },
+          "zero": {
+            "relative_time_l2": 0.05893256959694693,
+            "relative_complex_spectrum_l2": 0.06464291550589074
+          },
+          "linear": {
+            "relative_time_l2": 0.023795640831371513,
+            "relative_complex_spectrum_l2": 0.026481873914860444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3566008087458918,
+            "relative_complex_spectrum_l2": 1.4258153653794012
+          },
+          "zero": {
+            "relative_time_l2": 0.0589464776386678,
+            "relative_complex_spectrum_l2": 0.05274170631335218
+          },
+          "linear": {
+            "relative_time_l2": 0.02762599942461349,
+            "relative_complex_spectrum_l2": 0.03190147927509556
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.4104717251303667,
+            "relative_complex_spectrum_l2": 1.5035567701886838
+          },
+          "zero": {
+            "relative_time_l2": 0.06371367913975656,
+            "relative_complex_spectrum_l2": 0.06200818007369799
+          },
+          "linear": {
+            "relative_time_l2": 0.02313860666294133,
+            "relative_complex_spectrum_l2": 0.02859361066378879
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3216915991620535,
+            "relative_complex_spectrum_l2": 1.547315128005824
+          },
+          "zero": {
+            "relative_time_l2": 0.0534230240395397,
+            "relative_complex_spectrum_l2": 0.05729758939260527
+          },
+          "linear": {
+            "relative_time_l2": 0.023573190387603866,
+            "relative_complex_spectrum_l2": 0.02327927935750312
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 2000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 1.3491381201789654,
+            "relative_complex_spectrum_l2": 1.800658316509032
+          },
+          "zero": {
+            "relative_time_l2": 0.04807300524141037,
+            "relative_complex_spectrum_l2": 0.06813117260008156
+          },
+          "linear": {
+            "relative_time_l2": 0.022063796939045945,
+            "relative_complex_spectrum_l2": 0.029576513323596093
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.365769674404699,
+            "relative_complex_spectrum_l2": 5.730460485103869
+          },
+          "zero": {
+            "relative_time_l2": 0.05893256959694693,
+            "relative_complex_spectrum_l2": 0.06464291550589074
+          },
+          "linear": {
+            "relative_time_l2": 0.023795640831371513,
+            "relative_complex_spectrum_l2": 0.026481873914860444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.426403234983567,
+            "relative_complex_spectrum_l2": 5.703261461517605
+          },
+          "zero": {
+            "relative_time_l2": 0.0589464776386678,
+            "relative_complex_spectrum_l2": 0.05274170631335218
+          },
+          "linear": {
+            "relative_time_l2": 0.02762599942461349,
+            "relative_complex_spectrum_l2": 0.03190147927509556
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.641886900521467,
+            "relative_complex_spectrum_l2": 6.014227080754737
+          },
+          "zero": {
+            "relative_time_l2": 0.06371367913975656,
+            "relative_complex_spectrum_l2": 0.06200818007369799
+          },
+          "linear": {
+            "relative_time_l2": 0.02313860666294133,
+            "relative_complex_spectrum_l2": 0.02859361066378879
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.286766396648214,
+            "relative_complex_spectrum_l2": 6.189260512023295
+          },
+          "zero": {
+            "relative_time_l2": 0.0534230240395397,
+            "relative_complex_spectrum_l2": 0.05729758939260527
+          },
+          "linear": {
+            "relative_time_l2": 0.023573190387603866,
+            "relative_complex_spectrum_l2": 0.02327927935750312
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 8000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 5.396552480715862,
+            "relative_complex_spectrum_l2": 7.20263326603613
+          },
+          "zero": {
+            "relative_time_l2": 0.04807300524141037,
+            "relative_complex_spectrum_l2": 0.06813117260008156
+          },
+          "linear": {
+            "relative_time_l2": 0.022063796939045945,
+            "relative_complex_spectrum_l2": 0.029576513323596093
+          }
+        },
+        {
+          "seed": 20261022,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.414424186011749,
+            "relative_complex_spectrum_l2": 14.32615121275967
+          },
+          "zero": {
+            "relative_time_l2": 0.05893256959694693,
+            "relative_complex_spectrum_l2": 0.06464291550589074
+          },
+          "linear": {
+            "relative_time_l2": 0.023795640831371513,
+            "relative_complex_spectrum_l2": 0.026481873914860444
+          }
+        },
+        {
+          "seed": 20261023,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.566008087458918,
+            "relative_complex_spectrum_l2": 14.258153653794013
+          },
+          "zero": {
+            "relative_time_l2": 0.0589464776386678,
+            "relative_complex_spectrum_l2": 0.05274170631335218
+          },
+          "linear": {
+            "relative_time_l2": 0.02762599942461349,
+            "relative_complex_spectrum_l2": 0.03190147927509556
+          }
+        },
+        {
+          "seed": 20261024,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 14.104717251303668,
+            "relative_complex_spectrum_l2": 15.035567701886839
+          },
+          "zero": {
+            "relative_time_l2": 0.06371367913975656,
+            "relative_complex_spectrum_l2": 0.06200818007369799
+          },
+          "linear": {
+            "relative_time_l2": 0.02313860666294133,
+            "relative_complex_spectrum_l2": 0.02859361066378879
+          }
+        },
+        {
+          "seed": 20261025,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.216915991620535,
+            "relative_complex_spectrum_l2": 15.473151280058236
+          },
+          "zero": {
+            "relative_time_l2": 0.0534230240395397,
+            "relative_complex_spectrum_l2": 0.05729758939260527
+          },
+          "linear": {
+            "relative_time_l2": 0.023573190387603866,
+            "relative_complex_spectrum_l2": 0.02327927935750312
+          }
+        },
+        {
+          "seed": 20261026,
+          "injection_counts": 20000,
+          "injected_samples": 96,
+          "detected_injected_samples": 96,
+          "flagged_outside_injection": 0,
+          "flagged_samples": 96,
+          "total_chirps": 256,
+          "usable_chirps": 256,
+          "compared_injected_chirps": 32,
+          "damaged": {
+            "relative_time_l2": 13.491381201789656,
+            "relative_complex_spectrum_l2": 18.00658316509032
+          },
+          "zero": {
+            "relative_time_l2": 0.04807300524141037,
+            "relative_complex_spectrum_l2": 0.06813117260008156
+          },
+          "linear": {
+            "relative_time_l2": 0.022063796939045945,
+            "relative_complex_spectrum_l2": 0.029576513323596093
+          }
+        }
+      ]
+    }
+  ],
+  "caveat": "Original ADC is a numeric reference, not interference-free ground truth. Injected pulses are synthetic. Rejected chirps are NaN and must not be silently FFT processed; long bursts and edge pulses are not interpolated."
+}
