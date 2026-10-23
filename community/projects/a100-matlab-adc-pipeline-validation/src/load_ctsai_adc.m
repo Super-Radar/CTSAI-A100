@@ -1,6 +1,7 @@
 function adc = load_ctsai_adc(files, cfg)
 %LOAD_CTSAI_ADC Read four text files and unpack two signed int16 samples
 %from each stored uint32 word. Output: [sample, chirp, rx].
+% Public f0/f1 captures are headerless, with at most one extra trailing zero.
 
 adc = zeros(cfg.numAdcSamples, cfg.numChirps, cfg.numRx);
 expectedWords = cfg.numPackedSamples * cfg.numChirps;
@@ -9,16 +10,29 @@ for rx = 1:cfg.numRx
     if ~isfile(files{rx})
         error('CTSAI:MissingData', 'ADC file not found: %s', files{rx});
     end
-    values = readmatrix(files{rx});
-    values = values(:);
-    values = values(isfinite(values));
+    % Parse the exported comma-separated record without inferring header rows
+    % or dropping invalid fields: either would shift subsequent ADC samples.
+    tokens = strsplit(strtrim(fileread(files{rx})), ',', ...
+        'CollapseDelimiters', false);
+    values = str2double(tokens(:));
+    if ~isreal(values) || any(~isfinite(values)) || ...
+            any(values < 0 | values > double(intmax('uint32'))) || ...
+            any(values ~= fix(values))
+        error('CTSAI:DataValue', ...
+            'RX%d must contain finite unsigned 32-bit integer ADC words.', rx-1);
+    end
 
-    % Public files contain one leading metadata value followed by payload.
+    % Keep the first payload word and all zeros within the expected payload.
+    % The public exports have ONE extra zero at the end, not a leading header.
     if numel(values) == expectedWords + 1
-        values = values(2:end);
+        if values(end) ~= 0
+            error('CTSAI:DataTrailer', ...
+                'RX%d has a nonzero extra word; only one trailing zero is supported.', rx-1);
+        end
+        values = values(1:expectedWords);
     elseif numel(values) ~= expectedWords
         error('CTSAI:DataLength', ...
-            'RX%d contains %d values; expected %d payload values (+ optional header).', ...
+            'RX%d contains %d values; expected %d headerless words (+ optional trailing zero).', ...
             rx-1, numel(values), expectedWords);
     end
 

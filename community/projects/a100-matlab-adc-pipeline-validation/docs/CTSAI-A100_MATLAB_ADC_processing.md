@@ -10,8 +10,9 @@ present undecoded DDMA bins as physical velocity or calibrated angle.
 
 ## Input data and configuration
 
-Each profile contains four text files, one for each receive channel. A file has
-one leading metadata field and 131072 payload words. Every payload word stores
+Each profile contains four headerless comma-separated text records, one for
+each receive channel. The public files have 131072 payload words followed by
+one extra zero. The first value is signal data, not metadata. Every word stores
 two consecutive two's-complement signed 16-bit ADC samples:
 
 ```text
@@ -22,7 +23,11 @@ The far profile reshapes the payload as 512 packed words by 256 chirps. The near
 profile uses 1024 packed words by 128 chirps. The implementation loads waveform,
 FFT, TX-group and antenna fields directly from the repository's
 `sensor_config_init0.hxx` and `sensor_config_init1.hxx` files. It validates the
-RX-file count and payload size instead of silently truncating or padding data.
+RX-file count and payload size. It accepts an exact payload or one additional
+zero at the end, rejecting other lengths/trailers and non-finite, fractional or
+out-of-range values before conversion. No samples are filtered out or padded.
+Zeros within the payload are retained. The three-field-header `Pf0_Rx` format
+elsewhere in the repository is separate and is not inferred by this loader.
 
 ## Processing flow
 
@@ -125,13 +130,16 @@ calibration and processing parameters. This reference does not claim physical
 velocity, azimuth, maximum detection range, accuracy, false-alarm performance or
 product firmware equivalence for the unresolved public DDMA capture.
 
-The committed reference results were produced by the independent NumPy validator
-from the public captures. Native MATLAB R2026a cross-validation subsequently ran
+The corrected reference results were produced by the independent NumPy validator
+from the public captures, with sample-level arithmetic oracles checking both
+profiles. The earlier native MATLAB R2026a cross-validation ran
 `main('near')` and `main('far')` successfully on GitHub-hosted Ubuntu. Detection
 counts and raw Doppler bins matched, with range/power differences below numerical
 roundoff. The run is recorded in
-`validator/results/matlab-r2026a-validation.txt`. Radar hardware testing is not
-claimed.
+`validator/results/matlab-r2026a-validation.txt`. That run predates the ADC
+alignment correction and did not detect the loaders' shared shift. It is
+historical evidence; native MATLAB revalidation of the corrected main is still
+pending. Radar hardware testing is not claimed.
 
 ## Extensions supported by the design
 
@@ -145,5 +153,7 @@ once the required public metadata is available.
 `community/projects/a100-matlab-adc-pipeline-validation/validator/` contains a
 NumPy implementation of the same HXX loading, ADC unpacking and diagnostic
 FFT/CFAR equations. It checks data shapes, configuration consistency and finite
-output independently; the native MATLAB cross-validation described above then
-compares its exported detections against this reference.
+output and every decoded public ADC sample against an arithmetic oracle.
+Cross-language agreement alone is insufficient if both implementations share a
+format assumption; the loader regressions therefore use hand-decoded samples
+and the documented high-half/low-half order as well.

@@ -48,12 +48,21 @@ def load_adc(files: list[Path], cfg: dict) -> np.ndarray:
     expected = packed * cfg["chirps"]
     channels = []
     for path in files:
-        values = np.loadtxt(path, delimiter=",").reshape(-1)
-        values = values[np.isfinite(values)]
+        # Public exports are a comma-separated record, not a leading header
+        # followed by samples. Preserve every field until validation completes.
+        values = np.array([float(token) for token in
+                           path.read_text(encoding="utf-8").strip().split(",")])
+        if (not np.isfinite(values).all() or np.any(values < 0)
+                or np.any(values > np.iinfo(np.uint32).max)
+                or np.any(values != np.floor(values))):
+            raise ValueError(f"{path.name}: expected finite uint32 ADC words")
         if values.size == expected + 1:
-            values = values[1:]
+            if values[-1] != 0:
+                raise ValueError(f"{path.name}: only one extra trailing zero is supported")
+            values = values[:expected]
         if values.size != expected:
-            raise ValueError(f"{path.name}: {values.size} values, expected {expected}")
+            raise ValueError(f"{path.name}: {values.size} values, expected {expected} "
+                             "headerless words (+ optional trailing zero)")
         words = values.astype(np.uint32)
         high = (words >> 16).astype(np.uint16).view(np.int16)
         low = (words & 65535).astype(np.uint16).view(np.int16)

@@ -1,0 +1,33 @@
+ADC sample alignment validation (2026-10-23)
+
+Input: the eight public *_f0_* / *_f1_* files in
+ADC数据采集/示例adc数据和结果/
+Each file: 131072 payload words, followed by one extra zero.
+Reference: high 16 bits are the earlier signed sample; low 16 bits the later.
+The oracle uses scalar integer division/remainder, independent of loader bit views.
+
+Python 3.10.9 / NumPy 1.26.4 / Pillow 9.5.0, Windows:
+  python -m unittest discover -s community/projects/a100-matlab-adc-pipeline-validation/validator -p test_adc_loading.py -v
+  8 tests PASS, including malformed fields, trailer rules and all public samples.
+  Initial seven fixture tests on the original loader: 16 failing assertions.
+
+GNU Octave 6.4.0, WSL Ubuntu 22.04:
+  addpath('community/projects/a100-matlab-adc-pipeline-validation/tests'); run_adc_loading_tests();
+  Actual load_ctsai_adc.m, file IO and tests ran without compatibility substitutes.
+  Hand-decoded samples / chirp and RX order / invalid inputs: PASS.
+  f0: 1048576 DC-removed samples match independent arithmetic unpacking exactly.
+  f1: 1048576 DC-removed samples match independent arithmetic unpacking exactly.
+
+Full NumPy near/far processing and result export: PASS, finite outputs.
+  near ADC (2048,128,4), raw RD (1024,128,4), 32 output detections.
+  far  ADC (1024,256,4), raw RD (512,256,4), 3 output detections.
+  Detection cells match the original run on these captures; maximum power changes
+  are 0.0129805424 dB (near) / 0.0101858133 dB (far).
+  Original loader RMS sample error after DC removal: 103.5263694 / 82.0634777 ADC units.
+  Corrected loader exact sample error: zero for both profiles.
+
+MATLAB R2023a could not start (license host mismatch, error -9).
+Native MATLAB main('near') / main('far') and table/MAT/figure export remain untested
+for this correction. The retained matlab-r2026a-validation.txt describes the older
+loader and must not be treated as validating these corrected outputs.
+No hardware acquisition, DDMA decoding or physical velocity/angle validation is claimed.
