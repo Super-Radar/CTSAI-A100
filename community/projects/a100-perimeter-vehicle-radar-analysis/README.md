@@ -862,6 +862,29 @@ results/simulation/parameter_study/
 
 改变 chirp duration，同时保持 bandwidth 不变。
 
+采样率固定为 25 MHz，样本数使用 `floor(sample_rate * chirp_duration)`：
+30、36、43 us 分别对应 750、900、1075 点。每个采样时刻必须位于半开区间
+`[0, chirp_duration)`；帧仿真会拒绝末采样点位于 chirp 终点或之后的配置。
+默认仿真仍使用 43 us、1024 点；这里只改变时宽扫描的采样窗口。
+
+原时宽扫描固定 1024 点，30/36 us 时分别有 274/124 点超出 ramp。
+修正后 FFT 频率间隔随样本数变化；这不是修改实际雷达采集参数。
+帧生成器仍是解析差频教学模型，不模拟传播时延造成的 chirp 起始无效区。
+
+独立数值回归（不需要绘图或实测数据）：
+
+```matlab
+addpath('tests');
+test_simulation_window;
+```
+
+本次更新的时宽图使用修正后的 `simulate_lfmcw_frame` 在 GNU Octave 6.4.0 中
+生成的单目标 FFT 谱，由 Matplotlib 3.10.9 绘制。验证覆盖帧函数与上述等价时宽
+实验；未执行完整 MATLAB `run_parameter_studies.m` 或交互图形流程。现有 MATLAB
+脚本可以按修正后的采样配置重新生成该图。
+
+
+
 
 
 结果：

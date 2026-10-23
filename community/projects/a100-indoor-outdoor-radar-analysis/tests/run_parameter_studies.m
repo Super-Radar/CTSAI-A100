@@ -170,6 +170,10 @@ for i = 1:numel(durationValues)
     cfg.chirp_duration = ...
         durationValues(i);
 
+    % Keep the ADC rate fixed and sample only within this chirp ramp.
+    % These durations give 750, 900 and 1075 samples at 25 MHz.
+    cfg.num_samples = floor(cfg.sample_rate * cfg.chirp_duration);
+
     cfg.slope = ...
         cfg.bandwidth / ...
         cfg.chirp_duration;
